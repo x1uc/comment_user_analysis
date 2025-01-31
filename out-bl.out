@@ -1,0 +1,4822 @@
+PhoneType: 苹果, Num: 9
+=====================================
+cnt: 9
+PhoneType: 苹果, Num: 15
+PhoneType: Vivo, Num: 1
+=====================================
+cnt: 16
+PhoneType: Vivo, Num: 2
+PhoneType: 华为, Num: 2
+PhoneType: 苹果, Num: 18
+=====================================
+cnt: 22
+PhoneType: 苹果, Num: 22
+PhoneType: Vivo, Num: 2
+PhoneType: 华为, Num: 4
+PhoneType: 荣耀, Num: 1
+=====================================
+cnt: 29
+PhoneType: 苹果, Num: 27
+PhoneType: Vivo, Num: 3
+PhoneType: 华为, Num: 6
+PhoneType: 荣耀, Num: 1
+=====================================
+cnt: 37
+PhoneType: 苹果, Num: 29
+PhoneType: Vivo, Num: 3
+PhoneType: 华为, Num: 6
+PhoneType: 荣耀, Num: 1
+PhoneType: IQOO, Num: 1
+=====================================
+cnt: 40
+PhoneType: 苹果, Num: 30
+PhoneType: Vivo, Num: 3
+PhoneType: 华为, Num: 6
+PhoneType: 荣耀, Num: 1
+PhoneType: IQOO, Num: 1
+=====================================
+cnt: 41
+PhoneType: 华为, Num: 7
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 1
+PhoneType: Vivo, Num: 3
+PhoneType: OPPO, Num: 2
+PhoneType: 苹果, Num: 35
+PhoneType: 荣耀, Num: 2
+=====================================
+cnt: 52
+PhoneType: 小米, Num: 1
+PhoneType: Vivo, Num: 4
+PhoneType: 华为, Num: 7
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 苹果, Num: 39
+PhoneType: 荣耀, Num: 2
+PhoneType: OPPO, Num: 2
+=====================================
+cnt: 57
+PhoneType: 荣耀, Num: 2
+PhoneType: OPPO, Num: 2
+PhoneType: 苹果, Num: 41
+PhoneType: Vivo, Num: 5
+PhoneType: 华为, Num: 9
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 1
+=====================================
+cnt: 62
+PhoneType: 苹果, Num: 41
+PhoneType: 荣耀, Num: 2
+PhoneType: OPPO, Num: 2
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 1
+PhoneType: Vivo, Num: 5
+PhoneType: 华为, Num: 9
+=====================================
+cnt: 62
+PhoneType: 苹果, Num: 44
+PhoneType: 荣耀, Num: 2
+PhoneType: OPPO, Num: 2
+PhoneType: Vivo, Num: 5
+PhoneType: 华为, Num: 10
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 1
+=====================================
+cnt: 66
+PhoneType: 荣耀, Num: 2
+PhoneType: OPPO, Num: 2
+PhoneType: 三星, Num: 1
+PhoneType: 苹果, Num: 47
+PhoneType: Vivo, Num: 5
+PhoneType: 华为, Num: 10
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 1
+=====================================
+cnt: 70
+PhoneType: 苹果, Num: 50
+PhoneType: 荣耀, Num: 2
+PhoneType: OPPO, Num: 3
+PhoneType: 三星, Num: 1
+PhoneType: Vivo, Num: 5
+PhoneType: 华为, Num: 10
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 1
+PhoneType: 红米, Num: 1
+=====================================
+cnt: 75
+PhoneType: 红米, Num: 1
+PhoneType: Vivo, Num: 5
+PhoneType: 华为, Num: 10
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 1
+PhoneType: 苹果, Num: 51
+PhoneType: 荣耀, Num: 2
+PhoneType: OPPO, Num: 3
+PhoneType: 三星, Num: 1
+=====================================
+cnt: 76
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 2
+PhoneType: 红米, Num: 2
+PhoneType: Vivo, Num: 5
+PhoneType: 华为, Num: 13
+PhoneType: 三星, Num: 1
+PhoneType: 苹果, Num: 52
+PhoneType: 荣耀, Num: 5
+PhoneType: OPPO, Num: 4
+=====================================
+cnt: 86
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 2
+PhoneType: 红米, Num: 2
+PhoneType: Vivo, Num: 6
+PhoneType: 华为, Num: 13
+PhoneType: IQOO, Num: 1
+PhoneType: 苹果, Num: 54
+PhoneType: 荣耀, Num: 5
+PhoneType: OPPO, Num: 4
+PhoneType: 三星, Num: 1
+=====================================
+cnt: 89
+PhoneType: Vivo, Num: 6
+PhoneType: 华为, Num: 13
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 2
+PhoneType: 红米, Num: 2
+PhoneType: 荣耀, Num: 5
+PhoneType: OPPO, Num: 4
+PhoneType: 三星, Num: 1
+PhoneType: 苹果, Num: 56
+=====================================
+cnt: 91
+PhoneType: 苹果, Num: 63
+PhoneType: 荣耀, Num: 5
+PhoneType: OPPO, Num: 4
+PhoneType: 三星, Num: 1
+PhoneType: 小米, Num: 2
+PhoneType: 红米, Num: 2
+PhoneType: Vivo, Num: 6
+PhoneType: 华为, Num: 13
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+=====================================
+cnt: 98
+PhoneType: Vivo, Num: 6
+PhoneType: 华为, Num: 13
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 3
+PhoneType: 红米, Num: 2
+PhoneType: 苹果, Num: 65
+PhoneType: 荣耀, Num: 5
+PhoneType: OPPO, Num: 4
+PhoneType: 三星, Num: 1
+=====================================
+cnt: 101
+PhoneType: 华为, Num: 13
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 3
+PhoneType: 红米, Num: 2
+PhoneType: Vivo, Num: 6
+PhoneType: OPPO, Num: 4
+PhoneType: 三星, Num: 1
+PhoneType: 苹果, Num: 65
+PhoneType: 荣耀, Num: 6
+=====================================
+cnt: 102
+PhoneType: 苹果, Num: 68
+PhoneType: 荣耀, Num: 6
+PhoneType: OPPO, Num: 4
+PhoneType: 三星, Num: 1
+PhoneType: 红米, Num: 2
+PhoneType: Vivo, Num: 6
+PhoneType: 华为, Num: 14
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 3
+=====================================
+cnt: 106
+PhoneType: 荣耀, Num: 6
+PhoneType: OPPO, Num: 4
+PhoneType: 三星, Num: 1
+PhoneType: 苹果, Num: 71
+PhoneType: Vivo, Num: 7
+PhoneType: 华为, Num: 14
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 4
+PhoneType: 红米, Num: 2
+=====================================
+cnt: 111
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 4
+PhoneType: 红米, Num: 2
+PhoneType: Vivo, Num: 7
+PhoneType: 华为, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 苹果, Num: 73
+PhoneType: 荣耀, Num: 7
+PhoneType: OPPO, Num: 4
+=====================================
+cnt: 115
+PhoneType: OPPO, Num: 4
+PhoneType: 三星, Num: 1
+PhoneType: 苹果, Num: 73
+PhoneType: 荣耀, Num: 7
+PhoneType: 华为, Num: 16
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 4
+PhoneType: 红米, Num: 2
+PhoneType: Vivo, Num: 7
+=====================================
+cnt: 116
+PhoneType: 三星, Num: 1
+PhoneType: 苹果, Num: 75
+PhoneType: 荣耀, Num: 7
+PhoneType: OPPO, Num: 4
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 3
+PhoneType: Vivo, Num: 7
+PhoneType: 华为, Num: 17
+=====================================
+cnt: 121
+PhoneType: 苹果, Num: 79
+PhoneType: 荣耀, Num: 7
+PhoneType: OPPO, Num: 4
+PhoneType: 三星, Num: 1
+PhoneType: Vivo, Num: 8
+PhoneType: 华为, Num: 17
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 3
+=====================================
+cnt: 126
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 3
+PhoneType: Vivo, Num: 8
+PhoneType: 华为, Num: 17
+PhoneType: IQOO, Num: 1
+PhoneType: 苹果, Num: 84
+PhoneType: 荣耀, Num: 7
+PhoneType: OPPO, Num: 4
+PhoneType: 三星, Num: 1
+=====================================
+cnt: 131
+PhoneType: Vivo, Num: 8
+PhoneType: 华为, Num: 17
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 3
+PhoneType: 苹果, Num: 88
+PhoneType: 荣耀, Num: 8
+PhoneType: OPPO, Num: 4
+PhoneType: 三星, Num: 1
+=====================================
+cnt: 136
+PhoneType: 苹果, Num: 88
+PhoneType: 荣耀, Num: 8
+PhoneType: OPPO, Num: 4
+PhoneType: 三星, Num: 1
+PhoneType: Vivo, Num: 10
+PhoneType: 华为, Num: 17
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 3
+=====================================
+cnt: 138
+PhoneType: 苹果, Num: 92
+PhoneType: 荣耀, Num: 8
+PhoneType: OPPO, Num: 5
+PhoneType: 三星, Num: 1
+PhoneType: Vivo, Num: 10
+PhoneType: 华为, Num: 17
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 3
+=====================================
+cnt: 143
+PhoneType: Vivo, Num: 11
+PhoneType: 华为, Num: 18
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 3
+PhoneType: 苹果, Num: 92
+PhoneType: 荣耀, Num: 8
+PhoneType: OPPO, Num: 6
+PhoneType: 三星, Num: 1
+=====================================
+cnt: 146
+PhoneType: 苹果, Num: 92
+PhoneType: 荣耀, Num: 8
+PhoneType: OPPO, Num: 6
+PhoneType: 三星, Num: 1
+PhoneType: 红米, Num: 3
+PhoneType: Vivo, Num: 14
+PhoneType: 华为, Num: 18
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+=====================================
+cnt: 149
+PhoneType: 苹果, Num: 94
+PhoneType: 荣耀, Num: 8
+PhoneType: OPPO, Num: 6
+PhoneType: 三星, Num: 1
+PhoneType: Vivo, Num: 14
+PhoneType: 华为, Num: 19
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 3
+=====================================
+cnt: 152
+PhoneType: 三星, Num: 1
+PhoneType: 苹果, Num: 95
+PhoneType: 荣耀, Num: 8
+PhoneType: OPPO, Num: 6
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 3
+PhoneType: Vivo, Num: 14
+PhoneType: 华为, Num: 22
+=====================================
+cnt: 156
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 3
+PhoneType: Vivo, Num: 14
+PhoneType: 华为, Num: 22
+PhoneType: IQOO, Num: 1
+PhoneType: 苹果, Num: 97
+PhoneType: 荣耀, Num: 8
+PhoneType: OPPO, Num: 6
+PhoneType: 三星, Num: 1
+=====================================
+cnt: 158
+PhoneType: Vivo, Num: 16
+PhoneType: 华为, Num: 22
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 3
+PhoneType: 荣耀, Num: 9
+PhoneType: OPPO, Num: 6
+PhoneType: 三星, Num: 1
+PhoneType: 苹果, Num: 97
+=====================================
+cnt: 161
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 4
+PhoneType: Vivo, Num: 16
+PhoneType: 华为, Num: 24
+PhoneType: 三星, Num: 1
+PhoneType: 苹果, Num: 99
+PhoneType: 荣耀, Num: 9
+PhoneType: OPPO, Num: 7
+=====================================
+cnt: 167
+PhoneType: 华为, Num: 24
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 4
+PhoneType: Vivo, Num: 16
+PhoneType: OPPO, Num: 8
+PhoneType: 三星, Num: 1
+PhoneType: 苹果, Num: 100
+PhoneType: 荣耀, Num: 9
+=====================================
+cnt: 169
+PhoneType: OPPO, Num: 9
+PhoneType: 三星, Num: 1
+PhoneType: 苹果, Num: 101
+PhoneType: 荣耀, Num: 9
+PhoneType: 华为, Num: 24
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 4
+PhoneType: Vivo, Num: 16
+=====================================
+cnt: 171
+PhoneType: Vivo, Num: 16
+PhoneType: 华为, Num: 25
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 4
+PhoneType: 苹果, Num: 102
+PhoneType: 荣耀, Num: 9
+PhoneType: OPPO, Num: 10
+PhoneType: 三星, Num: 1
+=====================================
+cnt: 174
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 4
+PhoneType: Vivo, Num: 16
+PhoneType: 华为, Num: 25
+PhoneType: 三星, Num: 1
+PhoneType: 苹果, Num: 104
+PhoneType: 荣耀, Num: 10
+PhoneType: OPPO, Num: 10
+=====================================
+cnt: 177
+PhoneType: Vivo, Num: 16
+PhoneType: 华为, Num: 25
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 4
+PhoneType: 苹果, Num: 107
+PhoneType: 荣耀, Num: 10
+PhoneType: OPPO, Num: 10
+PhoneType: 三星, Num: 1
+=====================================
+cnt: 180
+PhoneType: Vivo, Num: 16
+PhoneType: 华为, Num: 25
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 4
+PhoneType: 苹果, Num: 107
+PhoneType: 荣耀, Num: 11
+PhoneType: OPPO, Num: 11
+PhoneType: 三星, Num: 1
+=====================================
+cnt: 182
+PhoneType: 华为, Num: 25
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 4
+PhoneType: Vivo, Num: 16
+PhoneType: OPPO, Num: 11
+PhoneType: 三星, Num: 1
+PhoneType: 苹果, Num: 110
+PhoneType: 荣耀, Num: 11
+=====================================
+cnt: 185
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 5
+PhoneType: Vivo, Num: 17
+PhoneType: 华为, Num: 26
+PhoneType: 三星, Num: 1
+PhoneType: 苹果, Num: 111
+PhoneType: 荣耀, Num: 11
+PhoneType: OPPO, Num: 12
+=====================================
+cnt: 190
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 5
+PhoneType: Vivo, Num: 18
+PhoneType: 华为, Num: 26
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 苹果, Num: 114
+PhoneType: 荣耀, Num: 12
+PhoneType: OPPO, Num: 13
+PhoneType: 三星, Num: 1
+=====================================
+cnt: 196
+PhoneType: 苹果, Num: 117
+PhoneType: 荣耀, Num: 12
+PhoneType: OPPO, Num: 13
+PhoneType: 三星, Num: 1
+PhoneType: Vivo, Num: 19
+PhoneType: 华为, Num: 28
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 5
+=====================================
+cnt: 202
+PhoneType: Vivo, Num: 19
+PhoneType: 华为, Num: 28
+PhoneType: IQOO, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 5
+PhoneType: 荣耀, Num: 12
+PhoneType: OPPO, Num: 13
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 119
+=====================================
+cnt: 205
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 119
+PhoneType: 荣耀, Num: 12
+PhoneType: OPPO, Num: 14
+PhoneType: IQOO, Num: 2
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 5
+PhoneType: Vivo, Num: 20
+PhoneType: 华为, Num: 28
+=====================================
+cnt: 208
+PhoneType: Vivo, Num: 21
+PhoneType: 华为, Num: 29
+PhoneType: IQOO, Num: 2
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 5
+PhoneType: 红米, Num: 5
+PhoneType: 苹果, Num: 123
+PhoneType: 荣耀, Num: 12
+PhoneType: OPPO, Num: 14
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+=====================================
+cnt: 214
+PhoneType: 荣耀, Num: 12
+PhoneType: OPPO, Num: 14
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 131
+PhoneType: Vivo, Num: 21
+PhoneType: 华为, Num: 29
+PhoneType: IQOO, Num: 3
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 7
+PhoneType: 红米, Num: 5
+=====================================
+cnt: 225
+PhoneType: Vivo, Num: 21
+PhoneType: 华为, Num: 29
+PhoneType: IQOO, Num: 3
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 7
+PhoneType: 红米, Num: 5
+PhoneType: 苹果, Num: 133
+PhoneType: 荣耀, Num: 12
+PhoneType: OPPO, Num: 14
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+=====================================
+cnt: 227
+PhoneType: 小米, Num: 7
+PhoneType: 红米, Num: 5
+PhoneType: Vivo, Num: 21
+PhoneType: 华为, Num: 30
+PhoneType: IQOO, Num: 3
+PhoneType: 真我, Num: 1
+PhoneType: 苹果, Num: 134
+PhoneType: 荣耀, Num: 13
+PhoneType: OPPO, Num: 14
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+=====================================
+cnt: 230
+PhoneType: Vivo, Num: 21
+PhoneType: 华为, Num: 30
+PhoneType: IQOO, Num: 3
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 8
+PhoneType: 红米, Num: 6
+PhoneType: 苹果, Num: 136
+PhoneType: 荣耀, Num: 13
+PhoneType: OPPO, Num: 14
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+=====================================
+cnt: 234
+PhoneType: OPPO, Num: 14
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 139
+PhoneType: 荣耀, Num: 13
+PhoneType: 华为, Num: 30
+PhoneType: IQOO, Num: 3
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 8
+PhoneType: 红米, Num: 6
+PhoneType: Vivo, Num: 21
+=====================================
+cnt: 237
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 8
+PhoneType: 红米, Num: 6
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 31
+PhoneType: IQOO, Num: 3
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 140
+PhoneType: 荣耀, Num: 14
+PhoneType: OPPO, Num: 14
+PhoneType: 三星, Num: 1
+=====================================
+cnt: 241
+PhoneType: 苹果, Num: 142
+PhoneType: 荣耀, Num: 14
+PhoneType: OPPO, Num: 14
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 小米, Num: 8
+PhoneType: 红米, Num: 6
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 31
+PhoneType: IQOO, Num: 3
+PhoneType: 真我, Num: 1
+=====================================
+cnt: 243
+PhoneType: 华为, Num: 31
+PhoneType: IQOO, Num: 3
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 8
+PhoneType: 红米, Num: 6
+PhoneType: Vivo, Num: 22
+PhoneType: OPPO, Num: 14
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 144
+PhoneType: 荣耀, Num: 14
+=====================================
+cnt: 245
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 145
+PhoneType: 荣耀, Num: 14
+PhoneType: OPPO, Num: 14
+PhoneType: 三星, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 8
+PhoneType: 红米, Num: 6
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 31
+PhoneType: IQOO, Num: 3
+=====================================
+cnt: 246
+PhoneType: 红米, Num: 6
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 31
+PhoneType: IQOO, Num: 3
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 8
+PhoneType: 苹果, Num: 147
+PhoneType: 荣耀, Num: 14
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+=====================================
+cnt: 249
+PhoneType: 苹果, Num: 148
+PhoneType: 荣耀, Num: 14
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 31
+PhoneType: IQOO, Num: 3
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 8
+PhoneType: 红米, Num: 6
+=====================================
+cnt: 250
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 8
+PhoneType: 红米, Num: 6
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 31
+PhoneType: IQOO, Num: 3
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 149
+PhoneType: 荣耀, Num: 14
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+=====================================
+cnt: 251
+PhoneType: IQOO, Num: 3
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 8
+PhoneType: 红米, Num: 7
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 31
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 151
+PhoneType: 荣耀, Num: 14
+PhoneType: OPPO, Num: 15
+=====================================
+cnt: 254
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 31
+PhoneType: IQOO, Num: 3
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 8
+PhoneType: 红米, Num: 7
+PhoneType: 苹果, Num: 153
+PhoneType: 荣耀, Num: 14
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+=====================================
+cnt: 256
+PhoneType: 小米, Num: 8
+PhoneType: 红米, Num: 8
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 32
+PhoneType: IQOO, Num: 3
+PhoneType: 真我, Num: 1
+PhoneType: 苹果, Num: 156
+PhoneType: 荣耀, Num: 14
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+=====================================
+cnt: 261
+PhoneType: 苹果, Num: 158
+PhoneType: 荣耀, Num: 14
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 32
+PhoneType: IQOO, Num: 3
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 8
+PhoneType: 红米, Num: 8
+=====================================
+cnt: 263
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 8
+PhoneType: 红米, Num: 8
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 32
+PhoneType: IQOO, Num: 3
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 159
+PhoneType: 荣耀, Num: 14
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+=====================================
+cnt: 264
+PhoneType: IQOO, Num: 4
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 8
+PhoneType: 红米, Num: 8
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 33
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 159
+PhoneType: 荣耀, Num: 14
+PhoneType: OPPO, Num: 15
+=====================================
+cnt: 266
+PhoneType: 华为, Num: 33
+PhoneType: IQOO, Num: 4
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 8
+PhoneType: Vivo, Num: 22
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 160
+PhoneType: 荣耀, Num: 14
+=====================================
+cnt: 268
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 161
+PhoneType: 荣耀, Num: 14
+PhoneType: 华为, Num: 33
+PhoneType: IQOO, Num: 4
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 8
+PhoneType: Vivo, Num: 22
+=====================================
+cnt: 269
+PhoneType: 苹果, Num: 161
+PhoneType: 荣耀, Num: 14
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 33
+PhoneType: IQOO, Num: 4
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 8
+=====================================
+cnt: 269
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 162
+PhoneType: 荣耀, Num: 14
+PhoneType: OPPO, Num: 15
+PhoneType: IQOO, Num: 4
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 8
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 34
+=====================================
+cnt: 271
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 34
+PhoneType: IQOO, Num: 4
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 8
+PhoneType: 苹果, Num: 168
+PhoneType: 荣耀, Num: 14
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+=====================================
+cnt: 277
+PhoneType: 苹果, Num: 169
+PhoneType: 荣耀, Num: 14
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 34
+PhoneType: IQOO, Num: 4
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 8
+=====================================
+cnt: 278
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 169
+PhoneType: 荣耀, Num: 14
+PhoneType: 华为, Num: 35
+PhoneType: IQOO, Num: 4
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 8
+PhoneType: Vivo, Num: 22
+=====================================
+cnt: 279
+PhoneType: IQOO, Num: 4
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 8
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 35
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 172
+PhoneType: 荣耀, Num: 14
+PhoneType: OPPO, Num: 15
+=====================================
+cnt: 282
+PhoneType: 苹果, Num: 176
+PhoneType: 荣耀, Num: 14
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 35
+PhoneType: IQOO, Num: 5
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 8
+=====================================
+cnt: 287
+PhoneType: 苹果, Num: 176
+PhoneType: 荣耀, Num: 14
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 红米, Num: 8
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 35
+PhoneType: IQOO, Num: 5
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+=====================================
+cnt: 287
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 35
+PhoneType: IQOO, Num: 5
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 8
+PhoneType: 苹果, Num: 176
+PhoneType: 荣耀, Num: 15
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+=====================================
+cnt: 288
+PhoneType: Vivo, Num: 22
+PhoneType: 华为, Num: 35
+PhoneType: IQOO, Num: 5
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 8
+PhoneType: 荣耀, Num: 15
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 180
+=====================================
+cnt: 292
+PhoneType: 红米, Num: 8
+PhoneType: Vivo, Num: 23
+PhoneType: 华为, Num: 35
+PhoneType: IQOO, Num: 7
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 苹果, Num: 182
+PhoneType: 荣耀, Num: 15
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+=====================================
+cnt: 297
+PhoneType: Vivo, Num: 23
+PhoneType: 华为, Num: 35
+PhoneType: IQOO, Num: 7
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 9
+PhoneType: 苹果, Num: 185
+PhoneType: 荣耀, Num: 15
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+=====================================
+cnt: 301
+PhoneType: Vivo, Num: 23
+PhoneType: 华为, Num: 36
+PhoneType: IQOO, Num: 7
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 9
+PhoneType: 苹果, Num: 185
+PhoneType: 荣耀, Num: 15
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+=====================================
+cnt: 302
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 186
+PhoneType: 荣耀, Num: 15
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 10
+PhoneType: Vivo, Num: 23
+PhoneType: 华为, Num: 37
+PhoneType: IQOO, Num: 7
+=====================================
+cnt: 305
+PhoneType: 苹果, Num: 187
+PhoneType: 荣耀, Num: 16
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 红米, Num: 10
+PhoneType: Vivo, Num: 23
+PhoneType: 华为, Num: 38
+PhoneType: IQOO, Num: 7
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+=====================================
+cnt: 308
+PhoneType: 华为, Num: 38
+PhoneType: IQOO, Num: 7
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 10
+PhoneType: Vivo, Num: 23
+PhoneType: OPPO, Num: 15
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 190
+PhoneType: 荣耀, Num: 16
+=====================================
+cnt: 311
+PhoneType: 苹果, Num: 191
+PhoneType: 荣耀, Num: 16
+PhoneType: OPPO, Num: 16
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 红米, Num: 11
+PhoneType: Vivo, Num: 23
+PhoneType: 华为, Num: 39
+PhoneType: IQOO, Num: 7
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+=====================================
+cnt: 315
+PhoneType: 苹果, Num: 191
+PhoneType: 荣耀, Num: 16
+PhoneType: OPPO, Num: 16
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 11
+PhoneType: Vivo, Num: 23
+PhoneType: 华为, Num: 39
+PhoneType: IQOO, Num: 7
+PhoneType: 真我, Num: 1
+=====================================
+cnt: 315
+PhoneType: 红米, Num: 11
+PhoneType: Vivo, Num: 23
+PhoneType: 华为, Num: 39
+PhoneType: IQOO, Num: 7
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 苹果, Num: 196
+PhoneType: 荣耀, Num: 16
+PhoneType: OPPO, Num: 16
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+=====================================
+cnt: 320
+PhoneType: 苹果, Num: 196
+PhoneType: 荣耀, Num: 16
+PhoneType: OPPO, Num: 16
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: Vivo, Num: 23
+PhoneType: 华为, Num: 40
+PhoneType: IQOO, Num: 7
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 11
+=====================================
+cnt: 321
+PhoneType: 苹果, Num: 199
+PhoneType: 荣耀, Num: 16
+PhoneType: OPPO, Num: 16
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: Vivo, Num: 23
+PhoneType: 华为, Num: 40
+PhoneType: IQOO, Num: 7
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 11
+=====================================
+cnt: 324
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 204
+PhoneType: 荣耀, Num: 16
+PhoneType: OPPO, Num: 16
+PhoneType: IQOO, Num: 7
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 11
+PhoneType: Vivo, Num: 23
+PhoneType: 华为, Num: 41
+=====================================
+cnt: 330
+PhoneType: IQOO, Num: 7
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 11
+PhoneType: Vivo, Num: 23
+PhoneType: 华为, Num: 41
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 206
+PhoneType: 荣耀, Num: 16
+PhoneType: OPPO, Num: 16
+=====================================
+cnt: 332
+PhoneType: 苹果, Num: 207
+PhoneType: 荣耀, Num: 16
+PhoneType: OPPO, Num: 17
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 红米, Num: 12
+PhoneType: Vivo, Num: 24
+PhoneType: 华为, Num: 43
+PhoneType: IQOO, Num: 7
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+=====================================
+cnt: 338
+PhoneType: Vivo, Num: 24
+PhoneType: 华为, Num: 43
+PhoneType: IQOO, Num: 7
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 12
+PhoneType: 荣耀, Num: 16
+PhoneType: OPPO, Num: 18
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+PhoneType: 苹果, Num: 213
+=====================================
+cnt: 345
+PhoneType: Vivo, Num: 24
+PhoneType: 华为, Num: 44
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 12
+PhoneType: 苹果, Num: 213
+PhoneType: 荣耀, Num: 16
+PhoneType: OPPO, Num: 18
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 1
+=====================================
+cnt: 347
+PhoneType: 苹果, Num: 213
+PhoneType: 荣耀, Num: 16
+PhoneType: OPPO, Num: 19
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: Vivo, Num: 24
+PhoneType: 华为, Num: 44
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 12
+=====================================
+cnt: 349
+PhoneType: Vivo, Num: 24
+PhoneType: 华为, Num: 45
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 12
+PhoneType: 苹果, Num: 214
+PhoneType: 荣耀, Num: 16
+PhoneType: OPPO, Num: 19
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 351
+PhoneType: OPPO, Num: 19
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 220
+PhoneType: 荣耀, Num: 17
+PhoneType: 华为, Num: 46
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 13
+PhoneType: Vivo, Num: 26
+=====================================
+cnt: 362
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 14
+PhoneType: Vivo, Num: 26
+PhoneType: 华为, Num: 46
+PhoneType: IQOO, Num: 8
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 222
+PhoneType: 荣耀, Num: 18
+PhoneType: OPPO, Num: 19
+PhoneType: 三星, Num: 1
+=====================================
+cnt: 366
+PhoneType: 苹果, Num: 226
+PhoneType: 荣耀, Num: 19
+PhoneType: OPPO, Num: 19
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: Vivo, Num: 26
+PhoneType: 华为, Num: 46
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 14
+=====================================
+cnt: 371
+PhoneType: Vivo, Num: 29
+PhoneType: 华为, Num: 48
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 14
+PhoneType: 苹果, Num: 232
+PhoneType: 荣耀, Num: 20
+PhoneType: OPPO, Num: 19
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 383
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 234
+PhoneType: 荣耀, Num: 20
+PhoneType: OPPO, Num: 19
+PhoneType: 三星, Num: 1
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 14
+PhoneType: Vivo, Num: 29
+PhoneType: 华为, Num: 48
+PhoneType: IQOO, Num: 8
+=====================================
+cnt: 385
+PhoneType: 苹果, Num: 236
+PhoneType: 荣耀, Num: 20
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: Vivo, Num: 29
+PhoneType: 华为, Num: 48
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 1
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 14
+=====================================
+cnt: 388
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 238
+PhoneType: 荣耀, Num: 20
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+PhoneType: 真我, Num: 2
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 15
+PhoneType: Vivo, Num: 30
+PhoneType: 华为, Num: 48
+PhoneType: IQOO, Num: 8
+=====================================
+cnt: 393
+PhoneType: 苹果, Num: 242
+PhoneType: 荣耀, Num: 21
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: Vivo, Num: 30
+PhoneType: 华为, Num: 48
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 2
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 15
+=====================================
+cnt: 398
+PhoneType: 小米, Num: 9
+PhoneType: 红米, Num: 15
+PhoneType: Vivo, Num: 30
+PhoneType: 华为, Num: 48
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 2
+PhoneType: 苹果, Num: 242
+PhoneType: 荣耀, Num: 21
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 398
+PhoneType: 苹果, Num: 242
+PhoneType: 荣耀, Num: 21
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 红米, Num: 15
+PhoneType: Vivo, Num: 30
+PhoneType: 华为, Num: 48
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 2
+PhoneType: 小米, Num: 9
+=====================================
+cnt: 398
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 15
+PhoneType: Vivo, Num: 30
+PhoneType: 华为, Num: 48
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 2
+PhoneType: 苹果, Num: 242
+PhoneType: 荣耀, Num: 21
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 399
+PhoneType: Vivo, Num: 31
+PhoneType: 华为, Num: 49
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 2
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 16
+PhoneType: 荣耀, Num: 21
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 247
+=====================================
+cnt: 407
+PhoneType: 苹果, Num: 248
+PhoneType: 荣耀, Num: 21
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: Vivo, Num: 31
+PhoneType: 华为, Num: 49
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 2
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 16
+=====================================
+cnt: 408
+PhoneType: 真我, Num: 2
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 16
+PhoneType: Vivo, Num: 31
+PhoneType: 华为, Num: 50
+PhoneType: IQOO, Num: 8
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 249
+PhoneType: 荣耀, Num: 22
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+=====================================
+cnt: 411
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 251
+PhoneType: 荣耀, Num: 22
+PhoneType: 华为, Num: 50
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 2
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 16
+PhoneType: Vivo, Num: 31
+=====================================
+cnt: 413
+PhoneType: 红米, Num: 16
+PhoneType: Vivo, Num: 32
+PhoneType: 华为, Num: 50
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 2
+PhoneType: 小米, Num: 10
+PhoneType: 苹果, Num: 253
+PhoneType: 荣耀, Num: 22
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 416
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 16
+PhoneType: Vivo, Num: 33
+PhoneType: 华为, Num: 50
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 2
+PhoneType: 苹果, Num: 253
+PhoneType: 荣耀, Num: 22
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 417
+PhoneType: 华为, Num: 50
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 2
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 16
+PhoneType: Vivo, Num: 33
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 254
+PhoneType: 荣耀, Num: 23
+=====================================
+cnt: 419
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 16
+PhoneType: Vivo, Num: 33
+PhoneType: 华为, Num: 50
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 2
+PhoneType: 苹果, Num: 257
+PhoneType: 荣耀, Num: 23
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 422
+PhoneType: Vivo, Num: 34
+PhoneType: 华为, Num: 51
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 2
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 17
+PhoneType: 苹果, Num: 261
+PhoneType: 荣耀, Num: 23
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 429
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 262
+PhoneType: 荣耀, Num: 23
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+PhoneType: 真我, Num: 2
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 17
+PhoneType: Vivo, Num: 35
+PhoneType: 华为, Num: 51
+PhoneType: IQOO, Num: 8
+=====================================
+cnt: 431
+PhoneType: Vivo, Num: 36
+PhoneType: 华为, Num: 51
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 2
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 17
+PhoneType: 荣耀, Num: 23
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 263
+=====================================
+cnt: 433
+PhoneType: Vivo, Num: 36
+PhoneType: 华为, Num: 52
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 3
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 17
+PhoneType: 荣耀, Num: 23
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 264
+=====================================
+cnt: 436
+PhoneType: 苹果, Num: 266
+PhoneType: 荣耀, Num: 24
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: Vivo, Num: 36
+PhoneType: 华为, Num: 52
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 3
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 17
+=====================================
+cnt: 439
+PhoneType: 红米, Num: 17
+PhoneType: Vivo, Num: 36
+PhoneType: 华为, Num: 52
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 3
+PhoneType: 小米, Num: 10
+PhoneType: 苹果, Num: 268
+PhoneType: 荣耀, Num: 24
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 441
+PhoneType: OPPO, Num: 20
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 268
+PhoneType: 荣耀, Num: 25
+PhoneType: 华为, Num: 53
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 3
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 17
+PhoneType: Vivo, Num: 36
+=====================================
+cnt: 443
+PhoneType: 荣耀, Num: 25
+PhoneType: OPPO, Num: 21
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 269
+PhoneType: Vivo, Num: 36
+PhoneType: 华为, Num: 54
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 3
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 17
+=====================================
+cnt: 446
+PhoneType: 真我, Num: 3
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 17
+PhoneType: Vivo, Num: 36
+PhoneType: 华为, Num: 54
+PhoneType: IQOO, Num: 8
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 269
+PhoneType: 荣耀, Num: 25
+PhoneType: OPPO, Num: 21
+PhoneType: 三星, Num: 1
+=====================================
+cnt: 446
+PhoneType: Vivo, Num: 36
+PhoneType: 华为, Num: 54
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 3
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 17
+PhoneType: 苹果, Num: 269
+PhoneType: 荣耀, Num: 25
+PhoneType: OPPO, Num: 21
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 446
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 17
+PhoneType: Vivo, Num: 36
+PhoneType: 华为, Num: 54
+PhoneType: IQOO, Num: 8
+PhoneType: 真我, Num: 3
+PhoneType: 苹果, Num: 270
+PhoneType: 荣耀, Num: 25
+PhoneType: OPPO, Num: 21
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 447
+PhoneType: IQOO, Num: 9
+PhoneType: 真我, Num: 3
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 17
+PhoneType: Vivo, Num: 36
+PhoneType: 华为, Num: 54
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 271
+PhoneType: 荣耀, Num: 25
+PhoneType: OPPO, Num: 21
+=====================================
+cnt: 449
+PhoneType: 荣耀, Num: 25
+PhoneType: OPPO, Num: 22
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 271
+PhoneType: Vivo, Num: 36
+PhoneType: 华为, Num: 54
+PhoneType: IQOO, Num: 9
+PhoneType: 真我, Num: 3
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 17
+=====================================
+cnt: 450
+PhoneType: 荣耀, Num: 26
+PhoneType: OPPO, Num: 22
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 273
+PhoneType: Vivo, Num: 36
+PhoneType: 华为, Num: 54
+PhoneType: IQOO, Num: 9
+PhoneType: 真我, Num: 3
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 17
+=====================================
+cnt: 453
+PhoneType: 苹果, Num: 280
+PhoneType: 荣耀, Num: 26
+PhoneType: OPPO, Num: 23
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: Vivo, Num: 36
+PhoneType: 华为, Num: 55
+PhoneType: IQOO, Num: 9
+PhoneType: 真我, Num: 3
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 17
+=====================================
+cnt: 462
+PhoneType: 真我, Num: 3
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 17
+PhoneType: Vivo, Num: 37
+PhoneType: 华为, Num: 55
+PhoneType: IQOO, Num: 9
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 281
+PhoneType: 荣耀, Num: 26
+PhoneType: OPPO, Num: 23
+PhoneType: 三星, Num: 1
+=====================================
+cnt: 464
+PhoneType: 苹果, Num: 281
+PhoneType: 荣耀, Num: 26
+PhoneType: OPPO, Num: 23
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 17
+PhoneType: Vivo, Num: 37
+PhoneType: 华为, Num: 55
+PhoneType: IQOO, Num: 9
+PhoneType: 真我, Num: 3
+=====================================
+cnt: 464
+PhoneType: 华为, Num: 55
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 3
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 17
+PhoneType: Vivo, Num: 37
+PhoneType: OPPO, Num: 23
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 282
+PhoneType: 荣耀, Num: 26
+=====================================
+cnt: 466
+PhoneType: 红米, Num: 17
+PhoneType: Vivo, Num: 37
+PhoneType: 华为, Num: 56
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 3
+PhoneType: 小米, Num: 10
+PhoneType: 苹果, Num: 282
+PhoneType: 荣耀, Num: 26
+PhoneType: OPPO, Num: 23
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 467
+PhoneType: 红米, Num: 17
+PhoneType: Vivo, Num: 37
+PhoneType: 华为, Num: 57
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 3
+PhoneType: 小米, Num: 10
+PhoneType: 苹果, Num: 283
+PhoneType: 荣耀, Num: 26
+PhoneType: OPPO, Num: 23
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 469
+PhoneType: 苹果, Num: 283
+PhoneType: 荣耀, Num: 26
+PhoneType: OPPO, Num: 23
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 红米, Num: 17
+PhoneType: Vivo, Num: 37
+PhoneType: 华为, Num: 57
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 10
+=====================================
+cnt: 470
+PhoneType: 红米, Num: 17
+PhoneType: Vivo, Num: 37
+PhoneType: 华为, Num: 57
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 10
+PhoneType: 苹果, Num: 287
+PhoneType: 荣耀, Num: 26
+PhoneType: OPPO, Num: 23
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 474
+PhoneType: 华为, Num: 57
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 17
+PhoneType: Vivo, Num: 38
+PhoneType: OPPO, Num: 23
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 290
+PhoneType: 荣耀, Num: 27
+=====================================
+cnt: 479
+PhoneType: 荣耀, Num: 27
+PhoneType: OPPO, Num: 23
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 292
+PhoneType: Vivo, Num: 38
+PhoneType: 华为, Num: 57
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 17
+=====================================
+cnt: 481
+PhoneType: 苹果, Num: 294
+PhoneType: 荣耀, Num: 27
+PhoneType: OPPO, Num: 23
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: Vivo, Num: 38
+PhoneType: 华为, Num: 57
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 18
+=====================================
+cnt: 484
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 40
+PhoneType: 华为, Num: 58
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 295
+PhoneType: 荣耀, Num: 27
+PhoneType: OPPO, Num: 23
+=====================================
+cnt: 488
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 295
+PhoneType: 荣耀, Num: 27
+PhoneType: OPPO, Num: 23
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 40
+PhoneType: 华为, Num: 58
+=====================================
+cnt: 488
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 296
+PhoneType: 荣耀, Num: 27
+PhoneType: OPPO, Num: 24
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 40
+PhoneType: 华为, Num: 58
+=====================================
+cnt: 490
+PhoneType: Vivo, Num: 40
+PhoneType: 华为, Num: 58
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 18
+PhoneType: 苹果, Num: 297
+PhoneType: 荣耀, Num: 27
+PhoneType: OPPO, Num: 24
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 491
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 298
+PhoneType: 荣耀, Num: 27
+PhoneType: OPPO, Num: 24
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 40
+PhoneType: 华为, Num: 59
+=====================================
+cnt: 493
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 40
+PhoneType: 华为, Num: 59
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 299
+PhoneType: 荣耀, Num: 27
+PhoneType: OPPO, Num: 24
+=====================================
+cnt: 494
+PhoneType: 华为, Num: 59
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 40
+PhoneType: OPPO, Num: 24
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 299
+PhoneType: 荣耀, Num: 28
+=====================================
+cnt: 495
+PhoneType: Vivo, Num: 40
+PhoneType: 华为, Num: 59
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 18
+PhoneType: 苹果, Num: 301
+PhoneType: 荣耀, Num: 28
+PhoneType: OPPO, Num: 24
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 497
+PhoneType: 苹果, Num: 301
+PhoneType: 荣耀, Num: 28
+PhoneType: OPPO, Num: 24
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 40
+PhoneType: 华为, Num: 60
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 4
+=====================================
+cnt: 498
+PhoneType: 荣耀, Num: 28
+PhoneType: OPPO, Num: 24
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 304
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 60
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 10
+PhoneType: 红米, Num: 18
+=====================================
+cnt: 502
+PhoneType: 苹果, Num: 305
+PhoneType: 荣耀, Num: 28
+PhoneType: OPPO, Num: 24
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 60
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+=====================================
+cnt: 504
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 307
+PhoneType: 荣耀, Num: 28
+PhoneType: OPPO, Num: 24
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+=====================================
+cnt: 508
+PhoneType: OPPO, Num: 24
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 307
+PhoneType: 荣耀, Num: 28
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 41
+=====================================
+cnt: 508
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 307
+PhoneType: 荣耀, Num: 28
+PhoneType: OPPO, Num: 24
+PhoneType: 三星, Num: 1
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 10
+=====================================
+cnt: 508
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: 苹果, Num: 308
+PhoneType: 荣耀, Num: 28
+PhoneType: OPPO, Num: 25
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 510
+PhoneType: 苹果, Num: 308
+PhoneType: 荣耀, Num: 29
+PhoneType: OPPO, Num: 25
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 10
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+=====================================
+cnt: 511
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 苹果, Num: 311
+PhoneType: 荣耀, Num: 29
+PhoneType: OPPO, Num: 26
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 516
+PhoneType: 荣耀, Num: 29
+PhoneType: OPPO, Num: 26
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 311
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+=====================================
+cnt: 516
+PhoneType: 苹果, Num: 313
+PhoneType: 荣耀, Num: 29
+PhoneType: OPPO, Num: 26
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+=====================================
+cnt: 518
+PhoneType: 苹果, Num: 314
+PhoneType: 荣耀, Num: 29
+PhoneType: OPPO, Num: 26
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+=====================================
+cnt: 519
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: 苹果, Num: 314
+PhoneType: 荣耀, Num: 29
+PhoneType: OPPO, Num: 26
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 519
+PhoneType: 苹果, Num: 315
+PhoneType: 荣耀, Num: 30
+PhoneType: OPPO, Num: 26
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+=====================================
+cnt: 521
+PhoneType: 苹果, Num: 316
+PhoneType: 荣耀, Num: 30
+PhoneType: OPPO, Num: 26
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+=====================================
+cnt: 522
+PhoneType: 苹果, Num: 316
+PhoneType: 荣耀, Num: 30
+PhoneType: OPPO, Num: 27
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+=====================================
+cnt: 523
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 41
+PhoneType: OPPO, Num: 27
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 316
+PhoneType: 荣耀, Num: 30
+=====================================
+cnt: 523
+PhoneType: 苹果, Num: 317
+PhoneType: 荣耀, Num: 30
+PhoneType: OPPO, Num: 27
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+=====================================
+cnt: 524
+PhoneType: 苹果, Num: 318
+PhoneType: 荣耀, Num: 30
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+=====================================
+cnt: 526
+PhoneType: 苹果, Num: 318
+PhoneType: 荣耀, Num: 30
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+=====================================
+cnt: 526
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: 荣耀, Num: 30
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 318
+=====================================
+cnt: 526
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 318
+PhoneType: 荣耀, Num: 30
+PhoneType: OPPO, Num: 28
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+=====================================
+cnt: 526
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 苹果, Num: 320
+PhoneType: 荣耀, Num: 30
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 528
+PhoneType: 苹果, Num: 323
+PhoneType: 荣耀, Num: 30
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+=====================================
+cnt: 531
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: 荣耀, Num: 30
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 324
+=====================================
+cnt: 532
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 62
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: 荣耀, Num: 30
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 324
+=====================================
+cnt: 532
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 63
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 苹果, Num: 327
+PhoneType: 荣耀, Num: 30
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 536
+PhoneType: 苹果, Num: 328
+PhoneType: 荣耀, Num: 30
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 64
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+=====================================
+cnt: 538
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 64
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: 苹果, Num: 328
+PhoneType: 荣耀, Num: 30
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 538
+PhoneType: 华为, Num: 64
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 41
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 328
+PhoneType: 荣耀, Num: 30
+=====================================
+cnt: 538
+PhoneType: 华为, Num: 64
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 41
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 329
+PhoneType: 荣耀, Num: 31
+=====================================
+cnt: 540
+PhoneType: 荣耀, Num: 32
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 331
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 65
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+=====================================
+cnt: 544
+PhoneType: Vivo, Num: 41
+PhoneType: 华为, Num: 65
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: 苹果, Num: 332
+PhoneType: 荣耀, Num: 32
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 545
+PhoneType: Vivo, Num: 42
+PhoneType: 华为, Num: 66
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: 荣耀, Num: 33
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 333
+=====================================
+cnt: 549
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 335
+PhoneType: 荣耀, Num: 33
+PhoneType: 华为, Num: 66
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 43
+=====================================
+cnt: 552
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 43
+PhoneType: 华为, Num: 66
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 338
+PhoneType: 荣耀, Num: 33
+PhoneType: OPPO, Num: 28
+=====================================
+cnt: 555
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 43
+PhoneType: 华为, Num: 66
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 340
+PhoneType: 荣耀, Num: 33
+PhoneType: OPPO, Num: 28
+=====================================
+cnt: 557
+PhoneType: Vivo, Num: 43
+PhoneType: 华为, Num: 66
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: 苹果, Num: 340
+PhoneType: 荣耀, Num: 33
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 557
+PhoneType: 苹果, Num: 341
+PhoneType: 荣耀, Num: 33
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 43
+PhoneType: 华为, Num: 66
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+=====================================
+cnt: 558
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 43
+PhoneType: 华为, Num: 66
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 苹果, Num: 343
+PhoneType: 荣耀, Num: 33
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 560
+PhoneType: Vivo, Num: 43
+PhoneType: 华为, Num: 66
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: 荣耀, Num: 33
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 343
+=====================================
+cnt: 560
+PhoneType: Vivo, Num: 43
+PhoneType: 华为, Num: 66
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: 荣耀, Num: 33
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 345
+=====================================
+cnt: 562
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 43
+PhoneType: 华为, Num: 66
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 348
+PhoneType: 荣耀, Num: 33
+PhoneType: OPPO, Num: 28
+=====================================
+cnt: 565
+PhoneType: 红米, Num: 18
+PhoneType: Vivo, Num: 44
+PhoneType: 华为, Num: 67
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 苹果, Num: 349
+PhoneType: 荣耀, Num: 34
+PhoneType: OPPO, Num: 28
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 569
+PhoneType: 苹果, Num: 349
+PhoneType: 荣耀, Num: 34
+PhoneType: OPPO, Num: 29
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: Vivo, Num: 44
+PhoneType: 华为, Num: 67
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 18
+=====================================
+cnt: 570
+PhoneType: Vivo, Num: 44
+PhoneType: 华为, Num: 67
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 19
+PhoneType: 苹果, Num: 354
+PhoneType: 荣耀, Num: 34
+PhoneType: OPPO, Num: 29
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 576
+PhoneType: 红米, Num: 19
+PhoneType: Vivo, Num: 45
+PhoneType: 华为, Num: 67
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 苹果, Num: 354
+PhoneType: 荣耀, Num: 34
+PhoneType: OPPO, Num: 29
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 577
+PhoneType: 苹果, Num: 358
+PhoneType: 荣耀, Num: 34
+PhoneType: OPPO, Num: 31
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 19
+PhoneType: Vivo, Num: 45
+PhoneType: 华为, Num: 68
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+=====================================
+cnt: 584
+PhoneType: OPPO, Num: 31
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 358
+PhoneType: 荣耀, Num: 34
+PhoneType: 华为, Num: 68
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 19
+PhoneType: Vivo, Num: 45
+=====================================
+cnt: 584
+PhoneType: Vivo, Num: 45
+PhoneType: 华为, Num: 68
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 19
+PhoneType: 苹果, Num: 358
+PhoneType: 荣耀, Num: 34
+PhoneType: OPPO, Num: 31
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 584
+PhoneType: 苹果, Num: 358
+PhoneType: 荣耀, Num: 35
+PhoneType: OPPO, Num: 31
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 19
+PhoneType: Vivo, Num: 46
+PhoneType: 华为, Num: 68
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+=====================================
+cnt: 586
+PhoneType: 华为, Num: 68
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 19
+PhoneType: Vivo, Num: 46
+PhoneType: OPPO, Num: 31
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 358
+PhoneType: 荣耀, Num: 35
+=====================================
+cnt: 586
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 19
+PhoneType: Vivo, Num: 46
+PhoneType: 华为, Num: 68
+PhoneType: IQOO, Num: 11
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 360
+PhoneType: 荣耀, Num: 35
+PhoneType: OPPO, Num: 31
+PhoneType: 三星, Num: 1
+=====================================
+cnt: 588
+PhoneType: 苹果, Num: 361
+PhoneType: 荣耀, Num: 35
+PhoneType: OPPO, Num: 31
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 19
+PhoneType: Vivo, Num: 46
+PhoneType: 华为, Num: 68
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+=====================================
+cnt: 589
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 19
+PhoneType: Vivo, Num: 46
+PhoneType: 华为, Num: 69
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 苹果, Num: 363
+PhoneType: 荣耀, Num: 35
+PhoneType: OPPO, Num: 31
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 592
+PhoneType: 苹果, Num: 365
+PhoneType: 荣耀, Num: 35
+PhoneType: OPPO, Num: 31
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: Vivo, Num: 46
+PhoneType: 华为, Num: 69
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 19
+=====================================
+cnt: 594
+PhoneType: 苹果, Num: 365
+PhoneType: 荣耀, Num: 35
+PhoneType: OPPO, Num: 31
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: Vivo, Num: 46
+PhoneType: 华为, Num: 70
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 19
+=====================================
+cnt: 595
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 19
+PhoneType: Vivo, Num: 46
+PhoneType: 华为, Num: 71
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 367
+PhoneType: 荣耀, Num: 35
+PhoneType: OPPO, Num: 31
+=====================================
+cnt: 598
+PhoneType: 苹果, Num: 372
+PhoneType: 荣耀, Num: 36
+PhoneType: OPPO, Num: 32
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: Vivo, Num: 46
+PhoneType: 华为, Num: 71
+PhoneType: IQOO, Num: 11
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 11
+PhoneType: 红米, Num: 20
+=====================================
+cnt: 606
+PhoneType: IQOO, Num: 12
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 12
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 46
+PhoneType: 华为, Num: 72
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 375
+PhoneType: 荣耀, Num: 36
+PhoneType: OPPO, Num: 33
+=====================================
+cnt: 613
+PhoneType: IQOO, Num: 12
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 12
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 47
+PhoneType: 华为, Num: 72
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 379
+PhoneType: 荣耀, Num: 36
+PhoneType: OPPO, Num: 34
+=====================================
+cnt: 619
+PhoneType: IQOO, Num: 12
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 12
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 48
+PhoneType: 华为, Num: 73
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 384
+PhoneType: 荣耀, Num: 36
+PhoneType: OPPO, Num: 34
+=====================================
+cnt: 626
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 385
+PhoneType: 荣耀, Num: 36
+PhoneType: OPPO, Num: 34
+PhoneType: IQOO, Num: 12
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 12
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 49
+PhoneType: 华为, Num: 73
+=====================================
+cnt: 628
+PhoneType: 小米, Num: 12
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 49
+PhoneType: 华为, Num: 73
+PhoneType: IQOO, Num: 12
+PhoneType: 真我, Num: 4
+PhoneType: 苹果, Num: 388
+PhoneType: 荣耀, Num: 36
+PhoneType: OPPO, Num: 34
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 631
+PhoneType: 小米, Num: 12
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 49
+PhoneType: 华为, Num: 73
+PhoneType: IQOO, Num: 12
+PhoneType: 真我, Num: 4
+PhoneType: 苹果, Num: 391
+PhoneType: 荣耀, Num: 36
+PhoneType: OPPO, Num: 34
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 634
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 49
+PhoneType: 华为, Num: 73
+PhoneType: IQOO, Num: 13
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 12
+PhoneType: 苹果, Num: 393
+PhoneType: 荣耀, Num: 36
+PhoneType: OPPO, Num: 34
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 637
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 49
+PhoneType: 华为, Num: 73
+PhoneType: IQOO, Num: 13
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 12
+PhoneType: 苹果, Num: 396
+PhoneType: 荣耀, Num: 37
+PhoneType: OPPO, Num: 35
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 642
+PhoneType: 苹果, Num: 398
+PhoneType: 荣耀, Num: 37
+PhoneType: OPPO, Num: 35
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 49
+PhoneType: 华为, Num: 73
+PhoneType: IQOO, Num: 13
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 12
+=====================================
+cnt: 644
+PhoneType: 苹果, Num: 399
+PhoneType: 荣耀, Num: 37
+PhoneType: OPPO, Num: 36
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 小米, Num: 12
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 50
+PhoneType: 华为, Num: 73
+PhoneType: IQOO, Num: 13
+PhoneType: 真我, Num: 4
+=====================================
+cnt: 647
+PhoneType: IQOO, Num: 13
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 12
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 50
+PhoneType: 华为, Num: 73
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 402
+PhoneType: 荣耀, Num: 37
+PhoneType: OPPO, Num: 36
+=====================================
+cnt: 650
+PhoneType: OPPO, Num: 36
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 406
+PhoneType: 荣耀, Num: 37
+PhoneType: 华为, Num: 75
+PhoneType: IQOO, Num: 13
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 13
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 50
+=====================================
+cnt: 657
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 50
+PhoneType: 华为, Num: 75
+PhoneType: IQOO, Num: 13
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 13
+PhoneType: 苹果, Num: 407
+PhoneType: 荣耀, Num: 37
+PhoneType: OPPO, Num: 36
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+=====================================
+cnt: 658
+PhoneType: OPPO, Num: 36
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 409
+PhoneType: 荣耀, Num: 38
+PhoneType: 华为, Num: 75
+PhoneType: IQOO, Num: 13
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 14
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 51
+=====================================
+cnt: 663
+PhoneType: 苹果, Num: 409
+PhoneType: 荣耀, Num: 38
+PhoneType: OPPO, Num: 36
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 2
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 51
+PhoneType: 华为, Num: 76
+PhoneType: IQOO, Num: 14
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 14
+=====================================
+cnt: 665
+PhoneType: 一加, Num: 2
+PhoneType: 苹果, Num: 409
+PhoneType: 荣耀, Num: 38
+PhoneType: OPPO, Num: 36
+PhoneType: 三星, Num: 1
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 14
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 52
+PhoneType: 华为, Num: 77
+PhoneType: IQOO, Num: 14
+=====================================
+cnt: 667
+PhoneType: Vivo, Num: 53
+PhoneType: 华为, Num: 78
+PhoneType: IQOO, Num: 14
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 14
+PhoneType: 红米, Num: 20
+PhoneType: 苹果, Num: 413
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 39
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 3
+=====================================
+cnt: 678
+PhoneType: Vivo, Num: 54
+PhoneType: 华为, Num: 79
+PhoneType: IQOO, Num: 14
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 14
+PhoneType: 红米, Num: 20
+PhoneType: 苹果, Num: 414
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 39
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 3
+=====================================
+cnt: 681
+PhoneType: 苹果, Num: 415
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 39
+PhoneType: 三星, Num: 1
+PhoneType: 一加, Num: 3
+PhoneType: Vivo, Num: 54
+PhoneType: 华为, Num: 81
+PhoneType: IQOO, Num: 14
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 14
+PhoneType: 红米, Num: 20
+=====================================
+cnt: 684
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 54
+PhoneType: 华为, Num: 81
+PhoneType: IQOO, Num: 14
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 14
+PhoneType: 苹果, Num: 415
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 40
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+=====================================
+cnt: 686
+PhoneType: 小米, Num: 14
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 55
+PhoneType: 华为, Num: 81
+PhoneType: IQOO, Num: 14
+PhoneType: 真我, Num: 4
+PhoneType: 苹果, Num: 416
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 41
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+=====================================
+cnt: 689
+PhoneType: 华为, Num: 81
+PhoneType: IQOO, Num: 14
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 14
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 55
+PhoneType: OPPO, Num: 41
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+PhoneType: 苹果, Num: 417
+PhoneType: 荣耀, Num: 39
+=====================================
+cnt: 690
+PhoneType: Vivo, Num: 55
+PhoneType: 华为, Num: 81
+PhoneType: IQOO, Num: 14
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 14
+PhoneType: 红米, Num: 20
+PhoneType: 苹果, Num: 418
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 41
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+=====================================
+cnt: 691
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+PhoneType: 苹果, Num: 418
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 41
+PhoneType: IQOO, Num: 14
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 14
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 55
+PhoneType: 华为, Num: 81
+=====================================
+cnt: 691
+PhoneType: IQOO, Num: 14
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 14
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 56
+PhoneType: 华为, Num: 81
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+PhoneType: 苹果, Num: 418
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 41
+=====================================
+cnt: 692
+PhoneType: Vivo, Num: 56
+PhoneType: 华为, Num: 81
+PhoneType: IQOO, Num: 15
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 14
+PhoneType: 红米, Num: 20
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 41
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+PhoneType: 苹果, Num: 420
+=====================================
+cnt: 695
+PhoneType: IQOO, Num: 15
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 14
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 56
+PhoneType: 华为, Num: 82
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+PhoneType: 苹果, Num: 421
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 41
+=====================================
+cnt: 697
+PhoneType: 小米, Num: 15
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 56
+PhoneType: 华为, Num: 82
+PhoneType: IQOO, Num: 15
+PhoneType: 真我, Num: 4
+PhoneType: 苹果, Num: 421
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 41
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+=====================================
+cnt: 698
+PhoneType: 苹果, Num: 424
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 41
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+PhoneType: Vivo, Num: 56
+PhoneType: 华为, Num: 82
+PhoneType: IQOO, Num: 15
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 15
+PhoneType: 红米, Num: 20
+=====================================
+cnt: 701
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 56
+PhoneType: 华为, Num: 82
+PhoneType: IQOO, Num: 15
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 15
+PhoneType: 苹果, Num: 425
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 41
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+=====================================
+cnt: 702
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+PhoneType: 苹果, Num: 425
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 41
+PhoneType: IQOO, Num: 15
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 15
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 56
+PhoneType: 华为, Num: 82
+=====================================
+cnt: 702
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 41
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+PhoneType: 苹果, Num: 426
+PhoneType: Vivo, Num: 56
+PhoneType: 华为, Num: 82
+PhoneType: IQOO, Num: 15
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 15
+PhoneType: 红米, Num: 20
+=====================================
+cnt: 703
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+PhoneType: 苹果, Num: 427
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 41
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 15
+PhoneType: 红米, Num: 20
+PhoneType: Vivo, Num: 56
+PhoneType: 华为, Num: 82
+=====================================
+cnt: 705
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 42
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+PhoneType: 苹果, Num: 429
+PhoneType: Vivo, Num: 56
+PhoneType: 华为, Num: 82
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 15
+PhoneType: 红米, Num: 20
+=====================================
+cnt: 708
+PhoneType: Vivo, Num: 56
+PhoneType: 华为, Num: 82
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 15
+PhoneType: 红米, Num: 20
+PhoneType: 苹果, Num: 431
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 42
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+=====================================
+cnt: 710
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 42
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+PhoneType: 苹果, Num: 433
+PhoneType: Vivo, Num: 57
+PhoneType: 华为, Num: 82
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 15
+PhoneType: 红米, Num: 20
+=====================================
+cnt: 713
+PhoneType: Vivo, Num: 57
+PhoneType: 华为, Num: 84
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 15
+PhoneType: 红米, Num: 22
+PhoneType: 苹果, Num: 436
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 42
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+=====================================
+cnt: 720
+PhoneType: 苹果, Num: 439
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 42
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+PhoneType: Vivo, Num: 57
+PhoneType: 华为, Num: 84
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 15
+PhoneType: 红米, Num: 22
+=====================================
+cnt: 723
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 42
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+PhoneType: 苹果, Num: 440
+PhoneType: Vivo, Num: 57
+PhoneType: 华为, Num: 84
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 22
+=====================================
+cnt: 725
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+PhoneType: 苹果, Num: 444
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 43
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 22
+PhoneType: Vivo, Num: 57
+PhoneType: 华为, Num: 84
+=====================================
+cnt: 730
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 43
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+PhoneType: 苹果, Num: 444
+PhoneType: Vivo, Num: 57
+PhoneType: 华为, Num: 84
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 22
+=====================================
+cnt: 730
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 44
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+PhoneType: 苹果, Num: 444
+PhoneType: Vivo, Num: 57
+PhoneType: 华为, Num: 84
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 22
+=====================================
+cnt: 731
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+PhoneType: 苹果, Num: 445
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 44
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 22
+PhoneType: Vivo, Num: 57
+PhoneType: 华为, Num: 84
+=====================================
+cnt: 732
+PhoneType: 苹果, Num: 448
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 44
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+PhoneType: Vivo, Num: 58
+PhoneType: 华为, Num: 84
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 22
+=====================================
+cnt: 736
+PhoneType: OPPO, Num: 44
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 3
+PhoneType: 苹果, Num: 450
+PhoneType: 荣耀, Num: 39
+PhoneType: 华为, Num: 84
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 22
+PhoneType: Vivo, Num: 58
+=====================================
+cnt: 738
+PhoneType: Vivo, Num: 58
+PhoneType: 华为, Num: 84
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 22
+PhoneType: 苹果, Num: 452
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 44
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 4
+=====================================
+cnt: 741
+PhoneType: OPPO, Num: 44
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 4
+PhoneType: 苹果, Num: 453
+PhoneType: 荣耀, Num: 39
+PhoneType: 华为, Num: 84
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 22
+PhoneType: Vivo, Num: 58
+=====================================
+cnt: 742
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 4
+PhoneType: 苹果, Num: 454
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 45
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 22
+PhoneType: Vivo, Num: 58
+PhoneType: 华为, Num: 86
+=====================================
+cnt: 746
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 4
+PhoneType: 苹果, Num: 455
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 45
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 22
+PhoneType: Vivo, Num: 58
+PhoneType: 华为, Num: 88
+=====================================
+cnt: 749
+PhoneType: 苹果, Num: 455
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 45
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 4
+PhoneType: Vivo, Num: 58
+PhoneType: 华为, Num: 88
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 22
+=====================================
+cnt: 749
+PhoneType: 苹果, Num: 455
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 45
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 22
+PhoneType: Vivo, Num: 58
+PhoneType: 华为, Num: 88
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+=====================================
+cnt: 749
+PhoneType: 一加, Num: 4
+PhoneType: 苹果, Num: 456
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 45
+PhoneType: 三星, Num: 2
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 22
+PhoneType: Vivo, Num: 58
+PhoneType: 华为, Num: 88
+PhoneType: IQOO, Num: 16
+=====================================
+cnt: 750
+PhoneType: 苹果, Num: 457
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 45
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 4
+PhoneType: Vivo, Num: 58
+PhoneType: 华为, Num: 88
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 22
+=====================================
+cnt: 751
+PhoneType: 苹果, Num: 457
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 46
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 4
+PhoneType: Vivo, Num: 58
+PhoneType: 华为, Num: 88
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 22
+=====================================
+cnt: 752
+PhoneType: Vivo, Num: 59
+PhoneType: 华为, Num: 88
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 22
+PhoneType: 苹果, Num: 458
+PhoneType: 荣耀, Num: 39
+PhoneType: OPPO, Num: 46
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 4
+=====================================
+cnt: 754
+PhoneType: 华为, Num: 89
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 22
+PhoneType: Vivo, Num: 59
+PhoneType: OPPO, Num: 47
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 4
+PhoneType: 苹果, Num: 460
+PhoneType: 荣耀, Num: 39
+=====================================
+cnt: 758
+PhoneType: 苹果, Num: 461
+PhoneType: 荣耀, Num: 40
+PhoneType: OPPO, Num: 47
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 4
+PhoneType: 红米, Num: 22
+PhoneType: Vivo, Num: 59
+PhoneType: 华为, Num: 90
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+=====================================
+cnt: 761
+PhoneType: 苹果, Num: 461
+PhoneType: 荣耀, Num: 40
+PhoneType: OPPO, Num: 47
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 4
+PhoneType: Vivo, Num: 59
+PhoneType: 华为, Num: 90
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 22
+=====================================
+cnt: 761
+PhoneType: 华为, Num: 90
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 23
+PhoneType: Vivo, Num: 59
+PhoneType: OPPO, Num: 47
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 4
+PhoneType: 苹果, Num: 461
+PhoneType: 荣耀, Num: 40
+=====================================
+cnt: 762
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 23
+PhoneType: Vivo, Num: 59
+PhoneType: 华为, Num: 91
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 苹果, Num: 462
+PhoneType: 荣耀, Num: 40
+PhoneType: OPPO, Num: 47
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 4
+=====================================
+cnt: 764
+PhoneType: OPPO, Num: 48
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 4
+PhoneType: 苹果, Num: 462
+PhoneType: 荣耀, Num: 40
+PhoneType: 华为, Num: 91
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 23
+PhoneType: Vivo, Num: 59
+=====================================
+cnt: 765
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 462
+PhoneType: 荣耀, Num: 40
+PhoneType: OPPO, Num: 48
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 23
+PhoneType: Vivo, Num: 59
+PhoneType: 华为, Num: 92
+=====================================
+cnt: 767
+PhoneType: 苹果, Num: 465
+PhoneType: 荣耀, Num: 40
+PhoneType: OPPO, Num: 48
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 红米, Num: 23
+PhoneType: Vivo, Num: 60
+PhoneType: 华为, Num: 93
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+=====================================
+cnt: 772
+PhoneType: OPPO, Num: 48
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 465
+PhoneType: 荣耀, Num: 40
+PhoneType: 华为, Num: 94
+PhoneType: IQOO, Num: 16
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 23
+PhoneType: Vivo, Num: 60
+=====================================
+cnt: 773
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 23
+PhoneType: Vivo, Num: 60
+PhoneType: 华为, Num: 94
+PhoneType: IQOO, Num: 17
+PhoneType: 真我, Num: 4
+PhoneType: 苹果, Num: 469
+PhoneType: 荣耀, Num: 41
+PhoneType: OPPO, Num: 48
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 779
+PhoneType: IQOO, Num: 17
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 23
+PhoneType: Vivo, Num: 60
+PhoneType: 华为, Num: 94
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 472
+PhoneType: 荣耀, Num: 41
+PhoneType: OPPO, Num: 48
+=====================================
+cnt: 782
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 472
+PhoneType: 荣耀, Num: 41
+PhoneType: OPPO, Num: 48
+PhoneType: IQOO, Num: 17
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 23
+PhoneType: Vivo, Num: 60
+PhoneType: 华为, Num: 94
+=====================================
+cnt: 782
+PhoneType: 红米, Num: 23
+PhoneType: Vivo, Num: 60
+PhoneType: 华为, Num: 94
+PhoneType: IQOO, Num: 18
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 苹果, Num: 473
+PhoneType: 荣耀, Num: 41
+PhoneType: OPPO, Num: 48
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 784
+PhoneType: 苹果, Num: 473
+PhoneType: 荣耀, Num: 42
+PhoneType: OPPO, Num: 49
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 红米, Num: 23
+PhoneType: Vivo, Num: 60
+PhoneType: 华为, Num: 94
+PhoneType: IQOO, Num: 18
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+=====================================
+cnt: 786
+PhoneType: 苹果, Num: 473
+PhoneType: 荣耀, Num: 42
+PhoneType: OPPO, Num: 49
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: Vivo, Num: 60
+PhoneType: 华为, Num: 94
+PhoneType: IQOO, Num: 18
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 23
+=====================================
+cnt: 786
+PhoneType: 荣耀, Num: 42
+PhoneType: OPPO, Num: 49
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 473
+PhoneType: Vivo, Num: 60
+PhoneType: 华为, Num: 94
+PhoneType: IQOO, Num: 18
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 16
+PhoneType: 红米, Num: 23
+=====================================
+cnt: 786
+PhoneType: 红米, Num: 23
+PhoneType: Vivo, Num: 61
+PhoneType: 华为, Num: 94
+PhoneType: IQOO, Num: 18
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 17
+PhoneType: 苹果, Num: 473
+PhoneType: 荣耀, Num: 42
+PhoneType: OPPO, Num: 49
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 788
+PhoneType: 华为, Num: 95
+PhoneType: IQOO, Num: 19
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 17
+PhoneType: 红米, Num: 23
+PhoneType: Vivo, Num: 61
+PhoneType: OPPO, Num: 49
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 474
+PhoneType: 荣耀, Num: 42
+=====================================
+cnt: 791
+PhoneType: IQOO, Num: 19
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 17
+PhoneType: 红米, Num: 23
+PhoneType: Vivo, Num: 61
+PhoneType: 华为, Num: 97
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 474
+PhoneType: 荣耀, Num: 42
+PhoneType: OPPO, Num: 49
+=====================================
+cnt: 793
+PhoneType: 苹果, Num: 476
+PhoneType: 荣耀, Num: 42
+PhoneType: OPPO, Num: 49
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: Vivo, Num: 61
+PhoneType: 华为, Num: 97
+PhoneType: IQOO, Num: 19
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 18
+PhoneType: 红米, Num: 23
+=====================================
+cnt: 796
+PhoneType: 苹果, Num: 479
+PhoneType: 荣耀, Num: 42
+PhoneType: OPPO, Num: 49
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: Vivo, Num: 61
+PhoneType: 华为, Num: 98
+PhoneType: IQOO, Num: 19
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 18
+PhoneType: 红米, Num: 23
+=====================================
+cnt: 800
+PhoneType: 苹果, Num: 479
+PhoneType: 荣耀, Num: 42
+PhoneType: OPPO, Num: 49
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 小米, Num: 18
+PhoneType: 红米, Num: 23
+PhoneType: Vivo, Num: 61
+PhoneType: 华为, Num: 98
+PhoneType: IQOO, Num: 19
+PhoneType: 真我, Num: 4
+=====================================
+cnt: 800
+PhoneType: Vivo, Num: 61
+PhoneType: 华为, Num: 98
+PhoneType: IQOO, Num: 19
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 18
+PhoneType: 红米, Num: 23
+PhoneType: 苹果, Num: 480
+PhoneType: 荣耀, Num: 43
+PhoneType: OPPO, Num: 50
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 803
+PhoneType: 荣耀, Num: 44
+PhoneType: OPPO, Num: 51
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 480
+PhoneType: Vivo, Num: 62
+PhoneType: 华为, Num: 98
+PhoneType: IQOO, Num: 19
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 18
+PhoneType: 红米, Num: 23
+=====================================
+cnt: 806
+PhoneType: 荣耀, Num: 44
+PhoneType: OPPO, Num: 51
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 480
+PhoneType: Vivo, Num: 63
+PhoneType: 华为, Num: 98
+PhoneType: IQOO, Num: 19
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 18
+PhoneType: 红米, Num: 23
+=====================================
+cnt: 807
+PhoneType: 苹果, Num: 480
+PhoneType: 荣耀, Num: 44
+PhoneType: OPPO, Num: 51
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: Vivo, Num: 63
+PhoneType: 华为, Num: 98
+PhoneType: IQOO, Num: 19
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 18
+PhoneType: 红米, Num: 23
+=====================================
+cnt: 807
+PhoneType: 真我, Num: 4
+PhoneType: 小米, Num: 18
+PhoneType: 红米, Num: 23
+PhoneType: Vivo, Num: 63
+PhoneType: 华为, Num: 98
+PhoneType: IQOO, Num: 19
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 482
+PhoneType: 荣耀, Num: 44
+PhoneType: OPPO, Num: 51
+PhoneType: 三星, Num: 2
+=====================================
+cnt: 809
+PhoneType: Vivo, Num: 64
+PhoneType: 华为, Num: 99
+PhoneType: IQOO, Num: 19
+PhoneType: 真我, Num: 5
+PhoneType: 小米, Num: 19
+PhoneType: 红米, Num: 23
+PhoneType: 荣耀, Num: 44
+PhoneType: OPPO, Num: 52
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 485
+=====================================
+cnt: 817
+PhoneType: 苹果, Num: 488
+PhoneType: 荣耀, Num: 44
+PhoneType: OPPO, Num: 52
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 小米, Num: 19
+PhoneType: 红米, Num: 23
+PhoneType: Vivo, Num: 64
+PhoneType: 华为, Num: 99
+PhoneType: IQOO, Num: 19
+PhoneType: 真我, Num: 5
+=====================================
+cnt: 820
+PhoneType: Vivo, Num: 65
+PhoneType: 华为, Num: 99
+PhoneType: IQOO, Num: 19
+PhoneType: 真我, Num: 5
+PhoneType: 小米, Num: 19
+PhoneType: 红米, Num: 24
+PhoneType: 苹果, Num: 490
+PhoneType: 荣耀, Num: 44
+PhoneType: OPPO, Num: 53
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 825
+PhoneType: Vivo, Num: 65
+PhoneType: 华为, Num: 100
+PhoneType: IQOO, Num: 19
+PhoneType: 真我, Num: 6
+PhoneType: 小米, Num: 19
+PhoneType: 红米, Num: 25
+PhoneType: 苹果, Num: 490
+PhoneType: 荣耀, Num: 44
+PhoneType: OPPO, Num: 53
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 828
+PhoneType: 小米, Num: 19
+PhoneType: 红米, Num: 25
+PhoneType: Vivo, Num: 65
+PhoneType: 华为, Num: 102
+PhoneType: IQOO, Num: 19
+PhoneType: 真我, Num: 6
+PhoneType: 苹果, Num: 493
+PhoneType: 荣耀, Num: 44
+PhoneType: OPPO, Num: 53
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 833
+PhoneType: Vivo, Num: 65
+PhoneType: 华为, Num: 102
+PhoneType: IQOO, Num: 19
+PhoneType: 真我, Num: 6
+PhoneType: 小米, Num: 19
+PhoneType: 红米, Num: 26
+PhoneType: 苹果, Num: 496
+PhoneType: 荣耀, Num: 44
+PhoneType: OPPO, Num: 53
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 837
+PhoneType: 小米, Num: 19
+PhoneType: 红米, Num: 26
+PhoneType: Vivo, Num: 66
+PhoneType: 华为, Num: 103
+PhoneType: IQOO, Num: 19
+PhoneType: 真我, Num: 6
+PhoneType: 苹果, Num: 498
+PhoneType: 荣耀, Num: 44
+PhoneType: OPPO, Num: 53
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 841
+PhoneType: Vivo, Num: 67
+PhoneType: 华为, Num: 103
+PhoneType: IQOO, Num: 19
+PhoneType: 真我, Num: 6
+PhoneType: 小米, Num: 20
+PhoneType: 红米, Num: 26
+PhoneType: 苹果, Num: 498
+PhoneType: 荣耀, Num: 45
+PhoneType: OPPO, Num: 53
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 844
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 500
+PhoneType: 荣耀, Num: 45
+PhoneType: OPPO, Num: 53
+PhoneType: 三星, Num: 2
+PhoneType: 真我, Num: 6
+PhoneType: 小米, Num: 20
+PhoneType: 红米, Num: 26
+PhoneType: Vivo, Num: 67
+PhoneType: 华为, Num: 105
+PhoneType: IQOO, Num: 19
+=====================================
+cnt: 848
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 20
+PhoneType: 红米, Num: 26
+PhoneType: Vivo, Num: 68
+PhoneType: 华为, Num: 105
+PhoneType: IQOO, Num: 20
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 506
+PhoneType: 荣耀, Num: 45
+PhoneType: OPPO, Num: 53
+PhoneType: 三星, Num: 2
+=====================================
+cnt: 857
+PhoneType: Vivo, Num: 68
+PhoneType: 华为, Num: 108
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 20
+PhoneType: 红米, Num: 26
+PhoneType: 苹果, Num: 506
+PhoneType: 荣耀, Num: 46
+PhoneType: OPPO, Num: 54
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 862
+PhoneType: 红米, Num: 26
+PhoneType: Vivo, Num: 68
+PhoneType: 华为, Num: 108
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 20
+PhoneType: 苹果, Num: 508
+PhoneType: 荣耀, Num: 46
+PhoneType: OPPO, Num: 54
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 864
+PhoneType: 荣耀, Num: 46
+PhoneType: OPPO, Num: 54
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 509
+PhoneType: Vivo, Num: 68
+PhoneType: 华为, Num: 108
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 20
+PhoneType: 红米, Num: 26
+=====================================
+cnt: 865
+PhoneType: 苹果, Num: 509
+PhoneType: 荣耀, Num: 46
+PhoneType: OPPO, Num: 54
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: Vivo, Num: 69
+PhoneType: 华为, Num: 108
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 20
+PhoneType: 红米, Num: 26
+=====================================
+cnt: 866
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 20
+PhoneType: 红米, Num: 26
+PhoneType: Vivo, Num: 69
+PhoneType: 华为, Num: 108
+PhoneType: IQOO, Num: 20
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 510
+PhoneType: 荣耀, Num: 46
+PhoneType: OPPO, Num: 54
+PhoneType: 三星, Num: 2
+=====================================
+cnt: 867
+PhoneType: Vivo, Num: 69
+PhoneType: 华为, Num: 110
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 20
+PhoneType: 红米, Num: 26
+PhoneType: 苹果, Num: 511
+PhoneType: 荣耀, Num: 46
+PhoneType: OPPO, Num: 54
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 870
+PhoneType: 小米, Num: 20
+PhoneType: 红米, Num: 26
+PhoneType: Vivo, Num: 69
+PhoneType: 华为, Num: 110
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 苹果, Num: 512
+PhoneType: 荣耀, Num: 46
+PhoneType: OPPO, Num: 54
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 871
+PhoneType: Vivo, Num: 69
+PhoneType: 华为, Num: 110
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 20
+PhoneType: 红米, Num: 26
+PhoneType: 苹果, Num: 513
+PhoneType: 荣耀, Num: 46
+PhoneType: OPPO, Num: 54
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 872
+PhoneType: OPPO, Num: 54
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 514
+PhoneType: 荣耀, Num: 46
+PhoneType: 华为, Num: 111
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 20
+PhoneType: 红米, Num: 26
+PhoneType: Vivo, Num: 69
+=====================================
+cnt: 874
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 20
+PhoneType: 红米, Num: 27
+PhoneType: Vivo, Num: 69
+PhoneType: 华为, Num: 112
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 516
+PhoneType: 荣耀, Num: 46
+PhoneType: OPPO, Num: 56
+=====================================
+cnt: 880
+PhoneType: 荣耀, Num: 46
+PhoneType: OPPO, Num: 56
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 517
+PhoneType: Vivo, Num: 69
+PhoneType: 华为, Num: 113
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 20
+PhoneType: 红米, Num: 27
+=====================================
+cnt: 882
+PhoneType: 华为, Num: 113
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 21
+PhoneType: 红米, Num: 27
+PhoneType: Vivo, Num: 69
+PhoneType: OPPO, Num: 56
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 518
+PhoneType: 荣耀, Num: 46
+=====================================
+cnt: 884
+PhoneType: Vivo, Num: 69
+PhoneType: 华为, Num: 113
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 21
+PhoneType: 红米, Num: 27
+PhoneType: 荣耀, Num: 46
+PhoneType: OPPO, Num: 56
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 519
+=====================================
+cnt: 885
+PhoneType: 华为, Num: 113
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 21
+PhoneType: 红米, Num: 27
+PhoneType: Vivo, Num: 70
+PhoneType: OPPO, Num: 56
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 519
+PhoneType: 荣耀, Num: 46
+=====================================
+cnt: 886
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 21
+PhoneType: 红米, Num: 27
+PhoneType: Vivo, Num: 70
+PhoneType: 华为, Num: 113
+PhoneType: IQOO, Num: 20
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 520
+PhoneType: 荣耀, Num: 46
+PhoneType: OPPO, Num: 57
+PhoneType: 三星, Num: 2
+=====================================
+cnt: 888
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 21
+PhoneType: 红米, Num: 27
+PhoneType: Vivo, Num: 70
+PhoneType: 华为, Num: 113
+PhoneType: IQOO, Num: 20
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 520
+PhoneType: 荣耀, Num: 46
+PhoneType: OPPO, Num: 57
+PhoneType: 三星, Num: 2
+=====================================
+cnt: 888
+PhoneType: 苹果, Num: 521
+PhoneType: 荣耀, Num: 46
+PhoneType: OPPO, Num: 57
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 红米, Num: 27
+PhoneType: Vivo, Num: 70
+PhoneType: 华为, Num: 113
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 21
+=====================================
+cnt: 889
+PhoneType: OPPO, Num: 57
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 523
+PhoneType: 荣耀, Num: 46
+PhoneType: 华为, Num: 113
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 21
+PhoneType: 红米, Num: 27
+PhoneType: Vivo, Num: 70
+=====================================
+cnt: 891
+PhoneType: Vivo, Num: 70
+PhoneType: 华为, Num: 113
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 21
+PhoneType: 红米, Num: 27
+PhoneType: 苹果, Num: 528
+PhoneType: 荣耀, Num: 46
+PhoneType: OPPO, Num: 57
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 896
+PhoneType: Vivo, Num: 70
+PhoneType: 华为, Num: 113
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 21
+PhoneType: 红米, Num: 27
+PhoneType: 荣耀, Num: 48
+PhoneType: OPPO, Num: 57
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 529
+=====================================
+cnt: 899
+PhoneType: Vivo, Num: 71
+PhoneType: 华为, Num: 113
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 21
+PhoneType: 红米, Num: 27
+PhoneType: 苹果, Num: 529
+PhoneType: 荣耀, Num: 49
+PhoneType: OPPO, Num: 57
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 901
+PhoneType: OPPO, Num: 57
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 530
+PhoneType: 荣耀, Num: 49
+PhoneType: 华为, Num: 113
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 21
+PhoneType: 红米, Num: 27
+PhoneType: Vivo, Num: 71
+=====================================
+cnt: 902
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 532
+PhoneType: 荣耀, Num: 49
+PhoneType: OPPO, Num: 58
+PhoneType: 三星, Num: 2
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 21
+PhoneType: 红米, Num: 27
+PhoneType: Vivo, Num: 72
+PhoneType: 华为, Num: 114
+PhoneType: IQOO, Num: 20
+=====================================
+cnt: 907
+PhoneType: 华为, Num: 115
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 27
+PhoneType: Vivo, Num: 72
+PhoneType: OPPO, Num: 58
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 533
+PhoneType: 荣耀, Num: 49
+=====================================
+cnt: 910
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 27
+PhoneType: Vivo, Num: 72
+PhoneType: 华为, Num: 116
+PhoneType: IQOO, Num: 20
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 534
+PhoneType: 荣耀, Num: 49
+PhoneType: OPPO, Num: 58
+PhoneType: 三星, Num: 2
+=====================================
+cnt: 912
+PhoneType: 苹果, Num: 535
+PhoneType: 荣耀, Num: 49
+PhoneType: OPPO, Num: 58
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: Vivo, Num: 72
+PhoneType: 华为, Num: 116
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 27
+=====================================
+cnt: 913
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 535
+PhoneType: 荣耀, Num: 49
+PhoneType: OPPO, Num: 58
+PhoneType: 三星, Num: 2
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 27
+PhoneType: Vivo, Num: 72
+PhoneType: 华为, Num: 117
+PhoneType: IQOO, Num: 20
+=====================================
+cnt: 914
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 536
+PhoneType: 荣耀, Num: 49
+PhoneType: OPPO, Num: 58
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 27
+PhoneType: Vivo, Num: 72
+PhoneType: 华为, Num: 118
+=====================================
+cnt: 916
+PhoneType: 苹果, Num: 539
+PhoneType: 荣耀, Num: 49
+PhoneType: OPPO, Num: 58
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: Vivo, Num: 72
+PhoneType: 华为, Num: 120
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 27
+=====================================
+cnt: 921
+PhoneType: 红米, Num: 27
+PhoneType: Vivo, Num: 72
+PhoneType: 华为, Num: 120
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 苹果, Num: 540
+PhoneType: 荣耀, Num: 49
+PhoneType: OPPO, Num: 58
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 922
+PhoneType: 苹果, Num: 540
+PhoneType: 荣耀, Num: 49
+PhoneType: OPPO, Num: 58
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: Vivo, Num: 72
+PhoneType: 华为, Num: 120
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 27
+=====================================
+cnt: 922
+PhoneType: 红米, Num: 27
+PhoneType: Vivo, Num: 72
+PhoneType: 华为, Num: 120
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 苹果, Num: 540
+PhoneType: 荣耀, Num: 49
+PhoneType: OPPO, Num: 58
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 922
+PhoneType: Vivo, Num: 72
+PhoneType: 华为, Num: 121
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 27
+PhoneType: 苹果, Num: 541
+PhoneType: 荣耀, Num: 49
+PhoneType: OPPO, Num: 58
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 924
+PhoneType: 苹果, Num: 541
+PhoneType: 荣耀, Num: 49
+PhoneType: OPPO, Num: 59
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: Vivo, Num: 72
+PhoneType: 华为, Num: 121
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 27
+=====================================
+cnt: 925
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 541
+PhoneType: 荣耀, Num: 49
+PhoneType: OPPO, Num: 59
+PhoneType: 三星, Num: 2
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 27
+PhoneType: Vivo, Num: 72
+PhoneType: 华为, Num: 121
+PhoneType: IQOO, Num: 20
+=====================================
+cnt: 925
+PhoneType: 苹果, Num: 544
+PhoneType: 荣耀, Num: 51
+PhoneType: OPPO, Num: 59
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: Vivo, Num: 72
+PhoneType: 华为, Num: 121
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 28
+=====================================
+cnt: 931
+PhoneType: 苹果, Num: 545
+PhoneType: 荣耀, Num: 51
+PhoneType: OPPO, Num: 59
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: Vivo, Num: 72
+PhoneType: 华为, Num: 121
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 28
+=====================================
+cnt: 932
+PhoneType: 荣耀, Num: 51
+PhoneType: OPPO, Num: 59
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: 苹果, Num: 546
+PhoneType: Vivo, Num: 72
+PhoneType: 华为, Num: 121
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 28
+=====================================
+cnt: 933
+PhoneType: Vivo, Num: 72
+PhoneType: 华为, Num: 121
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 28
+PhoneType: 苹果, Num: 546
+PhoneType: 荣耀, Num: 51
+PhoneType: OPPO, Num: 59
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+=====================================
+cnt: 933
+PhoneType: 苹果, Num: 547
+PhoneType: 荣耀, Num: 51
+PhoneType: OPPO, Num: 59
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 5
+PhoneType: Vivo, Num: 72
+PhoneType: 华为, Num: 121
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 28
+=====================================
+cnt: 934
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 28
+PhoneType: Vivo, Num: 72
+PhoneType: 华为, Num: 122
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: 苹果, Num: 547
+PhoneType: 荣耀, Num: 51
+PhoneType: OPPO, Num: 59
+=====================================
+cnt: 936
+PhoneType: 华为, Num: 122
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 28
+PhoneType: Vivo, Num: 73
+PhoneType: OPPO, Num: 59
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: 苹果, Num: 547
+PhoneType: 荣耀, Num: 51
+=====================================
+cnt: 937
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 28
+PhoneType: Vivo, Num: 73
+PhoneType: 华为, Num: 122
+PhoneType: IQOO, Num: 20
+PhoneType: 一加, Num: 6
+PhoneType: 苹果, Num: 547
+PhoneType: 荣耀, Num: 51
+PhoneType: OPPO, Num: 59
+PhoneType: 三星, Num: 2
+=====================================
+cnt: 937
+PhoneType: 苹果, Num: 549
+PhoneType: 荣耀, Num: 51
+PhoneType: OPPO, Num: 59
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: Vivo, Num: 73
+PhoneType: 华为, Num: 122
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 28
+=====================================
+cnt: 939
+PhoneType: 苹果, Num: 549
+PhoneType: 荣耀, Num: 51
+PhoneType: OPPO, Num: 59
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: Vivo, Num: 73
+PhoneType: 华为, Num: 123
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 28
+=====================================
+cnt: 940
+PhoneType: 苹果, Num: 549
+PhoneType: 荣耀, Num: 51
+PhoneType: OPPO, Num: 59
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: Vivo, Num: 74
+PhoneType: 华为, Num: 124
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 28
+=====================================
+cnt: 942
+PhoneType: 苹果, Num: 549
+PhoneType: 荣耀, Num: 51
+PhoneType: OPPO, Num: 59
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: Vivo, Num: 74
+PhoneType: 华为, Num: 124
+PhoneType: IQOO, Num: 20
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 28
+=====================================
+cnt: 942
+PhoneType: IQOO, Num: 21
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 28
+PhoneType: Vivo, Num: 74
+PhoneType: 华为, Num: 124
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: 苹果, Num: 557
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 59
+=====================================
+cnt: 952
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 28
+PhoneType: Vivo, Num: 74
+PhoneType: 华为, Num: 124
+PhoneType: IQOO, Num: 21
+PhoneType: 一加, Num: 6
+PhoneType: 苹果, Num: 558
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 59
+PhoneType: 三星, Num: 2
+=====================================
+cnt: 953
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 59
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: 苹果, Num: 561
+PhoneType: Vivo, Num: 74
+PhoneType: 华为, Num: 124
+PhoneType: IQOO, Num: 21
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 28
+=====================================
+cnt: 956
+PhoneType: 苹果, Num: 561
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 59
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 28
+PhoneType: Vivo, Num: 75
+PhoneType: 华为, Num: 124
+PhoneType: IQOO, Num: 21
+PhoneType: 真我, Num: 7
+=====================================
+cnt: 957
+PhoneType: 一加, Num: 6
+PhoneType: 苹果, Num: 561
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 红米, Num: 28
+PhoneType: Vivo, Num: 75
+PhoneType: 华为, Num: 124
+PhoneType: IQOO, Num: 21
+=====================================
+cnt: 958
+PhoneType: 红米, Num: 28
+PhoneType: Vivo, Num: 75
+PhoneType: 华为, Num: 124
+PhoneType: IQOO, Num: 21
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 22
+PhoneType: 苹果, Num: 562
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+=====================================
+cnt: 959
+PhoneType: 华为, Num: 125
+PhoneType: IQOO, Num: 21
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 23
+PhoneType: 红米, Num: 28
+PhoneType: Vivo, Num: 75
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: 苹果, Num: 562
+PhoneType: 荣耀, Num: 52
+=====================================
+cnt: 961
+PhoneType: 一加, Num: 6
+PhoneType: 苹果, Num: 565
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 23
+PhoneType: 红米, Num: 28
+PhoneType: Vivo, Num: 76
+PhoneType: 华为, Num: 125
+PhoneType: IQOO, Num: 21
+=====================================
+cnt: 965
+PhoneType: 红米, Num: 28
+PhoneType: Vivo, Num: 76
+PhoneType: 华为, Num: 125
+PhoneType: IQOO, Num: 21
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 23
+PhoneType: 苹果, Num: 566
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+=====================================
+cnt: 966
+PhoneType: Vivo, Num: 76
+PhoneType: 华为, Num: 127
+PhoneType: IQOO, Num: 21
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 23
+PhoneType: 红米, Num: 28
+PhoneType: 苹果, Num: 568
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+=====================================
+cnt: 970
+PhoneType: 小米, Num: 23
+PhoneType: 红米, Num: 28
+PhoneType: Vivo, Num: 76
+PhoneType: 华为, Num: 127
+PhoneType: IQOO, Num: 21
+PhoneType: 真我, Num: 7
+PhoneType: 苹果, Num: 568
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+=====================================
+cnt: 970
+PhoneType: 小米, Num: 23
+PhoneType: 红米, Num: 28
+PhoneType: Vivo, Num: 76
+PhoneType: 华为, Num: 127
+PhoneType: IQOO, Num: 21
+PhoneType: 真我, Num: 7
+PhoneType: 苹果, Num: 570
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+=====================================
+cnt: 972
+PhoneType: 红米, Num: 28
+PhoneType: Vivo, Num: 76
+PhoneType: 华为, Num: 128
+PhoneType: IQOO, Num: 21
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 23
+PhoneType: 苹果, Num: 574
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+=====================================
+cnt: 977
+PhoneType: 华为, Num: 128
+PhoneType: IQOO, Num: 21
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 23
+PhoneType: 红米, Num: 28
+PhoneType: Vivo, Num: 76
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: 苹果, Num: 576
+PhoneType: 荣耀, Num: 52
+=====================================
+cnt: 979
+PhoneType: Vivo, Num: 76
+PhoneType: 华为, Num: 128
+PhoneType: IQOO, Num: 21
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 23
+PhoneType: 红米, Num: 28
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: 苹果, Num: 576
+=====================================
+cnt: 979
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: 苹果, Num: 576
+PhoneType: 荣耀, Num: 52
+PhoneType: 华为, Num: 128
+PhoneType: IQOO, Num: 21
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 23
+PhoneType: 红米, Num: 28
+PhoneType: Vivo, Num: 76
+=====================================
+cnt: 979
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: 苹果, Num: 577
+PhoneType: Vivo, Num: 76
+PhoneType: 华为, Num: 131
+PhoneType: IQOO, Num: 21
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 23
+PhoneType: 红米, Num: 28
+=====================================
+cnt: 983
+PhoneType: 一加, Num: 6
+PhoneType: 苹果, Num: 577
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 23
+PhoneType: 红米, Num: 28
+PhoneType: Vivo, Num: 76
+PhoneType: 华为, Num: 131
+PhoneType: IQOO, Num: 21
+=====================================
+cnt: 983
+PhoneType: Vivo, Num: 77
+PhoneType: 华为, Num: 131
+PhoneType: IQOO, Num: 21
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 23
+PhoneType: 红米, Num: 29
+PhoneType: 苹果, Num: 579
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+=====================================
+cnt: 987
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 23
+PhoneType: 红米, Num: 29
+PhoneType: Vivo, Num: 77
+PhoneType: 华为, Num: 131
+PhoneType: IQOO, Num: 21
+PhoneType: 一加, Num: 6
+PhoneType: 苹果, Num: 580
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+=====================================
+cnt: 988
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: 苹果, Num: 581
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: IQOO, Num: 21
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 23
+PhoneType: 红米, Num: 29
+PhoneType: Vivo, Num: 77
+PhoneType: 华为, Num: 131
+=====================================
+cnt: 989
+PhoneType: 苹果, Num: 582
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: Vivo, Num: 77
+PhoneType: 华为, Num: 131
+PhoneType: IQOO, Num: 21
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 23
+PhoneType: 红米, Num: 29
+=====================================
+cnt: 990
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: 苹果, Num: 583
+PhoneType: 荣耀, Num: 52
+PhoneType: 华为, Num: 131
+PhoneType: IQOO, Num: 21
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 23
+PhoneType: 红米, Num: 29
+PhoneType: Vivo, Num: 77
+=====================================
+cnt: 991
+PhoneType: 一加, Num: 6
+PhoneType: 苹果, Num: 584
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 23
+PhoneType: 红米, Num: 29
+PhoneType: Vivo, Num: 77
+PhoneType: 华为, Num: 131
+PhoneType: IQOO, Num: 21
+=====================================
+cnt: 992
+PhoneType: 苹果, Num: 585
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: Vivo, Num: 77
+PhoneType: 华为, Num: 131
+PhoneType: IQOO, Num: 22
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 23
+PhoneType: 红米, Num: 29
+=====================================
+cnt: 994
+PhoneType: 苹果, Num: 585
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: 红米, Num: 29
+PhoneType: Vivo, Num: 77
+PhoneType: 华为, Num: 131
+PhoneType: IQOO, Num: 22
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 23
+=====================================
+cnt: 994
+PhoneType: 苹果, Num: 585
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: 小米, Num: 23
+PhoneType: 红米, Num: 29
+PhoneType: Vivo, Num: 77
+PhoneType: 华为, Num: 131
+PhoneType: IQOO, Num: 22
+PhoneType: 真我, Num: 7
+=====================================
+cnt: 994
+PhoneType: 苹果, Num: 586
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: Vivo, Num: 77
+PhoneType: 华为, Num: 132
+PhoneType: IQOO, Num: 22
+PhoneType: 真我, Num: 7
+PhoneType: 小米, Num: 23
+PhoneType: 红米, Num: 29
+=====================================
+cnt: 996
+PhoneType: Vivo, Num: 78
+PhoneType: 华为, Num: 132
+PhoneType: IQOO, Num: 22
+PhoneType: 真我, Num: 8
+PhoneType: 小米, Num: 23
+PhoneType: 红米, Num: 29
+PhoneType: 苹果, Num: 587
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+=====================================
+cnt: 999
+PhoneType: 荣耀, Num: 52
+PhoneType: OPPO, Num: 60
+PhoneType: 三星, Num: 2
+PhoneType: 一加, Num: 6
+PhoneType: 苹果, Num: 589
+PhoneType: Vivo, Num: 78
+PhoneType: 华为, Num: 132
+PhoneType: IQOO, Num: 22
+PhoneType: 真我, Num: 8
+PhoneType: 小米, Num: 24
+PhoneType: 红米, Num: 30
+=====================================
+cnt: 1003
