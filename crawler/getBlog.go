@@ -61,6 +61,7 @@ func GetBlog(uid string, cookie string, page int) *Response {
 	client := &http.Client{}
 	resp, err := client.Do(req)
 	if err != nil {
+		fmt.Println("Request error:", err)
 		return handleError("Request error:", err)
 	}
 	defer resp.Body.Close()

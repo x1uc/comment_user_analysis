@@ -1,0 +1,39 @@
+name: Build and Release Windows EXE
+
+on:
+  push:
+    tags:
+      - "v*"  # 触发带 v* 前缀的 tag（如 v1.0.0）
+
+jobs:
+  release:
+    runs-on: windows-latest  # 运行 Windows 环境
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: 1.18
+
+      - name: Build Windows EXE
+        run: |
+          mkdir dist
+          go build -o dist/wb-analyse.exe .
+
+      - name: Compress EXE into ZIP
+        run: |
+          Compress-Archive -Path dist/wb-analyse.exe -DestinationPath dist/wb-analyse-${{ github.ref_name }}.zip
+
+      - name: Upload EXE to GitHub Release
+        id: upload_release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+          files: dist/wb-analyse-${{ github.ref_name }}.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
