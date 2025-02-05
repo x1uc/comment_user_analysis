@@ -2,6 +2,8 @@ package main
 
 import (
 	"comment_phone_analyse/crawler"
+	"comment_phone_analyse/picexport"
+	"comment_phone_analyse/pojo"
 	"flag"
 	"fmt"
 	"sort"
@@ -138,10 +140,17 @@ func main() {
 	}
 
 	fmt.Println("==========================最终统计结果：已知机型============================")
+	dataArr := []pojo.StatisticsData{}
 	for _, phoneType := range knownKeys {
 		if _, exists := brandDict[phoneType]; exists {
 			fmt.Printf("PhoneType: %s, Num: %d\n", phoneType, phoneMap[phoneType])
+			dataArr = append(dataArr, pojo.StatisticsData{
+				PhoneType: phoneType,
+				Count:     phoneMap[phoneType],
+			})
 		}
 	}
 
+	picexport.Export(*uid, dataArr)
+	picexport.ExportPieChart(*uid, dataArr)
 }
