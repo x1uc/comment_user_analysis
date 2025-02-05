@@ -24,3 +24,8 @@ type CommentUser struct {
 	Idstr       string `json:"idstr"`
 	Profile_url string `json:"profile_url"`
 }
+
+type StatisticsData struct {
+	PhoneType string
+	Count     int
+}

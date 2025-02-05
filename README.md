@@ -17,3 +17,11 @@ go run main.go -uid xxxx -limit xxxx -cookie "xxxxxx"
 ```shell
 wb-analyse.exe -help
 ```
+
+## 结果
+
+代码执行结束之后会生成两个html文件，分别是对应用户的饼图和柱状图(uid-phone-stats.html,uid-phone-pie.html)
+
+![alt text](./asset/example-pie.png)
+
+![alt text](./asset/example.png)

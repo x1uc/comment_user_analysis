@@ -1,8 +1,6 @@
 package crawler
 
 import (
-	"fmt"
-	"os"
 	"strings"
 )
 
@@ -51,16 +49,16 @@ func GetSource(uid string, cookie string) string {
 			for key, value := range phoneBrands {
 				// 如果 PhoneType 包含品牌名称，返回对应的中文名称
 				if strings.Contains(strings.ToLower(brand), strings.ToLower(key)) {
-					if key == "Android" {
-						file, err := os.OpenFile("out-android-device.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
-						if err != nil {
-							fmt.Println("Error opening file:", err)
-						}
-						defer file.Close()
-						if _, err := file.WriteString(fmt.Sprintf("%s %s\n", uid, brand)); err != nil {
-							fmt.Println("Error writing to file:", err)
-						}
-					}
+					// if key == "Android" {
+					// 	file, err := os.OpenFile("out-android-device.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+					// 	if err != nil {
+					// 		fmt.Println("Error opening file:", err)
+					// 	}
+					// 	defer file.Close()
+					// 	if _, err := file.WriteString(fmt.Sprintf("%s %s\n", uid, brand)); err != nil {
+					// 		fmt.Println("Error writing to file:", err)
+					// 	}
+					// }
 					return value
 				}
 			}
