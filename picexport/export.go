@@ -4,6 +4,7 @@ import (
 	"comment_phone_analyse/pojo"
 	"fmt"
 	"os"
+	"strconv"
 
 	"github.com/go-echarts/go-echarts/v2/charts"
 	"github.com/go-echarts/go-echarts/v2/opts"
@@ -31,10 +32,15 @@ func Export(uid string, phoneArr []pojo.StatisticsData) {
 
 	// 设置柱状图数据
 	bar.SetGlobalOptions(
-		charts.WithTitleOpts(opts.Title{Title: "Phone Type Statistics"}),
-		charts.WithXAxisOpts(opts.XAxis{Name: "Phone Type"}),
+		charts.WithTitleOpts(opts.Title{Title: ""}),
+		charts.WithXAxisOpts(opts.XAxis{
+			Name: "Phone Type",
+			AxisLabel: &opts.AxisLabel{
+				Interval: strconv.Itoa(0), // 确保每个柱子都显示 X 轴标签
+			},
+		}),
 		charts.WithYAxisOpts(opts.YAxis{Name: "Number"}),
-		charts.WithGridOpts(opts.Grid{Left: "10%", Right: "10%", Bottom: "10%", Top: "10%"}), // 设置图表区域的边距
+		charts.WithGridOpts(opts.Grid{Left: "10%", Right: "10%", Bottom: "15%", Top: "10%"}), // 适当增加底部边距
 	)
 	bar.SetXAxis(xLabels).AddSeries("Phone Count", yValues)
 

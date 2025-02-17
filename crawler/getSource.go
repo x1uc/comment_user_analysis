@@ -33,7 +33,7 @@ var phoneBrands = map[string]string{
 	"努比亚":       "努比亚",
 	"IQOO":      "IQOO",
 	"Neo5":      "IQOO",
-	"Android":   "未知Android设备",
+	"Android":   "未知Android",
 }
 
 // GetSource 获取手机品牌

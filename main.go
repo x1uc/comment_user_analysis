@@ -13,21 +13,21 @@ import (
 var limit int = 1000
 
 var brandDict = map[string]bool{
-	"华为":          true,
-	"小米":          true,
-	"OPPO":        true,
-	"Vivo":        true,
-	"苹果":          true,
-	"三星":          true,
-	"魅族":          true,
-	"真我":          true,
-	"红米":          true,
-	"一加":          true,
-	"荣耀":          true,
-	"中兴":          true,
-	"努比亚":         true,
-	"IQOO":        true,
-	"未知Android设备": true,
+	"华为":        true,
+	"小米":        true,
+	"OPPO":      true,
+	"Vivo":      true,
+	"苹果":        true,
+	"三星":        true,
+	"魅族":        true,
+	"真我":        true,
+	"红米":        true,
+	"一加":        true,
+	"荣耀":        true,
+	"中兴":        true,
+	"努比亚":       true,
+	"IQOO":      true,
+	"未知Android": true,
 }
 
 func main() {
