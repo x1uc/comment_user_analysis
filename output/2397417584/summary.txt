@@ -1,18 +1,58 @@
 === 用户 2397417584 手机品牌统计摘要 ===
 
-统计时间: 2025-11-16 17:57:20
-总用户数: 73
-品牌数量: 11
+统计时间: 2025-11-16 20:18:08
+总用户数: 104
+品牌数量: 27
 
 详细统计:
- 1. 苹果          :   42 ( 57.5%)
- 2. 小米          :    7 (  9.6%)
- 3. 华为          :    7 (  9.6%)
- 4. Vivo        :    5 (  6.8%)
- 5. 荣耀          :    3 (  4.1%)
- 6. 红米          :    2 (  2.7%)
- 7. 三星          :    2 (  2.7%)
- 8. 真我          :    2 (  2.7%)
- 9. 一加          :    1 (  1.4%)
-10. OPPO        :    1 (  1.4%)
-11. IQOO        :    1 (  1.4%)
+ 1. 苹果          :   44 ( 42.3%)
+ 2. 小米          :    8 (  7.7%)
+ 3. 华为          :    6 (  5.8%)
+ 4. Vivo        :    5 (  4.8%)
+ 5. <a target="_blank" href="https://t.sina.com.cn" rel="nofollow">微博视频号</a>:    4 (  3.8%)
+ 6. 微博网页版       :    4 (  3.8%)
+ 7. 生日动态        :    4 (  3.8%)
+ 8. 微博轻享版       :    3 (  2.9%)
+ 9. Android设备   :    3 (  2.9%)
+10. 荣耀          :    2 (  1.9%)
+11. 微博 weibo.com:    2 (  1.9%)
+12. 红米          :    2 (  1.9%)
+13. 真我          :    2 (  1.9%)
+14. 三星          :    2 (  1.9%)
+15. 品牌活动        :    1 (  1.0%)
+16. 哔哩哔哩        :    1 (  1.0%)
+17. iPad mini   :    1 (  1.0%)
+18. <a target="_blank" href="https://app.weibo.com/t/feed/1VsfWt" rel="nofollow">moto edge S30</a>:    1 (  1.0%)
+19. 微博品牌活动      :    1 (  1.0%)
+20. 会员特权专用      :    1 (  1.0%)
+21. 微博积分        :    1 (  1.0%)
+22. IQOO        :    1 (  1.0%)
+23. 微博 HTML5 版  :    1 (  1.0%)
+24. 微博会员中心      :    1 (  1.0%)
+25. 一加          :    1 (  1.0%)
+26. 绿植领养        :    1 (  1.0%)
+27. OPPO        :    1 (  1.0%)
+
+========================== 未知机型统计 ===========================
+PhoneType: <a target="_blank" href="https://t.sina.com.cn" rel="nofollow">微博视频号</a>, Num: 4
+PhoneType: 微博网页版, Num: 4
+PhoneType: 生日动态, Num: 4
+PhoneType: 微博轻享版, Num: 3
+PhoneType: Android设备, Num: 3
+PhoneType: 微博 weibo.com, Num: 2
+PhoneType: 品牌活动, Num: 1
+PhoneType: 哔哩哔哩, Num: 1
+PhoneType: iPad mini, Num: 1
+PhoneType: <a target="_blank" href="https://app.weibo.com/t/feed/1VsfWt" rel="nofollow">moto edge S30</a>, Num: 1
+PhoneType: 微博品牌活动, Num: 1
+PhoneType: 会员特权专用, Num: 1
+PhoneType: 微博积分, Num: 1
+PhoneType: 微博 HTML5 版, Num: 1
+PhoneType: 微博会员中心, Num: 1
+PhoneType: 绿植领养, Num: 1
+
+=== 位置品牌信息 ===
+本统计基于微博用户的手机设备信息
+数据来源：微博评论用户设备分布
+统计范围：用户 2397417584 的评论区参与者
+生成时间： 2025-11-16 20:18:08
