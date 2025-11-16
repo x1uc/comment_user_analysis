@@ -7,6 +7,7 @@ import (
 	"io"
 	"os"
 	"path/filepath"
+	"sort"
 	"strconv"
 	"time"
 
@@ -167,9 +168,29 @@ func (e *ChartExporter) ExportSummary(data []models.StatisticsData) error {
 	fmt.Fprintf(file, "品牌数量: %d\n\n", len(data))
 
 	fmt.Fprintf(file, "详细统计:\n")
+	// 按数量降序排序
+	sort.Slice(data, func(i, j int) bool {
+		return data[i].Count > data[j].Count
+	})
 	for i, phone := range data {
 		percentage := float64(phone.Count) / float64(total) * 100
 		fmt.Fprintf(file, "%2d. %-12s: %4d (%5.1f%%)\n", i+1, phone.PhoneType, phone.Count, percentage)
+	}
+
+	// 添加未知机型信息
+	fmt.Fprintf(file, "\n========================== 未知机型统计 ===========================\n")
+	unknownCount := 0
+	knownBrands := map[string]bool{
+		"华为": true, "小米": true, "OPPO": true, "Vivo": true, "苹果": true,
+		"三星": true, "魅族": true, "真我": true, "红米": true, "一加": true,
+		"荣耀": true, "中兴": true, "努比亚": true, "IQOO": true, "未知Android": true,
+	}
+
+	for _, phone := range data {
+		if !knownBrands[phone.PhoneType] {
+			fmt.Fprintf(file, "PhoneType: %s, Num: %d\n", phone.PhoneType, phone.Count)
+			unknownCount += phone.Count
+		}
 	}
 
 	fmt.Printf("统计摘要已保存到: %s\n", filename)

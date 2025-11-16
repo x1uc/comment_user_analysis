@@ -3,6 +3,7 @@ package main
 import (
 	"comment_phone_analyse/config"
 	"comment_phone_analyse/export"
+	"comment_phone_analyse/internal/models"
 	"comment_phone_analyse/internal/services"
 	"fmt"
 	"log"
@@ -61,7 +62,18 @@ func main() {
 
 	// 导出摘要
 	summaryExporter := export.NewChartExporter(cfg.UID, userOutputDir)
-	if err := summaryExporter.ExportSummary(knownStats); err != nil {
+
+	// 获取所有统计数据（包括未知机型）
+	allStats := analyzerService.GetStatistics()
+	var allStatsData []models.StatisticsData
+	for phoneType, count := range allStats.BrandCounts {
+		allStatsData = append(allStatsData, models.StatisticsData{
+			PhoneType: phoneType,
+			Count:     count,
+		})
+	}
+
+	if err := summaryExporter.ExportSummary(allStatsData); err != nil {
 		log.Printf("导出摘要失败: %v", err)
 	} else {
 		fmt.Println("摘要导出完成!")
