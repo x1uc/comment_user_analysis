@@ -1,0 +1,26 @@
+# 包含敏感信息的配置文件
+config.json
+config.local.json
+
+# 二进制文件
+bin/
+
+
+# Go相关
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# IDE相关
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db

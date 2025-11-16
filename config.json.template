@@ -1,0 +1,7 @@
+{
+  "uid": "2397417584",
+  "cookie": "请在这里填写你的微博Cookie",
+  "limit": 100,
+  "debug": false,
+  "output_dir": "./output"
+}

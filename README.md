@@ -1,27 +1,28 @@
-编译好的可执行文件在release页面：https://github.com/x1uc/comment_user_analysis/releases/
+# 微博用户手机品牌分析工具
 
-可执行文件执行方式：
-```shell
-wb-analyse.exe -uid xxxx -limit xxxx -cookie "xxxxxx"
+一个用于分析微博用户手机品牌分布的工具，支持统计用户评论者的手机品牌并生成可视化图表。
+
+## 使用方法
+
+创建 `config.json` 文件：
+
+```json
+{
+  "uid": "需要的用户UID",
+  "cookie": "你的微博Cookie",
+  "limit": 100,
+  "debug": false,
+  "output_dir": "./output"
+}
 ```
 
-![alt text](./asset/4704f1fe7e5e273586567eedb0009380.jpg)
+运行 
+```
+go mod tidy
 
-源代码执行方式
-```shell
-go run main.go -uid xxxx -limit xxxx -cookie "xxxxxx"
+go run cmd/main.go
 ```
 
-查看帮助
+## FAQ
 
-```shell
-wb-analyse.exe -help
-```
-
-## 结果
-
-代码执行结束之后会生成两个html文件，分别是对应用户的饼图和柱状图(uid-phone-stats.html,uid-phone-pie.html)
-
-![alt text](./asset/example-pie.png)
-
-![alt text](./asset/example.png)
+如果不能使用，请修改 intermal/client/client.go 中的 setHeaders ，保证和当前微博网页端同步
