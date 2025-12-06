@@ -19,10 +19,11 @@ type AnalyzerService struct {
 	outputDir      string          // 输出目录
 	statsFile      *os.File        // 实时统计数据文件
 	mutex          sync.RWMutex
+	interval       int
 }
 
 // NewAnalyzerService 创建分析服务
-func NewAnalyzerService(weiboService *WeiboService, outputDir, uid string) *AnalyzerService {
+func NewAnalyzerService(weiboService *WeiboService, outputDir, uid string, interval int) *AnalyzerService {
 	// 创建用户专属的输出目录
 	userOutputDir := filepath.Join(outputDir, uid)
 	if err := os.MkdirAll(userOutputDir, 0755); err != nil {
@@ -47,29 +48,27 @@ func NewAnalyzerService(weiboService *WeiboService, outputDir, uid string) *Anal
 		processedUsers: make(map[string]bool),
 		outputDir:      userOutputDir,
 		statsFile:      statsFile,
+		interval:       interval,
 	}
 }
 
 // AnalyzeUserPhones 分析用户手机品牌分布
-func (a *AnalyzerService) AnalyzeUserPhones(uid string, limit int) (*models.PhoneStatistics, error) {
+func (a *AnalyzerService) AnalyzeUserPhones(uid string, limit int) *models.PhoneStatistics {
 	fmt.Printf("开始分析用户 %s 的手机品牌分布，限制 %d 个用户\n", uid, limit)
 
 	// 重置统计
 	a.resetStatistics()
 
 	// 定义用户处理回调
-	userCallback := func(users []models.CommentUser) error {
-		return a.processUsers(users)
+	userCallback := func(users []models.CommentUser) {
+		a.processUsers(users, a.interval)
 	}
 
 	// 获取并处理用户
-	err := a.weiboService.GetUserBlogsAndComments(uid, limit, userCallback)
-	if err != nil {
-		return nil, fmt.Errorf("分析用户手机失败: %w", err)
-	}
+	a.weiboService.GetUserBlogsAndComments(uid, limit, a.interval, userCallback)
 
 	fmt.Printf("分析完成，共处理 %d 个用户\n", a.statistics.UserCount)
-	return a.statistics, nil
+	return a.statistics
 }
 
 // isUserProcessed 检查用户是否已处理
@@ -87,7 +86,7 @@ func (a *AnalyzerService) markUserAsProcessed(userID string) {
 }
 
 // processUsers 处理用户列表
-func (a *AnalyzerService) processUsers(users []models.CommentUser) error {
+func (a *AnalyzerService) processUsers(users []models.CommentUser, interval int) {
 	for _, user := range users {
 		// 检查用户是否已处理过（全局去重）
 		if a.isUserProcessed(user.ID) {
@@ -111,10 +110,8 @@ func (a *AnalyzerService) processUsers(users []models.CommentUser) error {
 		a.updateStatistics(phoneType)
 
 		// 避免请求过于频繁
-		time.Sleep(1 * time.Second)
+		time.Sleep(time.Duration(interval) * time.Second)
 	}
-
-	return nil
 }
 
 // updateStatistics 更新统计信息

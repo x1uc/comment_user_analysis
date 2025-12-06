@@ -78,7 +78,7 @@ func (w *WeiboService) GetUserPhoneType(uid string) (string, error) {
 }
 
 // GetUserBlogsAndComments 获取用户博客和评论用户（分页处理）
-func (w *WeiboService) GetUserBlogsAndComments(uid string, limit int, callback func([]models.CommentUser) error) error {
+func (w *WeiboService) GetUserBlogsAndComments(uid string, limit int, interval int, callback func([]models.CommentUser)) {
 	page := 1
 	totalProcessed := 0
 	userSet := make(map[string]bool)
@@ -90,7 +90,9 @@ func (w *WeiboService) GetUserBlogsAndComments(uid string, limit int, callback f
 			if err == utils.ErrNoMoreData {
 				break
 			}
-			return fmt.Errorf("获取博客列表失败: %w", err)
+			//无更多博客
+			fmt.Printf("获取第%v页博客列表失败: %v\n", page, err)
+			return
 		}
 
 		// 处理每条博客的评论
@@ -118,11 +120,8 @@ func (w *WeiboService) GetUserBlogsAndComments(uid string, limit int, callback f
 
 			// 如果有新用户，调用回调函数
 			if len(newUsers) > 0 {
-				if err := callback(newUsers); err != nil {
-					return fmt.Errorf("处理用户回调失败: %w", err)
-				}
+				callback(newUsers)
 				totalProcessed += len(newUsers)
-
 				fmt.Printf("已处理 %d 个用户\n", totalProcessed)
 			}
 
@@ -133,11 +132,9 @@ func (w *WeiboService) GetUserBlogsAndComments(uid string, limit int, callback f
 		}
 
 		// 页面间延迟，避免频率限制
-		time.Sleep(3 * time.Second)
+		time.Sleep(time.Duration(interval) * time.Second)
 		page++
 	}
-
-	return nil
 }
 
 // getDefaultPhoneMapping 获取默认的手机品牌映射

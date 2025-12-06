@@ -16,6 +16,7 @@ type Config struct {
 	Limit     int    `json:"limit"`
 	Debug     bool   `json:"debug"`
 	OutputDir string `json:"output_dir"`
+	Interval  int    `json:"interval"`
 }
 
 // LoadConfig 加载配置
@@ -24,6 +25,7 @@ func LoadConfig() (*Config, error) {
 		Limit:     100,
 		Debug:     false,
 		OutputDir: "./output",
+		Interval:  5,
 	}
 
 	// 1. 首先尝试从配置文件加载
@@ -51,6 +53,7 @@ func (c *Config) loadFromFile() error {
 		"config.json",
 		"config.local.json",
 		"./config/config.json",
+		"../config.json",
 		filepath.Join(os.Getenv("HOME"), ".config", "comment_analyzer", "config.json"),
 	}
 
@@ -130,6 +133,7 @@ func (c *Config) Print() {
 	fmt.Printf("  统计限制: %d\n", c.Limit)
 	fmt.Printf("  调试模式: %t\n", c.Debug)
 	fmt.Printf("  输出目录: %s\n", c.OutputDir)
+	fmt.Printf("  间隔时间: %d\n", c.Interval)
 	fmt.Printf("  开始时间: %s\n", time.Now().Format("2006-01-02 15:04:05"))
 	fmt.Println()
 }
