@@ -46,7 +46,7 @@ func (w *WeiboService) GetBlogs(uid string, page int) ([]models.Blog, error) {
 
 // GetComments 获取博客评论用户列表
 func (w *WeiboService) GetComments(blogID string, uid string) ([]models.CommentData, error) {
-	url := fmt.Sprintf("https://weibo.com/ajax/statuses/buildComments?flow=0&is_reload=1&id=%s&is_show_bulletin=2&is_mix=0&count=10&uid=%s&fetch_level=0&locale=zh-CN", blogID, uid)
+	url := fmt.Sprintf("https://weibo.com/ajax/statuses/buildComments?flow=0&is_reload=1&id=%s&is_show_bulletin=2&is_mix=0&count=20&uid=%s&fetch_level=0&locale=zh-CN", blogID, uid)
 
 	body, err := w.client.Get(url)
 	if err != nil {
@@ -88,11 +88,12 @@ func (w *WeiboService) GetUserBlogsAndComments(uid string, limit int, interval i
 		blogs, err := w.GetBlogs(uid, page)
 		if err != nil {
 			if err == utils.ErrNoMoreData {
+				fmt.Printf("没有更多的博客")
 				break
 			}
 			//无更多博客
 			fmt.Printf("获取第%v页博客列表失败: %v\n", page, err)
-			return
+			break
 		}
 
 		// 处理每条博客的评论
@@ -141,32 +142,32 @@ func (w *WeiboService) GetUserBlogsAndComments(uid string, limit int, interval i
 func getDefaultPhoneMapping() models.PhoneBrandMapping {
 	return models.PhoneBrandMapping{
 		"Huawei":    "华为",
-		"华为":        "华为",
+		"华为":      "华为",
 		"nova":      "华为",
 		"HarmonyOS": "华为",
 		"Xiaomi":    "小米",
-		"小米":        "小米",
+		"小米":      "小米",
 		"OPPO":      "OPPO",
 		"Vivo":      "Vivo",
 		"iPhone":    "苹果",
-		"苹果":        "苹果",
+		"苹果":      "苹果",
 		"Samsung":   "三星",
-		"三星":        "三星",
+		"三星":      "三星",
 		"Meizu":     "魅族",
-		"魅族":        "魅族",
+		"魅族":      "魅族",
 		"realme":    "真我",
-		"真我":        "真我",
+		"真我":      "真我",
 		"redmi":     "红米",
-		"红米":        "红米",
-		"一加":        "一加",
+		"红米":      "红米",
+		"一加":      "一加",
 		"OnePlus":   "一加",
-		"荣耀":        "荣耀",
+		"荣耀":      "荣耀",
 		"Honor":     "荣耀",
 		"honor":     "荣耀",
 		"ZTE":       "中兴",
-		"中兴":        "中兴",
+		"中兴":      "中兴",
 		"Nubia":     "努比亚",
-		"努比亚":       "努比亚",
+		"努比亚":    "努比亚",
 		"IQOO":      "IQOO",
 		"Neo5":      "IQOO",
 		"Android":   "Android设备",
@@ -178,8 +179,8 @@ func (w *WeiboService) IsKnownBrand(phoneType string) bool {
 	knownBrands := map[string]bool{
 		"华为":        true,
 		"小米":        true,
-		"OPPO":      true,
-		"Vivo":      true,
+		"OPPO":        true,
+		"Vivo":        true,
 		"苹果":        true,
 		"三星":        true,
 		"魅族":        true,
@@ -188,8 +189,8 @@ func (w *WeiboService) IsKnownBrand(phoneType string) bool {
 		"一加":        true,
 		"荣耀":        true,
 		"中兴":        true,
-		"努比亚":       true,
-		"IQOO":      true,
+		"努比亚":      true,
+		"IQOO":        true,
 		"未知Android": true,
 	}
 	return knownBrands[phoneType]
