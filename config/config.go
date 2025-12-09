@@ -11,13 +11,14 @@ import (
 
 // Config 应用配置
 type Config struct {
-	UID       string `json:"uid"`
-	BlogID    string `json:"blog_id"`
-	Cookie    string `json:"cookie"`
-	Limit     int    `json:"limit"`
-	Debug     bool   `json:"debug"`
-	OutputDir string `json:"output_dir"`
-	Interval  int    `json:"interval"`
+	UID        string   `json:"uid"`
+	BlogList   []string `json:"blog_list"`
+	Cookie     string   `json:"cookie"`
+	Limit      int      `json:"limit"`
+	Debug      bool     `json:"debug"`
+	OutputDir  string   `json:"output_dir"`
+	Interval   int      `json:"interval"`
+	OutputName string   `json:"output_name"`
 }
 
 // LoadConfig 加载配置

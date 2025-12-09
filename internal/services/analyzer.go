@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"single_analysis/config"
 	"single_analysis/internal/models"
 	"sort"
 	"strings"
@@ -23,7 +24,7 @@ type AnalyzerService struct {
 }
 
 // NewAnalyzerService 创建分析服务
-func NewAnalyzerService(weiboService *WeiboService, outputDir, uid string, interval int, blog_id string) *AnalyzerService {
+func NewAnalyzerService(weiboService *WeiboService, cfg *config.Config) *AnalyzerService {
 	// 创建用户专属的输出目录
 	dir_name := uid + "_" + blog_id
 	userOutputDir := filepath.Join(outputDir, dir_name)

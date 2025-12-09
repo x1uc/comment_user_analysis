@@ -6,7 +6,6 @@ import (
 	"single_analysis/internal/client"
 	"single_analysis/internal/models"
 	"single_analysis/internal/utils"
-	"time"
 )
 
 // WeiboService 微博服务
@@ -78,49 +77,46 @@ func (w *WeiboService) GetUserPhoneType(uid string) (string, error) {
 }
 
 // GetUserBlogsAndComments 获取用户博客和评论用户（分页处理）
-func (w *WeiboService) GetUserBlogsAndComments(uid string, blog_id string, limit int, interval int, callback func([]models.CommentUser)) {
+func (w *WeiboService) GetUserBlogsAndComments(uid string, blog_list []string, limit int, interval int, callback func([]models.CommentUser)) {
 	totalProcessed := 0
 	userSet := make(map[string]bool)
+
+	flag := true
 	max_id := uint64(0)
 
-	for totalProcessed < limit {
-		// 获取评论用户
-		comments, cur_max_id, err := w.GetComments(blog_id, uid, max_id)
-		max_id = cur_max_id
-		if err != nil {
-			fmt.Printf("获取评论失败: %v, 跳过博客 %s\n", err, blog_id)
-			break
-		}
+	for _, blog_id := range blog_list {
+		for flag || max_id != 0 {
+			flag = false
+			// 获取评论用户
+			comments, cur_max_id, err := w.GetComments(blog_id, uid, max_id)
+			max_id = cur_max_id
+			if err != nil {
+				fmt.Printf("获取评论失败: %v, 跳过博客 %s\n", err, blog_id)
+				break
+			}
 
-		// 评论获得完了
-		if max_id == 0 {
-			fmt.Printf("没有更多评论\n")
-			break
-		}
+			// 评论获得完了
+			if max_id == 0 {
+				fmt.Printf("没有更多评论\n")
+				break
+			}
 
-		// 过滤重复用户并收集
-		var newUsers []models.CommentUser
-		for _, comment := range comments {
-			if !userSet[comment.User.ID] {
-				userSet[comment.User.ID] = true
-				newUsers = append(newUsers, comment.User)
+			user_map := make(map[string]int)
+			for _, comment := range comments {
+				if !userSet[comment.User.ID] {
+					userSet[comment.User.ID] = true
+				}
+				
+			}
+
+			// 如果有新用户，调用回调函数
+			if len(newUsers) > 0 {
+				callback(newUsers)
+				totalProcessed += len(newUsers)
+				fmt.Printf("已处理 %d 个用户\n", totalProcessed)
 			}
 		}
-
-		// 如果有新用户，调用回调函数
-		if len(newUsers) > 0 {
-			callback(newUsers)
-			totalProcessed += len(newUsers)
-			fmt.Printf("已处理 %d 个用户\n", totalProcessed)
-		}
-
-		// 检查是否达到限制
-		if totalProcessed >= limit {
-			break
-		}
-		time.Sleep(time.Duration(interval) * time.Second)
 	}
-
 }
 
 // getDefaultPhoneMapping 获取默认的手机品牌映射

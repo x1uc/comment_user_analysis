@@ -27,14 +27,14 @@ type User struct {
 
 // CommentResponse 评论响应
 type CommentResponse struct {
-	Data   []CommentData `json:"data"`
-	MaxID  uint64        `json:"max_id"`
+	Data  []CommentData `json:"data"`
+	MaxID uint64        `json:"max_id"`
 }
 
 // CommentData 评论数据
 type CommentData struct {
 	User CommentUser `json:"user"`
-	
+	Text string      `json:"text"`
 }
 
 // CommentUser 评论用户
@@ -45,7 +45,7 @@ type CommentUser struct {
 // PhoneStatistics 手机统计数据
 type PhoneStatistics struct {
 	BrandCounts map[string]int `json:"brand_counts"`
-	UserCount   int           `json:"user_count"`
+	UserCount   int            `json:"user_count"`
 }
 
 // StatisticsData 统计数据（用于导出）
@@ -60,6 +60,10 @@ type Config struct {
 	Cookie    string `json:"cookie"`
 	Limit     int    `json:"limit"`
 	UserAgent string `json:"user_agent"`
+}
+
+type AiResponse struct {
+	Value int `json:"value"`
 }
 
 // PhoneBrandMapping 手机品牌映射

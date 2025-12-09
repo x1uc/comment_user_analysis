@@ -24,14 +24,17 @@ func main() {
 
 	// 创建服务
 	weiboService := services.NewWeiboService(cfg.Cookie)
-	analyzerService := services.NewAnalyzerService(weiboService, cfg.OutputDir, cfg.UID, cfg.Interval, cfg.BlogID)
+	analyzerService, err := services.NewAnalyzerService(weiboService, cfg)
+	if err != nil {
+		log.Fatalf("err: %w", err)
+	}
 	defer analyzerService.Close() // 确保资源释放
 
 	setupGracefulShutdown(analyzerService, cfg)
 
 	// 开始分析
 	fmt.Println("开始分析...")
-	analyzerService.AnalyzeUserPhones(cfg.UID, cfg.Limit, cfg.BlogID)
+	analyzerService.AnalyzeUserPhones(cfg.UID, cfg.Limit, cfg.BlogList)
 
 	// 打印结果
 	printResults(analyzerService)
