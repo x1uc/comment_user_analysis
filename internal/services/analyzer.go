@@ -5,6 +5,7 @@ import (
 	"os"
 	"path/filepath"
 	"single_analysis/config"
+	"single_analysis/internal/llm"
 	"single_analysis/internal/models"
 	"sort"
 	"strings"
@@ -16,29 +17,33 @@ import (
 type AnalyzerService struct {
 	weiboService   *WeiboService
 	statistics     *models.PhoneStatistics
+	statisticsLLM  map[string]models.StatisticData
 	processedUsers map[string]bool // 存储已处理过的用户ID，避免重复处理
 	outputDir      string          // 输出目录
 	statsFile      *os.File        // 实时统计数据文件
+	statsFileLLM   *os.File
 	mutex          sync.RWMutex
 	interval       int
+	LLMAnalysis    llm.LLMClient
 }
 
 // NewAnalyzerService 创建分析服务
-func NewAnalyzerService(weiboService *WeiboService, cfg *config.Config) *AnalyzerService {
+func NewAnalyzerService(weiboService *WeiboService, cfg *config.Config) (*AnalyzerService, error) {
 	// 创建用户专属的输出目录
-	dir_name := uid + "_" + blog_id
-	userOutputDir := filepath.Join(outputDir, dir_name)
+	dir_name := cfg.UID + "_" + cfg.OutputName
+	userOutputDir := filepath.Join(cfg.OutputDir, dir_name)
 	if err := os.MkdirAll(userOutputDir, 0755); err != nil {
-		fmt.Printf("创建用户输出目录失败: %v\n", err)
-		userOutputDir = outputDir // 降级到基础目录
+		return nil, fmt.Errorf("创建文件夹失败%w", err)
 	}
 
 	// 创建统计数据文件
 	statsFilePath := filepath.Join(userOutputDir, "stats.txt")
+	statsFileLLMPath := filepath.Join(userOutputDir, "stats-llm.cvs")
 	statsFile, err := os.OpenFile(statsFilePath, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
+	statsFileLLM, err := os.OpenFile(statsFileLLMPath, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
+
 	if err != nil {
-		fmt.Printf("创建统计数据文件失败: %v\n", err)
-		statsFile = nil
+		return nil, fmt.Errorf("创建统计数据文件失败: %v\n", err)
 	}
 
 	return &AnalyzerService{
@@ -50,24 +55,28 @@ func NewAnalyzerService(weiboService *WeiboService, cfg *config.Config) *Analyze
 		processedUsers: make(map[string]bool),
 		outputDir:      userOutputDir,
 		statsFile:      statsFile,
-		interval:       interval,
-	}
+		statsFileLLM:   statsFileLLM,
+		interval:       cfg.Interval,
+		LLMAnalysis: llm.DeepSeek{
+			Api_key: cfg.ApiKey,
+		},
+	}, nil
 }
 
 // AnalyzeUserPhones 分析用户手机品牌分布
-func (a *AnalyzerService) AnalyzeUserPhones(uid string, limit int, blog_id string) *models.PhoneStatistics {
-	fmt.Printf("开始分析用户 %s 的手机品牌分布，限制 %d 个用户\n", uid, limit)
+func (a *AnalyzerService) AnalyzeUserPhones(uid string, blog_list []string) *models.PhoneStatistics {
+	fmt.Printf("开始分析用户 %s 的手机品牌分布，限制 %d 个用户\n", uid)
 
 	// 重置统计
 	a.resetStatistics()
 
 	// 定义用户处理回调
-	userCallback := func(users []models.CommentUser) {
-		a.processUsers(users, a.interval)
+	userCallback := func(comments []models.CommentData, blog_content string) {
+		a.processUsers(comments, blog_content, a.interval)
 	}
 
 	// 获取并处理用户
-	a.weiboService.GetUserBlogsAndComments(uid, blog_id, limit, a.interval, userCallback)
+	a.weiboService.GetUserBlogsAndComments(uid, blog_list, a.interval, userCallback)
 
 	fmt.Printf("分析完成，共处理 %d 个用户\n", a.statistics.UserCount)
 	return a.statistics
@@ -88,29 +97,40 @@ func (a *AnalyzerService) markUserAsProcessed(userID string) {
 }
 
 // processUsers 处理用户列表
-func (a *AnalyzerService) processUsers(users []models.CommentUser, interval int) {
-	for _, user := range users {
+func (a *AnalyzerService) processUsers(comments []models.CommentData, blog_content string, interval int) {
+	for _, comment := range comments {
 		// 检查用户是否已处理过（全局去重）
-		if a.isUserProcessed(user.ID) {
+		if a.isUserProcessed(comment.User.ID) {
 			continue
 		}
 
 		// 获取用户手机类型
-		phoneType, err := a.weiboService.GetUserPhoneType(user.ID)
+		phoneType, err := a.weiboService.GetUserPhoneType(comment.User.ID)
 		if err != nil {
-			fmt.Printf("获取用户 %s 手机类型失败: %v，跳过\n", user.ID, err)
+			fmt.Printf("获取用户 %s 手机类型失败: %v，跳过\n", comment.User.ID, err)
 			continue
 		}
 
 		// 标记用户为已处理
-		a.markUserAsProcessed(user.ID)
-
+		a.markUserAsProcessed(comment.User.ID)
 		// 实时写入用户统计数据到文件
-		a.writeUserStats(user.ID, phoneType)
-
+		a.writeUserStats(comment.User.ID, phoneType)
 		// 更新统计
 		a.updateStatistics(phoneType)
 
+		go func() {
+			result, err := a.LLMAnalysis.GetCommentLevel(comment.Text, blog_content)
+			if err != nil {
+				fmt.Println("调用LLM API 发生错误 %v", err)
+				return
+			}
+			a.statisticsLLM[comment.User.ID] = models.StatisticData{
+				ResonContent: result.ReasonContent,
+				UID:          comment.User.ID,
+				Value:        result.Value,
+				PhoneType:    phoneType,
+			}
+		}()
 		// 避免请求过于频繁
 		time.Sleep(time.Duration(interval) * time.Second)
 	}

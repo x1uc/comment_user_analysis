@@ -34,7 +34,7 @@ func main() {
 
 	// 开始分析
 	fmt.Println("开始分析...")
-	analyzerService.AnalyzeUserPhones(cfg.UID, cfg.Limit, cfg.BlogList)
+	analyzerService.AnalyzeUserPhones(cfg.UID, cfg.BlogList, cfg.Interval)
 
 	// 打印结果
 	printResults(analyzerService)

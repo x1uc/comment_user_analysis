@@ -63,7 +63,15 @@ type Config struct {
 }
 
 type AiResponse struct {
-	Value int `json:"value"`
+	Value         int    `json:"value"`
+	ReasonContent string `json:"reason_content"`
+}
+
+type StatisticData struct {
+	Value        int
+	UID          string
+	ResonContent string
+	PhoneType    string
 }
 
 // PhoneBrandMapping 手机品牌映射

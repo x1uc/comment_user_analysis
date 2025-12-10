@@ -77,7 +77,7 @@ func (w *WeiboService) GetUserPhoneType(uid string) (string, error) {
 }
 
 // GetUserBlogsAndComments 获取用户博客和评论用户（分页处理）
-func (w *WeiboService) GetUserBlogsAndComments(uid string, blog_list []string, limit int, interval int, callback func([]models.CommentUser)) {
+func (w *WeiboService) GetUserBlogsAndComments(uid string, blog_list []string, interval int, callback func([]models.CommentData)) {
 	totalProcessed := 0
 	userSet := make(map[string]bool)
 
@@ -101,18 +101,18 @@ func (w *WeiboService) GetUserBlogsAndComments(uid string, blog_list []string, l
 				break
 			}
 
-			user_map := make(map[string]int)
+			newComments := make([]models.CommentData, 0)
 			for _, comment := range comments {
 				if !userSet[comment.User.ID] {
 					userSet[comment.User.ID] = true
 				}
-				
+				newComments = append(newComments, comment)
 			}
 
 			// 如果有新用户，调用回调函数
-			if len(newUsers) > 0 {
-				callback(newUsers)
-				totalProcessed += len(newUsers)
+			if len(newComments) > 0 {
+				callback(newComments)
+				totalProcessed += len(newComments)
 				fmt.Printf("已处理 %d 个用户\n", totalProcessed)
 			}
 		}

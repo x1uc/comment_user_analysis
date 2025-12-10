@@ -19,6 +19,7 @@ type Config struct {
 	OutputDir  string   `json:"output_dir"`
 	Interval   int      `json:"interval"`
 	OutputName string   `json:"output_name"`
+	ApiKey     string   `json:"api_key"`
 }
 
 // LoadConfig 加载配置
