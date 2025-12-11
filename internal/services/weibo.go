@@ -58,7 +58,7 @@ func (w *WeiboService) GetBlogs(uid string, page int) ([]models.Blog, error) {
 
 // GetComments 获取博客评论用户列表
 func (w *WeiboService) GetComments(blogID string, uid string, max_id uint64) ([]models.CommentData, uint64, error) {
-	url := fmt.Sprintf("https://weibo.com/ajax/statuses/buildComments?flow=0&is_reload=1&id=%s&is_show_bulletin=2&is_mix=0&max_id=%d&count=20&uid=%s&fetch_level=0&locale=zh-CN", blogID, max_id, uid)
+	url := fmt.Sprintf("https://weibo.com/ajax/statuses/buildComments?flow=1&is_reload=1&id=%s&is_show_bulletin=2&is_mix=0&max_id=%d&count=20&uid=%s&fetch_level=0&locale=zh-CN", blogID, max_id, uid)
 
 	body, err := w.client.Get(url)
 	if err != nil {

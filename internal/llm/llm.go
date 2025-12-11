@@ -2,6 +2,7 @@ package llm
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"single_analysis/internal/models"
 
@@ -18,6 +19,7 @@ var (
 						核心人物：劳东燕（清华大学法学院教授）。
 						人物立场：劳东燕支持建立轻罪/特定条件下吸毒记录封存制度，主张给改过自新者回归社会的机会。
 						舆论环境：大众普遍对毒品持“零容忍”态度，常引用缉毒警的牺牲来反对任何形式的宽容。评论区可能包含激烈的对立情绪。
+						额外信息：劳东燕教授和蔡雅奇博士（法考教师兼执业律师）两人就这个问题有争论，蔡雅奇博士不支持吸毒封存，蔡雅奇博士支持吸毒入罪
 
 						# Task
 						请分析我提供的微博评论列表，将每一条评论分类为以下三类之一：
@@ -68,6 +70,15 @@ func (c DeepSeek) GetCommentLevel(comment string, blog_content string) (*models.
 		return nil, err
 	}
 
+	resultString := chatCompletion.Choices[0].Message.Content
+	result := struct {
+		Value int `json:"value"`
+	}{}
+
+	err = json.Unmarshal([]byte(resultString), &result)
+	if err != nil {
+		return nil, err
+	}
 	choice := chatCompletion.Choices[0]
 
 	var reason_content string
@@ -76,7 +87,7 @@ func (c DeepSeek) GetCommentLevel(comment string, blog_content string) (*models.
 		fmt.Printf("=== 思考过程 ===\n%v\n\n", reason_content)
 	}
 	res := &models.AiResponse{
-		Value:         100,
+		Value:         result.Value,
 		ReasonContent: reason_content,
 	}
 	return res, nil

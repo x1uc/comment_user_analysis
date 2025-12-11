@@ -72,6 +72,7 @@ type StatisticData struct {
 	UID          string
 	ResonContent string
 	PhoneType    string
+	Comment      string
 }
 
 // PhoneBrandMapping 手机品牌映射

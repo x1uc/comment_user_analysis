@@ -1,6 +1,7 @@
 package services
 
 import (
+	"encoding/csv"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -22,6 +23,7 @@ type AnalyzerService struct {
 	outputDir      string          // 输出目录
 	statsFile      *os.File        // 实时统计数据文件
 	statsFileLLM   *os.File
+	csvWriter      *csv.Writer // CSV writer
 	mutex          sync.RWMutex
 	interval       int
 	LLMAnalysis    llm.LLMClient
@@ -38,12 +40,26 @@ func NewAnalyzerService(weiboService *WeiboService, cfg *config.Config) (*Analyz
 
 	// 创建统计数据文件
 	statsFilePath := filepath.Join(userOutputDir, "stats.txt")
-	statsFileLLMPath := filepath.Join(userOutputDir, "stats-llm.cvs")
-	statsFile, err := os.OpenFile(statsFilePath, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
-	statsFileLLM, err := os.OpenFile(statsFileLLMPath, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
+	statsFileLLMPath := filepath.Join(userOutputDir, "stats-llm.csv")
+	statsFile, err1 := os.OpenFile(statsFilePath, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
+	statsFileLLM, err2 := os.OpenFile(statsFileLLMPath, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
 
-	if err != nil {
-		return nil, fmt.Errorf("创建统计数据文件失败: %v\n", err)
+	if err1 != nil {
+		return nil, fmt.Errorf("创建统计数据文件失败: %v", err1)
+	}
+	if err2 != nil {
+		return nil, fmt.Errorf("创建统计数据文件失败: %v", err2)
+	}
+
+	// 创建CSV writer并写入表头
+	csvWriter := csv.NewWriter(statsFileLLM)
+	header := []string{"用户ID", "评论内容", "手机品牌", "分析原因", "分值"}
+	if err := csvWriter.Write(header); err != nil {
+		return nil, fmt.Errorf("写入CSV表头失败: %v", err)
+	}
+	csvWriter.Flush()
+	if err := csvWriter.Error(); err != nil {
+		return nil, fmt.Errorf("刷新CSV失败: %v", err)
 	}
 
 	return &AnalyzerService{
@@ -57,6 +73,7 @@ func NewAnalyzerService(weiboService *WeiboService, cfg *config.Config) (*Analyz
 		outputDir:      userOutputDir,
 		statsFile:      statsFile,
 		statsFileLLM:   statsFileLLM,
+		csvWriter:      csvWriter,
 		interval:       cfg.Interval,
 		LLMAnalysis: llm.DeepSeek{
 			Api_key: cfg.ApiKey,
@@ -122,7 +139,7 @@ func (a *AnalyzerService) processUsers(comments []models.CommentData, blog_conte
 		go func() {
 			result, err := a.LLMAnalysis.GetCommentLevel(comment.Text, blog_content)
 			if err != nil {
-				fmt.Println("调用LLM API 发生错误 %v", err)
+				fmt.Printf("调用LLM API 发生错误 %v\n", err)
 				return
 			}
 			a.statisticsLLM[comment.User.ID] = models.StatisticData{
@@ -130,8 +147,21 @@ func (a *AnalyzerService) processUsers(comments []models.CommentData, blog_conte
 				UID:          comment.User.ID,
 				Value:        result.Value,
 				PhoneType:    phoneType,
+				Comment:      comment.Text,
 			}
-			a.statsFileLLM.WriteString(fmt.Sprintf("%s,%s,%s,%d\n", comment.User.ID, phoneType, result.ReasonContent, result.Value))
+
+			// 使用CSV writer写入数据
+			record := []string{comment.User.ID, comment.Text, phoneType, result.ReasonContent, fmt.Sprintf("%d", result.Value)}
+			a.mutex.Lock()
+			if err := a.csvWriter.Write(record); err != nil {
+				fmt.Printf("写入CSV数据失败: %v\n", err)
+			} else {
+				a.csvWriter.Flush()
+				if err := a.csvWriter.Error(); err != nil {
+					fmt.Printf("刷新CSV数据失败: %v\n", err)
+				}
+			}
+			a.mutex.Unlock()
 		}()
 		// 避免请求过于频繁
 		time.Sleep(time.Duration(interval) * time.Second)
@@ -184,6 +214,30 @@ func (a *AnalyzerService) resetStatistics() {
 			a.statsFile = nil
 		} else {
 			a.statsFile = statsFile
+		}
+	}
+
+	// 重置CSV文件和writer
+	if a.statsFileLLM != nil {
+		a.statsFileLLM.Close()
+		statsFileLLMPath := filepath.Join(a.outputDir, "stats-llm.csv")
+		statsFileLLM, err := os.OpenFile(statsFileLLMPath, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
+		if err != nil {
+			fmt.Printf("重置CSV统计数据文件失败: %v\n", err)
+			a.statsFileLLM = nil
+			a.csvWriter = nil
+		} else {
+			a.statsFileLLM = statsFileLLM
+			// 重新创建CSV writer并写入表头
+			a.csvWriter = csv.NewWriter(statsFileLLM)
+			header := []string{"用户ID", "手机品牌", "分析原因", "分值"}
+			if err := a.csvWriter.Write(header); err != nil {
+				fmt.Printf("写入CSV表头失败: %v\n", err)
+			}
+			a.csvWriter.Flush()
+			if err := a.csvWriter.Error(); err != nil {
+				fmt.Printf("刷新CSV失败: %v\n", err)
+			}
 		}
 	}
 }
@@ -331,12 +385,30 @@ func (a *AnalyzerService) Close() error {
 	a.mutex.Lock()
 	defer a.mutex.Unlock()
 
-	if a.statsFile != nil {
-		err := a.statsFile.Close()
-		a.statsFile = nil
-		return err
+	var lastErr error
+	if a.csvWriter != nil {
+		a.csvWriter.Flush()
+		if err := a.csvWriter.Error(); err != nil {
+			lastErr = err
+		}
+		a.csvWriter = nil
 	}
-	return nil
+
+	if a.statsFileLLM != nil {
+		if err := a.statsFileLLM.Close(); err != nil {
+			lastErr = err
+		}
+		a.statsFileLLM = nil
+	}
+
+	if a.statsFile != nil {
+		if err := a.statsFile.Close(); err != nil {
+			lastErr = err
+		}
+		a.statsFile = nil
+	}
+
+	return lastErr
 }
 
 // GetOutputDir 获取输出目录路径
