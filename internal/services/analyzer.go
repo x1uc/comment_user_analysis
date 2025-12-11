@@ -53,6 +53,7 @@ func NewAnalyzerService(weiboService *WeiboService, cfg *config.Config) (*Analyz
 			UserCount:   0,
 		},
 		processedUsers: make(map[string]bool),
+		statisticsLLM:  make(map[string]models.StatisticData),
 		outputDir:      userOutputDir,
 		statsFile:      statsFile,
 		statsFileLLM:   statsFileLLM,
@@ -65,7 +66,7 @@ func NewAnalyzerService(weiboService *WeiboService, cfg *config.Config) (*Analyz
 
 // AnalyzeUserPhones 分析用户手机品牌分布
 func (a *AnalyzerService) AnalyzeUserPhones(uid string, blog_list []string) *models.PhoneStatistics {
-	fmt.Printf("开始分析用户 %s 的手机品牌分布，限制 %d 个用户\n", uid)
+	fmt.Printf("开始分析用户 %s 的手机品牌分布\n", uid)
 
 	// 重置统计
 	a.resetStatistics()
@@ -130,6 +131,7 @@ func (a *AnalyzerService) processUsers(comments []models.CommentData, blog_conte
 				Value:        result.Value,
 				PhoneType:    phoneType,
 			}
+			a.statsFileLLM.WriteString(fmt.Sprintf("%s,%s,%s,%d\n", comment.User.ID, phoneType, result.ReasonContent, result.Value))
 		}()
 		// 避免请求过于频繁
 		time.Sleep(time.Duration(interval) * time.Second)

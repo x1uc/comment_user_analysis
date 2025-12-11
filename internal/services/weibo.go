@@ -21,6 +21,19 @@ func NewWeiboService(cookie string) *WeiboService {
 		phoneMapping: getDefaultPhoneMapping(),
 	}
 }
+func (w *WeiboService) GetBlogInfo(blog_id string) (*models.BlogInfo, error) {
+	url := fmt.Sprintf("https://weibo.com/ajax/statuses/show?id=%s&locale=zh-CN&isGetLongText=true", blog_id)
+
+	body, err := w.client.Get(url)
+	if err != nil {
+		return nil, fmt.Errorf("获取博客内容失败，err: %w", err)
+	}
+	var response models.BlogInfo
+	if err := json.Unmarshal(body, &response); err != nil {
+		return nil, utils.NewParseError("解析博客数据失败", err)
+	}
+	return &response, nil
+}
 
 // GetBlogs 获取用户博客列表
 func (w *WeiboService) GetBlogs(uid string, page int) ([]models.Blog, error) {
@@ -77,7 +90,7 @@ func (w *WeiboService) GetUserPhoneType(uid string) (string, error) {
 }
 
 // GetUserBlogsAndComments 获取用户博客和评论用户（分页处理）
-func (w *WeiboService) GetUserBlogsAndComments(uid string, blog_list []string, interval int, callback func([]models.CommentData)) {
+func (w *WeiboService) GetUserBlogsAndComments(uid string, blog_list []string, interval int, callback func(comment []models.CommentData, blog_content string)) {
 	totalProcessed := 0
 	userSet := make(map[string]bool)
 
@@ -85,6 +98,10 @@ func (w *WeiboService) GetUserBlogsAndComments(uid string, blog_list []string, i
 	max_id := uint64(0)
 
 	for _, blog_id := range blog_list {
+		blog_info, err := w.GetBlogInfo(blog_id)
+		if err != nil {
+			fmt.Printf("Get %s blog info failed: %v\n", blog_id, err)
+		}
 		for flag || max_id != 0 {
 			flag = false
 			// 获取评论用户
@@ -111,7 +128,7 @@ func (w *WeiboService) GetUserBlogsAndComments(uid string, blog_list []string, i
 
 			// 如果有新用户，调用回调函数
 			if len(newComments) > 0 {
-				callback(newComments)
+				callback(newComments, blog_info.TextRaw)
 				totalProcessed += len(newComments)
 				fmt.Printf("已处理 %d 个用户\n", totalProcessed)
 			}

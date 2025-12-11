@@ -29,8 +29,10 @@ var (
 						# Constraints & Rules
 						- **识别反讽**：这是最关键的。如果用户说“教授真是大善人，建议把吸毒者领回自己家养”，表面是夸赞，实际是极度【反对封存】。请务必识别“友军厚葬”类的反串言论。
 						- **逻辑关联**：如果评论提及“安卓/苹果”话题，除非用户用其进行类比（如“保护毒虫隐私却不保护苹果用户隐私”），否则归为【中立/其他】。
-						- **输出格式**：请以JSON格式输出，例如 {Value : 1}。
+						- **输出格式**：请以JSON格式输出。
 
+						# IMPORTANT
+						- 输出JSON格式为 {Value : 1}， 仅有一个字段Value，值为Int类型。
 						# 劳动燕微博正文内容
 						%s
 						`
@@ -69,7 +71,8 @@ func (c DeepSeek) GetCommentLevel(comment string, blog_content string) (*models.
 	choice := chatCompletion.Choices[0]
 
 	var reason_content string
-	if reason_content, ok := choice.Message.JSON.ExtraFields["reasoning_content"]; ok {
+	if reason, ok := choice.Message.JSON.ExtraFields["reasoning_content"]; ok {
+		reason_content = reason.Raw()
 		fmt.Printf("=== 思考过程 ===\n%v\n\n", reason_content)
 	}
 	res := &models.AiResponse{

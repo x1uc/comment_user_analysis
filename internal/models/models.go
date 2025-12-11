@@ -77,6 +77,10 @@ type StatisticData struct {
 // PhoneBrandMapping 手机品牌映射
 type PhoneBrandMapping map[string]string
 
+type BlogInfo struct {
+	TextRaw string `json:"text_raw"`
+}
+
 // GetBrand 获取手机品牌
 func (p PhoneBrandMapping) GetBrand(phoneType string) string {
 	brand := strings.TrimSpace(strings.ToLower(phoneType))
