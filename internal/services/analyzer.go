@@ -1,6 +1,7 @@
 package services
 
 import (
+	"comment_phone_analyse/config"
 	"comment_phone_analyse/internal/models"
 	"fmt"
 	"os"
@@ -20,11 +21,15 @@ type AnalyzerService struct {
 	statsFile      *os.File        // 实时统计数据文件
 	mutex          sync.RWMutex
 	interval       int
+	single_limit   int
 }
 
 // NewAnalyzerService 创建分析服务
-func NewAnalyzerService(weiboService *WeiboService, outputDir, uid string, interval int) *AnalyzerService {
+func NewAnalyzerService(weiboService *WeiboService, cfg *config.Config) *AnalyzerService {
 	// 创建用户专属的输出目录
+	outputDir := cfg.OutputDir
+	uid := cfg.UID
+
 	userOutputDir := filepath.Join(outputDir, uid)
 	if err := os.MkdirAll(userOutputDir, 0755); err != nil {
 		fmt.Printf("创建用户输出目录失败: %v\n", err)
@@ -48,7 +53,8 @@ func NewAnalyzerService(weiboService *WeiboService, outputDir, uid string, inter
 		processedUsers: make(map[string]bool),
 		outputDir:      userOutputDir,
 		statsFile:      statsFile,
-		interval:       interval,
+		interval:       cfg.Interval,
+		single_limit:   cfg.SingleLimit,
 	}
 }
 
@@ -65,7 +71,7 @@ func (a *AnalyzerService) AnalyzeUserPhones(uid string, limit int) *models.Phone
 	}
 
 	// 获取并处理用户
-	a.weiboService.GetUserBlogsAndComments(uid, limit, a.interval, userCallback)
+	a.weiboService.GetUserBlogsAndComments(uid, limit, a.interval, a.single_limit, userCallback)
 
 	fmt.Printf("分析完成，共处理 %d 个用户\n", a.statistics.UserCount)
 	return a.statistics

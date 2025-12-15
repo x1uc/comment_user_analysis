@@ -45,8 +45,8 @@ func (w *WeiboService) GetBlogs(uid string, page int) ([]models.Blog, error) {
 }
 
 // GetComments 获取博客评论用户列表
-func (w *WeiboService) GetComments(blogID string, uid string) ([]models.CommentData, error) {
-	url := fmt.Sprintf("https://weibo.com/ajax/statuses/buildComments?flow=0&is_reload=1&id=%s&is_show_bulletin=2&is_mix=0&count=20&uid=%s&fetch_level=0&locale=zh-CN", blogID, uid)
+func (w *WeiboService) GetComments(blogID string, uid string, max_id uint64) (*models.CommentResponse, error) {
+	url := fmt.Sprintf("https://weibo.com/ajax/statuses/buildComments?flow=0&is_reload=1&id=%s&is_show_bulletin=2&is_mix=0&count=20&uid=%s&fetch_level=0&locale=zh-CN&max_id=%v", blogID, uid, max_id)
 
 	body, err := w.client.Get(url)
 	if err != nil {
@@ -58,7 +58,7 @@ func (w *WeiboService) GetComments(blogID string, uid string) ([]models.CommentD
 		return nil, utils.NewParseError("解析评论数据失败", err)
 	}
 
-	return response.Data, nil
+	return &response, nil
 }
 
 // GetUserPhoneType 获取用户手机类型
@@ -67,18 +67,25 @@ func (w *WeiboService) GetUserPhoneType(uid string) (string, error) {
 	if err != nil {
 		return "", fmt.Errorf("获取用户博客失败: %w", err)
 	}
-
+	userPhone := ""
 	for _, blog := range blogs {
 		if blog.User.ID == uid && blog.PhoneType != "" {
-			return w.phoneMapping.GetBrand(blog.PhoneType), nil
+			curBrand := w.phoneMapping.GetBrand(blog.PhoneType)
+			if w.IsKnownBrand(curBrand) {
+				return curBrand, nil
+			} else {
+				userPhone = curBrand
+			}
 		}
 	}
-
+	if userPhone != "" {
+		return userPhone, nil
+	}
 	return "未知设备", nil
 }
 
 // GetUserBlogsAndComments 获取用户博客和评论用户（分页处理）
-func (w *WeiboService) GetUserBlogsAndComments(uid string, limit int, interval int, callback func([]models.CommentUser)) {
+func (w *WeiboService) GetUserBlogsAndComments(uid string, limit int, interval int, single_limit int, callback func([]models.CommentUser)) {
 	page := 1
 	totalProcessed := 0
 	userSet := make(map[string]bool)
@@ -103,35 +110,52 @@ func (w *WeiboService) GetUserBlogsAndComments(uid string, limit int, interval i
 				continue
 			}
 
-			// 获取评论用户
-			comments, err := w.GetComments(blog.MblogID, uid)
-			if err != nil {
-				fmt.Printf("获取评论失败: %v, 跳过博客 %s\n", err, blog.MblogID)
-				continue
-			}
+			max_id := uint64(0)
+			init_flag := true
+			single_count := 0
+			for max_id != 0 || init_flag {
+				init_flag = false
+				// 获取评论用户
+				CommentResponse, err := w.GetComments(blog.MblogID, uid, max_id)
+				comments := CommentResponse.Data
+				max_id = CommentResponse.MaxID
+				if err != nil {
+					fmt.Printf("获取评论失败: %v, 跳过博客 %s\n", err, blog.MblogID)
+					continue
+				}
 
-			// 过滤重复用户并收集
-			var newUsers []models.CommentUser
-			for _, comment := range comments {
-				if !userSet[comment.User.ID] {
-					userSet[comment.User.ID] = true
-					newUsers = append(newUsers, comment.User)
+				// 过滤重复用户并收集
+				var newUsers []models.CommentUser
+				for _, comment := range comments {
+					if !userSet[comment.User.ID] {
+						userSet[comment.User.ID] = true
+						newUsers = append(newUsers, comment.User)
+					}
+				}
+
+				// 如果有新用户，调用回调函数
+				if len(newUsers) > 0 {
+					callback(newUsers)
+					totalProcessed += len(newUsers)
+					single_count += len(newUsers)
+					fmt.Printf("已处理 %d 个用户\n", totalProcessed)
+				}
+
+				if single_count >= single_limit {
+					break
+				}
+				// 检查是否达到限制
+				if totalProcessed >= limit {
+					break
 				}
 			}
-
-			// 如果有新用户，调用回调函数
-			if len(newUsers) > 0 {
-				callback(newUsers)
-				totalProcessed += len(newUsers)
-				fmt.Printf("已处理 %d 个用户\n", totalProcessed)
-			}
-
-			// 检查是否达到限制
 			if totalProcessed >= limit {
 				break
 			}
 		}
-
+		if totalProcessed >= limit {
+			break
+		}
 		// 页面间延迟，避免频率限制
 		time.Sleep(time.Duration(interval) * time.Second)
 		page++
@@ -142,32 +166,32 @@ func (w *WeiboService) GetUserBlogsAndComments(uid string, limit int, interval i
 func getDefaultPhoneMapping() models.PhoneBrandMapping {
 	return models.PhoneBrandMapping{
 		"Huawei":    "华为",
-		"华为":      "华为",
+		"华为":        "华为",
 		"nova":      "华为",
 		"HarmonyOS": "华为",
 		"Xiaomi":    "小米",
-		"小米":      "小米",
+		"小米":        "小米",
 		"OPPO":      "OPPO",
 		"Vivo":      "Vivo",
 		"iPhone":    "苹果",
-		"苹果":      "苹果",
+		"苹果":        "苹果",
 		"Samsung":   "三星",
-		"三星":      "三星",
+		"三星":        "三星",
 		"Meizu":     "魅族",
-		"魅族":      "魅族",
+		"魅族":        "魅族",
 		"realme":    "真我",
-		"真我":      "真我",
+		"真我":        "真我",
 		"redmi":     "红米",
-		"红米":      "红米",
-		"一加":      "一加",
+		"红米":        "红米",
+		"一加":        "一加",
 		"OnePlus":   "一加",
-		"荣耀":      "荣耀",
+		"荣耀":        "荣耀",
 		"Honor":     "荣耀",
 		"honor":     "荣耀",
 		"ZTE":       "中兴",
-		"中兴":      "中兴",
+		"中兴":        "中兴",
 		"Nubia":     "努比亚",
-		"努比亚":    "努比亚",
+		"努比亚":       "努比亚",
 		"IQOO":      "IQOO",
 		"Neo5":      "IQOO",
 		"Android":   "Android设备",
@@ -179,8 +203,8 @@ func (w *WeiboService) IsKnownBrand(phoneType string) bool {
 	knownBrands := map[string]bool{
 		"华为":        true,
 		"小米":        true,
-		"OPPO":        true,
-		"Vivo":        true,
+		"OPPO":      true,
+		"Vivo":      true,
 		"苹果":        true,
 		"三星":        true,
 		"魅族":        true,
@@ -189,8 +213,8 @@ func (w *WeiboService) IsKnownBrand(phoneType string) bool {
 		"一加":        true,
 		"荣耀":        true,
 		"中兴":        true,
-		"努比亚":      true,
-		"IQOO":        true,
+		"努比亚":       true,
+		"IQOO":      true,
 		"未知Android": true,
 	}
 	return knownBrands[phoneType]

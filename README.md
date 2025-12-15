@@ -11,7 +11,6 @@
   "uid": "需要的用户UID",
   "cookie": "你的微博Cookie",
   "limit": 100,
-  "debug": false,
   "output_dir": "./output"
 }
 ```

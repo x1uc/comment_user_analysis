@@ -11,19 +11,18 @@ import (
 
 // Config 应用配置
 type Config struct {
-	UID       string `json:"uid"`
-	Cookie    string `json:"cookie"`
-	Limit     int    `json:"limit"`
-	Debug     bool   `json:"debug"`
-	OutputDir string `json:"output_dir"`
-	Interval  int    `json:"interval"`
+	UID         string `json:"uid"`
+	Cookie      string `json:"cookie"`
+	Limit       int    `json:"limit"`
+	OutputDir   string `json:"output_dir"`
+	Interval    int    `json:"interval"`
+	SingleLimit int    `json:"single_limit"`
 }
 
 // LoadConfig 加载配置
 func LoadConfig() (*Config, error) {
 	config := &Config{
 		Limit:     100,
-		Debug:     false,
 		OutputDir: "./output",
 		Interval:  5,
 	}
@@ -131,7 +130,6 @@ func (c *Config) Print() {
 	fmt.Printf("  Cookie: %s\n", cookieDisplay)
 
 	fmt.Printf("  统计限制: %d\n", c.Limit)
-	fmt.Printf("  调试模式: %t\n", c.Debug)
 	fmt.Printf("  输出目录: %s\n", c.OutputDir)
 	fmt.Printf("  间隔时间: %d\n", c.Interval)
 	fmt.Printf("  开始时间: %s\n", time.Now().Format("2006-01-02 15:04:05"))

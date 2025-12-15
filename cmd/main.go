@@ -24,7 +24,7 @@ func main() {
 
 	// 创建服务
 	weiboService := services.NewWeiboService(cfg.Cookie)
-	analyzerService := services.NewAnalyzerService(weiboService, cfg.OutputDir, cfg.UID, cfg.Interval)
+	analyzerService := services.NewAnalyzerService(weiboService, cfg)
 	defer analyzerService.Close() // 确保资源释放
 
 	setupGracefulShutdown(analyzerService, cfg)
