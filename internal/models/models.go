@@ -27,8 +27,8 @@ type User struct {
 
 // CommentResponse 评论响应
 type CommentResponse struct {
-	Data   []CommentData `json:"data"`
-	MaxID  uint64        `json:"max_id"`
+	Data  []CommentData `json:"data"`
+	MaxID uint64        `json:"max_id"`
 }
 
 // CommentData 评论数据
@@ -44,7 +44,7 @@ type CommentUser struct {
 // PhoneStatistics 手机统计数据
 type PhoneStatistics struct {
 	BrandCounts map[string]int `json:"brand_counts"`
-	UserCount   int           `json:"user_count"`
+	UserCount   int            `json:"user_count"`
 }
 
 // StatisticsData 统计数据（用于导出）

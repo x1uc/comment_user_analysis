@@ -36,13 +36,13 @@ func NewAppError(code int, message string, err error) *AppError {
 
 // 预定义错误码
 const (
-	ErrCodeNetwork     = 1001
-	ErrCodeParse       = 1002
-	ErrCodeAuth        = 1003
-	ErrCodeNotFound    = 1004
-	ErrCodeRateLimit   = 1005
-	ErrCodeConfig      = 1006
-	ErrCodeExport      = 1007
+	ErrCodeNetwork   = 1001
+	ErrCodeParse     = 1002
+	ErrCodeAuth      = 1003
+	ErrCodeNotFound  = 1004
+	ErrCodeRateLimit = 1005
+	ErrCodeConfig    = 1006
+	ErrCodeExport    = 1007
 )
 
 // 预定义错误

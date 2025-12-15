@@ -1,10 +1,12 @@
 package services
 
 import (
+	"comment_phone_analyse/config"
 	"comment_phone_analyse/internal/client"
 	"comment_phone_analyse/internal/models"
 	"comment_phone_analyse/internal/utils"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"time"
 )
@@ -16,9 +18,10 @@ type WeiboService struct {
 }
 
 // NewWeiboService 创建微博服务
-func NewWeiboService(cookie string) *WeiboService {
+func NewWeiboService() *WeiboService {
+	cfg := config.GetGlobalConfig()
 	return &WeiboService{
-		client:       client.NewClient(cookie),
+		client:       client.NewClient(cfg.Cookie),
 		phoneMapping: getDefaultPhoneMapping(),
 	}
 }
@@ -84,80 +87,83 @@ func (w *WeiboService) GetUserPhoneType(uid string) (string, error) {
 	return "未知设备", nil
 }
 
-// GetUserBlogsAndComments 获取用户博客和评论用户（分页处理）
-func (w *WeiboService) GetUserBlogsAndComments(uid string, limit int, interval int, single_limit int, callback func([]models.CommentUser)) {
+// GetUserBlogsAndComments 获取用户博客和评论用户
+func (w *WeiboService) GetUserBlogsAndComments(callback func([]models.CommentUser)) {
+	cfg := config.GetGlobalConfig()
+
 	page := 1
 	totalProcessed := 0
-	userSet := make(map[string]bool)
+	processedUsers := make(map[string]bool)
 
-	for totalProcessed < limit {
+	for totalProcessed < cfg.Limit {
 		// 获取博客列表
-		blogs, err := w.GetBlogs(uid, page)
+		blogs, err := w.GetBlogs(cfg.UID, page)
 		if err != nil {
-			if err == utils.ErrNoMoreData {
-				fmt.Printf("没有更多的博客")
+			if errors.Is(err, utils.ErrNoMoreData) {
+				fmt.Println("没有更多博客了")
 				break
 			}
-			//无更多博客
-			fmt.Printf("获取第%v页博客列表失败: %v\n", page, err)
+			fmt.Printf("获取第%d页博客失败: %v\n", page, err)
 			break
 		}
 
 		// 处理每条博客的评论
 		for _, blog := range blogs {
-			// 只处理用户本人发布的博客(不包含转发等)
-			if blog.User.ID != uid {
+			// 只处理用户本人发布的博客
+			if blog.User.ID != cfg.UID {
 				continue
 			}
 
-			max_id := uint64(0)
-			init_flag := true
-			single_count := 0
-			for max_id != 0 || init_flag {
-				init_flag = false
-				// 获取评论用户
-				CommentResponse, err := w.GetComments(blog.MblogID, uid, max_id)
-				comments := CommentResponse.Data
-				max_id = CommentResponse.MaxID
+			if totalProcessed >= cfg.Limit {
+				break
+			}
+
+			singleCount := 0
+			maxID := uint64(0)
+			isFirstPage := true
+
+			// 获取该博客的所有评论
+			for maxID != 0 || isFirstPage {
+				isFirstPage = false
+
+				response, err := w.GetComments(blog.MblogID, cfg.UID, maxID)
 				if err != nil {
 					fmt.Printf("获取评论失败: %v, 跳过博客 %s\n", err, blog.MblogID)
 					continue
 				}
 
-				// 过滤重复用户并收集
+				maxID = response.MaxID
+
+				// 过滤重复用户
 				var newUsers []models.CommentUser
-				for _, comment := range comments {
-					if !userSet[comment.User.ID] {
-						userSet[comment.User.ID] = true
+				for _, comment := range response.Data {
+					if !processedUsers[comment.User.ID] {
+						processedUsers[comment.User.ID] = true
 						newUsers = append(newUsers, comment.User)
 					}
 				}
 
-				// 如果有新用户，调用回调函数
+				// 调用回调处理新用户
 				if len(newUsers) > 0 {
 					callback(newUsers)
 					totalProcessed += len(newUsers)
-					single_count += len(newUsers)
+					singleCount += len(newUsers)
 					fmt.Printf("已处理 %d 个用户\n", totalProcessed)
 				}
 
-				if single_count >= single_limit {
+				// 检查限制
+				if singleCount >= cfg.SingleLimit || totalProcessed >= cfg.Limit {
 					break
 				}
-				// 检查是否达到限制
-				if totalProcessed >= limit {
-					break
-				}
-			}
-			if totalProcessed >= limit {
-				break
 			}
 		}
-		if totalProcessed >= limit {
+
+		if totalProcessed >= cfg.Limit {
 			break
 		}
-		// 页面间延迟，避免频率限制
-		time.Sleep(time.Duration(interval) * time.Second)
+
+		// 页面间延迟
+		time.Sleep(time.Duration(cfg.Interval) * time.Second)
 		page++
 	}
 }

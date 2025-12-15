@@ -17,15 +17,14 @@ type AnalyzerService struct {
 	weiboService   *WeiboService
 	statistics     *models.PhoneStatistics
 	processedUsers map[string]bool // 存储已处理过的用户ID，避免重复处理
-	outputDir      string          // 输出目录
 	statsFile      *os.File        // 实时统计数据文件
 	mutex          sync.RWMutex
-	interval       int
-	single_limit   int
 }
 
 // NewAnalyzerService 创建分析服务
-func NewAnalyzerService(weiboService *WeiboService, cfg *config.Config) *AnalyzerService {
+func NewAnalyzerService(weiboService *WeiboService) *AnalyzerService {
+	cfg := config.GetGlobalConfig()
+
 	// 创建用户专属的输出目录
 	outputDir := cfg.OutputDir
 	uid := cfg.UID
@@ -51,15 +50,17 @@ func NewAnalyzerService(weiboService *WeiboService, cfg *config.Config) *Analyze
 			UserCount:   0,
 		},
 		processedUsers: make(map[string]bool),
-		outputDir:      userOutputDir,
 		statsFile:      statsFile,
-		interval:       cfg.Interval,
-		single_limit:   cfg.SingleLimit,
 	}
 }
 
 // AnalyzeUserPhones 分析用户手机品牌分布
-func (a *AnalyzerService) AnalyzeUserPhones(uid string, limit int) *models.PhoneStatistics {
+func (a *AnalyzerService) AnalyzeUserPhones() *models.PhoneStatistics {
+	config := config.GetGlobalConfig()
+	uid := config.UID
+	limit := config.Limit
+	interval := config.Interval
+	singleLimit := config.SingleLimit
 	fmt.Printf("开始分析用户 %s 的手机品牌分布，限制 %d 个用户\n", uid, limit)
 
 	// 重置统计
@@ -67,11 +68,11 @@ func (a *AnalyzerService) AnalyzeUserPhones(uid string, limit int) *models.Phone
 
 	// 定义用户处理回调
 	userCallback := func(users []models.CommentUser) {
-		a.processUsers(users, a.interval)
+		a.processUsers(users)
 	}
 
 	// 获取并处理用户
-	a.weiboService.GetUserBlogsAndComments(uid, limit, a.interval, a.single_limit, userCallback)
+	a.weiboService.GetUserBlogsAndComments(userCallback)
 
 	fmt.Printf("分析完成，共处理 %d 个用户\n", a.statistics.UserCount)
 	return a.statistics
@@ -92,7 +93,8 @@ func (a *AnalyzerService) markUserAsProcessed(userID string) {
 }
 
 // processUsers 处理用户列表
-func (a *AnalyzerService) processUsers(users []models.CommentUser, interval int) {
+func (a *AnalyzerService) processUsers(users []models.CommentUser) {
+	cfg := config.GetGlobalConfig()
 	for _, user := range users {
 		// 检查用户是否已处理过（全局去重）
 		if a.isUserProcessed(user.ID) {
@@ -116,7 +118,7 @@ func (a *AnalyzerService) processUsers(users []models.CommentUser, interval int)
 		a.updateStatistics(phoneType)
 
 		// 避免请求过于频繁
-		time.Sleep(time.Duration(interval) * time.Second)
+		time.Sleep(time.Duration(cfg.Interval) * time.Second)
 	}
 }
 
@@ -159,7 +161,8 @@ func (a *AnalyzerService) resetStatistics() {
 	// 重置统计数据文件
 	if a.statsFile != nil {
 		a.statsFile.Close()
-		statsFilePath := filepath.Join(a.outputDir, "stats.txt")
+		cfg := config.GetGlobalConfig()
+		statsFilePath := filepath.Join(cfg.OutputDir, "stats.txt")
 		statsFile, err := os.OpenFile(statsFilePath, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
 		if err != nil {
 			fmt.Printf("重置统计数据文件失败: %v\n", err)
@@ -323,5 +326,6 @@ func (a *AnalyzerService) Close() error {
 
 // GetOutputDir 获取输出目录路径
 func (a *AnalyzerService) GetOutputDir() string {
-	return a.outputDir
+	cfg := config.GetGlobalConfig()
+	return cfg.OutputDir
 }

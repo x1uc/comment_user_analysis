@@ -13,32 +13,32 @@ import (
 )
 
 func main() {
-	// 加载配置
-	cfg, err := config.LoadConfig()
-	if err != nil {
+	// 初始化全局配置
+	if err := config.InitGlobalConfig(); err != nil {
 		log.Fatalf("加载配置失败: %v", err)
 	}
 
-	// 打印配置信息
+	cfg := config.GetGlobalConfig()
 	cfg.Print()
 
 	// 创建服务
-	weiboService := services.NewWeiboService(cfg.Cookie)
-	analyzerService := services.NewAnalyzerService(weiboService, cfg)
+	weiboService := services.NewWeiboService()
+	analyzerService := services.NewAnalyzerService(weiboService)
 	defer analyzerService.Close() // 确保资源释放
 
-	setupGracefulShutdown(analyzerService, cfg)
+	setupGracefulShutdown(analyzerService)
 
 	// 开始分析
 	fmt.Println("开始分析...")
-	analyzerService.AnalyzeUserPhones(cfg.UID, cfg.Limit)
+	analyzerService.AnalyzeUserPhones()
 
 	// 打印结果
 	printResults(analyzerService)
-	convertDataToChart(analyzerService, cfg)
+	convertDataToChart(analyzerService)
 }
 
-func convertDataToChart(analyzerService *services.AnalyzerService, cfg *config.Config) {
+func convertDataToChart(analyzerService *services.AnalyzerService) {
+	cfg := config.GetGlobalConfig()
 	// 导出图表到用户专属目录
 	userOutputDir := analyzerService.GetOutputDir()
 	chartExporter := export.NewChartExporter(cfg.UID, userOutputDir)
@@ -106,14 +106,14 @@ func printResults(analyzer *services.AnalyzerService) {
 }
 
 // setupGracefulShutdown 设置优雅退出
-func setupGracefulShutdown(analyzerService *services.AnalyzerService, cfg *config.Config) {
+func setupGracefulShutdown(analyzerService *services.AnalyzerService) {
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
 
 	go func() {
 		<-c
 		fmt.Println("\n\n收到退出信号，正在优雅退出...")
-		convertDataToChart(analyzerService, cfg)
+		convertDataToChart(analyzerService)
 		os.Exit(0)
 	}()
 }
