@@ -59,8 +59,6 @@ func (a *AnalyzerService) AnalyzeUserPhones() *models.PhoneStatistics {
 	config := config.GetGlobalConfig()
 	uid := config.UID
 	limit := config.Limit
-	interval := config.Interval
-	singleLimit := config.SingleLimit
 	fmt.Printf("开始分析用户 %s 的手机品牌分布，限制 %d 个用户\n", uid, limit)
 
 	// 重置统计
