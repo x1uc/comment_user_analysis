@@ -4,6 +4,7 @@ import (
 	"comment_phone_analyse/config"
 	"comment_phone_analyse/internal/models"
 	"fmt"
+	"math/rand"
 	"os"
 	"path/filepath"
 	"sort"
@@ -116,7 +117,8 @@ func (a *AnalyzerService) processUsers(users []models.CommentUser) {
 		a.updateStatistics(phoneType)
 
 		// 避免请求过于频繁
-		time.Sleep(time.Duration(cfg.Interval) * time.Second)
+		randomMs := rand.Intn(2001) + 1000
+		time.Sleep(time.Duration(cfg.Interval)*time.Second + time.Duration(randomMs)*time.Millisecond)
 	}
 }
 
