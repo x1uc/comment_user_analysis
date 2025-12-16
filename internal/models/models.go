@@ -61,6 +61,15 @@ type Config struct {
 	UserAgent string `json:"user_agent"`
 }
 
+type UserInfo struct {
+	Id         string `json:"idstr"`
+	Gender     string `json:"gender"`
+	Location   string `json:"location"`
+	PhoneType  string `json:"phone_type"`
+	UserName   string `json:"screen_name"`
+	IPLocation string `json:"ip_location"`
+}
+
 // PhoneBrandMapping 手机品牌映射
 type PhoneBrandMapping map[string]string
 

@@ -100,18 +100,28 @@ func (a *AnalyzerService) processUsers(users []models.CommentUser) {
 			continue
 		}
 
+		userInfo, err := a.weiboService.GetUserInfo(user.ID)
+		if err != nil {
+			fmt.Printf("获取用户信息失败: %v\n", err)
+			continue
+		}
 		// 获取用户手机类型
 		phoneType, err := a.weiboService.GetUserPhoneType(user.ID)
 		if err != nil {
 			fmt.Printf("获取用户 %s 手机类型失败: %v，跳过\n", user.ID, err)
 			continue
 		}
+		userInfo.PhoneType = phoneType
+
+		ipLocation := a.weiboService.GetUserLocation(user.ID)
+		ipLocation = strings.TrimPrefix(ipLocation, "IP属地：")
+		userInfo.IPLocation = ipLocation
 
 		// 标记用户为已处理
 		a.markUserAsProcessed(user.ID)
 
 		// 实时写入用户统计数据到文件
-		a.writeUserStats(user.ID, phoneType)
+		a.writeUserStats(userInfo)
 
 		// 更新统计
 		a.updateStatistics(phoneType)
@@ -132,13 +142,12 @@ func (a *AnalyzerService) updateStatistics(phoneType string) {
 }
 
 // writeUserStats 实时写入用户统计数据到文件
-func (a *AnalyzerService) writeUserStats(userID, phoneType string) {
+func (a *AnalyzerService) writeUserStats(user *models.UserInfo) {
 	if a.statsFile == nil {
 		return
 	}
 
-	// 实时写入用户ID和设备信息
-	statsLine := fmt.Sprintf("%s:%s\n", userID, phoneType)
+	statsLine := fmt.Sprintf("%s,%s,%s,%s,%s,%s\n", user.Id, user.UserName, user.PhoneType, user.Location, user.IPLocation, user.Gender)
 	if _, err := a.statsFile.WriteString(statsLine); err != nil {
 		fmt.Printf("写入统计数据失败: %v\n", err)
 	}
