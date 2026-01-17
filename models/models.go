@@ -88,6 +88,7 @@ type WeiboComment struct {
 	LikeCounts         int            `json:"like_counts"`
 	TextRaw            string         `json:"text_raw"`
 	IsExpand           bool           `json:"isExpand"`
+	User               WeiboUser      `json:"user"`
 }
 
 // WeiboStatus represents the root object

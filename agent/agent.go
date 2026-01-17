@@ -126,7 +126,7 @@ func (agent *WeiboAgent) GetHotComments(blogID string, uid string, max_id uint64
 	return wrapper.Data, wrapper.MaxID, nil
 }
 
-func (agent *WeiboAgent) GetNewComments(blogID string, max_id string, uid string) ([]models.WeiboComment, uint64, error) {
+func (agent *WeiboAgent) GetNewComments(blogID string, uid string, max_id uint64) ([]models.WeiboComment, uint64, error) {
 	url := fmt.Sprintf("https://weibo.com/ajax/statuses/buildComments?flow=1&is_reload=1&id=%s&is_show_bulletin=2&is_mix=0&count=20&uid=%s&fetch_level=0&locale=zh-CN&max_id=%d", blogID, uid, max_id)
 
 	body, err := agent.client.Get(url)
