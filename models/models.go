@@ -40,6 +40,18 @@ type WeiboUser struct {
 	SpecialFollow     bool   `json:"special_follow"`
 }
 
+type UserDetail struct {
+	Birthday    string `json:"birthday"`
+	CreatedAt   string `json:"created_at"`
+	Description string `json:"description"`
+	Gender      string `json:"gender"`
+	IPLocation  string `json:"ip_location"`
+	RealAuth    bool   `json:"real_auth"`
+	DescText    string `json:"desc_text"`
+	VerifiedURL string `json:"verified_url"`
+	FriendInfo  string `json:"friend_info"`
+}
+
 type WeiboComment struct {
 	CreatedAt          string         `json:"created_at"`
 	ID                 int64          `json:"id"`
@@ -78,11 +90,29 @@ type WeiboComment struct {
 	IsExpand           bool           `json:"isExpand"`
 }
 
-type UserDeteil struct {
-	UID         string
-	CreateAt    string `json:"created_at"`
-	DescText    string `json:"desc_text"`
-	Gender      string `json:"gender"`
-	IPLocation  string `json:"ip_location"`
-	Description string `json:"description"`
+// WeiboStatus represents the root object
+type WeiboBlog struct {
+	CreatedAt      string    `json:"created_at"`
+	ID             int64     `json:"id"`
+	IDStr          string    `json:"idstr"`
+	Mid            string    `json:"mid"`
+	MblogID        string    `json:"mblogid"`
+	User           WeiboUser `json:"user"`
+	CanEdit        bool      `json:"can_edit"`
+	TextLength     int       `json:"textLength"`
+	Source         string    `json:"source"`
+	Favorited      bool      `json:"favorited"`
+	PicIDs         []string  `json:"pic_ids"`
+	PicNum         int       `json:"pic_num"`
+	IsPaid         bool      `json:"is_paid"`
+	PicBgNew       string    `json:"pic_bg_new"`
+	RepostsCount   int       `json:"reposts_count"`
+	CommentsCount  int       `json:"comments_count"`
+	AttitudesCount int       `json:"attitudes_count"`
+	IsLongText     bool      `json:"isLongText"`
+	Text           string    `json:"text"`
+	TextRaw        string    `json:"text_raw"`
+	RegionName     string    `json:"region_name"`
+
+	// Additional nested objects
 }
