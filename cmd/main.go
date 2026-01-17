@@ -14,18 +14,11 @@ func main() {
 	cookie := requireEnv("COOKIE")
 	fmt.Printf("%s", cookie)
 	weiboAgent := agent.NewService(client.NewClient(cookie))
-	comments, max_id, err := weiboAgent.GetHotComments("5254618772671209", "2607719317", 0)
+	userDetail, err := weiboAgent.GetUserDetailInfo("2607719317")
 	if err != nil {
 		fmt.Print(err)
 	}
-	fmt.Print("max_id:", max_id, "\n")
-	fmt.Printf("arr len: %d", len(comments))
-	sum := 0
-	for _, comment := range comments {
-		sum++
-		sum += len(comment.Comments)
-	}
-	fmt.Print("total comments:", sum)
+	fmt.Printf("%+v", userDetail)
 }
 
 func requireEnv(key string) string {
