@@ -54,12 +54,51 @@ func (agent *WeiboAgent) GetUserInfo(uid string) (*models.WeiboUser, error) {
 	return &wrapper.Data.User, nil
 }
 
-func (*WeiboAgent) GetUserDeteilInfo(uid string) {
+func (agent *WeiboAgent) GetUserDetailInfo(uid string) (*models.UserDetail, error) {
+	url := fmt.Sprintf("https://weibo.com/ajax/profile/detail?uid=%v", uid)
+	body, err := agent.client.Get(url)
+	if err != nil {
+		return nil, fmt.Errorf("failed to fetch user detail info for uid %s: %w", uid, err)
+	}
 
+	var wrapper struct {
+		Data models.UserDetail `json:"data"`
+		Ok   int               `json:"ok"`
+	}
+
+	if err := json.Unmarshal(body, &wrapper); err != nil {
+		return nil, fmt.Errorf("failed to decode user detail info response for uid %s: %w", uid, err)
+	}
+
+	if wrapper.Ok != 1 {
+		return nil, fmt.Errorf("api error for uid %s: status not ok", uid)
+	}
+
+	return &wrapper.Data, nil
 }
 
-func (*WeiboAgent) GetUserBlogs(uid string, page int) {
+func (agent *WeiboAgent) GetUserBlogs(uid string, page int) ([]models.WeiboBlog, error) {
+	url := fmt.Sprintf("https://weibo.com/ajax/statuses/mymblog?uid=%s&page=%d&feature=1", uid, page)
+	body, err := agent.client.Get(url)
+	if err != nil {
+		return nil, fmt.Errorf("failed to fetch user blog info for uid %s: %w", uid, err)
+	}
 
+	var wrapper struct {
+		Data struct {
+			List []models.WeiboBlog `json:"list"`
+		} `json:"data"`
+		Ok int `json:"ok"`
+	}
+
+	if err := json.Unmarshal(body, &wrapper); err != nil {
+		return nil, fmt.Errorf("failed to decode user blog info response for uid %s: %w", uid, err)
+	}
+
+	if wrapper.Ok != 1 {
+		return nil, fmt.Errorf("api error for uid %s: status not ok", uid)
+	}
+	return wrapper.Data.List, nil
 }
 
 func (agent *WeiboAgent) GetHotComments(blogID string, uid string, max_id uint64) ([]models.WeiboComment, uint64, error) {
@@ -70,16 +109,21 @@ func (agent *WeiboAgent) GetHotComments(blogID string, uid string, max_id uint64
 		return nil, 0, err
 	}
 
-	var response struct {
+	var wrapper struct {
 		Ok    int                   `json:"ok"`
 		MaxID uint64                `json:"max_id"`
 		Data  []models.WeiboComment `json:"data"`
 	}
-	if err := json.Unmarshal(body, &response); err != nil {
+
+	if err := json.Unmarshal(body, &wrapper); err != nil {
 		return nil, 0, err
 	}
 
-	return response.Data, response.MaxID, nil
+	if wrapper.Ok != 1 {
+		return nil, 0, fmt.Errorf("api error for uid %s: status not ok", uid)
+	}
+
+	return wrapper.Data, wrapper.MaxID, nil
 }
 
 func (agent *WeiboAgent) GetNewComments(blogID string, max_id string, uid string) ([]models.WeiboComment, uint64, error) {
@@ -90,14 +134,19 @@ func (agent *WeiboAgent) GetNewComments(blogID string, max_id string, uid string
 		return nil, 0, err
 	}
 
-	var response struct {
+	var wrapper struct {
 		Ok    int                   `json:"ok"`
 		MaxID uint64                `json:"max_id"`
 		Data  []models.WeiboComment `json:"data"`
 	}
-	if err := json.Unmarshal(body, &response); err != nil {
+
+	if err := json.Unmarshal(body, &wrapper); err != nil {
 		return nil, 0, err
 	}
 
-	return response.Data, response.MaxID, nil
+	if wrapper.Ok != 1 {
+		return nil, 0, fmt.Errorf("api error for uid %s: status not ok", uid)
+	}
+
+	return wrapper.Data, wrapper.MaxID, nil
 }
