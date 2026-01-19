@@ -6,12 +6,16 @@ import (
 	"io"
 	"net/http"
 	"strings"
+	"sync"
 	"time"
 )
 
 type Client struct {
-	httpClient *http.Client
-	cookie     string
+	httpClient  *http.Client
+	cookie      string
+	rateLimit   time.Duration
+	lastReqTime time.Time
+	mu          sync.Mutex
 }
 
 func NewClient(cookie string) *Client {
@@ -23,7 +27,23 @@ func NewClient(cookie string) *Client {
 	}
 }
 
+func (c *Client) SetRateLimit(interval time.Duration) {
+	c.mu.Lock()
+	defer c.mu.Unlock()
+	c.rateLimit = interval
+}
+
 func (c *Client) Get(url string) ([]byte, error) {
+	c.mu.Lock()
+	if c.rateLimit > 0 {
+		elapsed := time.Since(c.lastReqTime)
+		if elapsed < c.rateLimit {
+			time.Sleep(c.rateLimit - elapsed)
+		}
+		c.lastReqTime = time.Now()
+	}
+	c.mu.Unlock()
+
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("failed to create request: %w", err)
