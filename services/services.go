@@ -61,43 +61,54 @@ func NewWeiboService(agent *agent.WeiboAgent) *WeiboService {
 	return &WeiboService{agent: agent}
 }
 
-func (s *WeiboService) GetUsers(blogId string, uid string, num int, popular bool) ([]models.WeiboUser, []models.WeiboComment, error) {
-	var users []models.WeiboUser
-	var summary_comments []models.WeiboComment
-	var max_id uint64
-	var err error
+// num: number of users to fetch per blog,
+// popular: whether to fetch popular comments or new comments
+func (s *WeiboService) GetUsers(blog_provider BlogProvider, num int, popular bool) ([]models.WeiboUser, []models.WeiboComment, error) {
+	blog_ids, err := blog_provider.GetBlogs()
+	if err != nil {
+		return nil, nil, err
+	}
+	summary_users := make([]models.WeiboUser, 0)
+	summary_comments := make([]models.WeiboComment, 0)
+	for _, blog_id := range blog_ids {
 
-	for len(users) < num {
-		var comments []models.WeiboComment
-		if popular {
-			comments, max_id, err = s.agent.GetHotComments(blogId, uid, max_id)
-		} else {
-			comments, max_id, err = s.agent.GetNewComments(blogId, uid, max_id)
-		}
+		var users []models.WeiboUser
+		var max_id uint64
+		var err error
 
-		if err != nil {
-			return nil, nil, err
-		}
+		for len(users) < num {
+			var comments []models.WeiboComment
+			if popular {
+				comments, max_id, err = s.agent.GetHotComments(blog_id, "", max_id)
+			} else {
+				comments, max_id, err = s.agent.GetNewComments(blog_id, "", max_id)
+			}
 
-		for _, comment := range comments {
-			users = append(users, comment.User)
-			summary_comments = append(summary_comments, comment)
-			for _, reply_comment := range comment.Comments {
-				users = append(users, reply_comment.User)
-				summary_comments = append(summary_comments, reply_comment)
+			if err != nil {
+				return nil, nil, err
+			}
+
+			for _, comment := range comments {
+				users = append(users, comment.User)
+				summary_comments = append(summary_comments, comment)
+				for _, reply_comment := range comment.SubComments {
+					users = append(users, reply_comment.User)
+					summary_comments = append(summary_comments, reply_comment)
+				}
+			}
+
+			if max_id == 0 {
+				break
 			}
 		}
-
-		if max_id == 0 {
-			break
-		}
+		summary_users = append(summary_users, users...)
 	}
 
-	return users, summary_comments, nil
+	return summary_users, summary_comments, nil
 }
 
-func (s *WeiboService) GetUserPhoneType(comment models.WeiboComment) (*models.CommentUserInfo, error) {
-	blogs, err := s.agent.GetUserBlogs(comment.User.IDStr, 1)
+func (s *WeiboService) GetUserPhoneType(user models.WeiboUser) (*models.UserPhoneInfo, error) {
+	blogs, err := s.agent.GetUserBlogs(user.IDStr, 1)
 	if err != nil {
 		return nil, err
 	}
@@ -117,45 +128,10 @@ func (s *WeiboService) GetUserPhoneType(comment models.WeiboComment) (*models.Co
 			}
 		}
 	}
-	return &models.CommentUserInfo{
-		Comment:    comment,
+	return &models.UserPhoneInfo{
+		User:       user,
 		Blog:       blog,
 		PhoneType:  phone_type,
 		PhoneBrand: brand,
 	}, nil
-}
-
-func (s *WeiboService) GetCommentsForBlogs(blog_provider BlogProvider, pre_num int) ([]models.WeiboComment, error) {
-	blog_ids, err := blog_provider.GetBlogs()
-	if err != nil {
-		return nil, err
-	}
-
-	var all_comments []models.WeiboComment
-	for _, blog_id := range blog_ids {
-		comments, err := s.GetComments(blog_id, pre_num)
-		if err != nil {
-			return nil, err
-		}
-		all_comments = append(all_comments, comments...)
-	}
-
-	return all_comments, nil
-}
-
-func (s *WeiboService) GetComments(blog_id string, num int) ([]models.WeiboComment, error) {
-	var all_comments []models.WeiboComment
-	var max_id uint64
-	for len(all_comments) < num {
-		comments, new_max_id, err := s.agent.GetNewComments(blog_id, "", max_id)
-		if err != nil {
-			return nil, err
-		}
-		all_comments = append(all_comments, comments...)
-		if new_max_id == 0 {
-			break
-		}
-		max_id = new_max_id
-	}
-	return all_comments, nil
 }
