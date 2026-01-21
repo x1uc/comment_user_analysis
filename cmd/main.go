@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"time"
 
 	"strings"
 
@@ -19,22 +18,7 @@ func main() {
 	//serviceGetBlogTest()
 	//serviceGetStaticBlogTest()
 	//serviceGetBlogTest()
-	// serviceGetStaticBlogTest()
-	serviceGetUserBlogTest()
-}
-
-func serviceGetUserTest() {
-	cookie := utils.RequireEnv("COOKIE")
-	weiboAgent := agent.NewService(client.NewClient(cookie))
-	weiboService := services.NewWeiboService(weiboAgent)
-	users, comments, err := weiboService.GetUsers("5254618772671209", "2607719317", 50, true)
-	if err != nil {
-		fmt.Print(err)
-	}
-	fmt.Printf("Fetched %d users and %d comments\n", len(users), len(comments))
-	// for _, comment := range comments {
-	// 	fmt.Printf("Comment: %+v\n", comment)
-	// }
+	//serviceGetStaticBlogTest()
 }
 
 func serviceGetBlogTest() {
@@ -68,31 +52,5 @@ func serviceGetStaticBlogTest() {
 	fmt.Printf("Fetched %d blogs from static provider\n", len(blogs))
 	for _, blogID := range blogs {
 		fmt.Printf("Blog ID: %s\n", blogID)
-	}
-}
-
-func serviceGetUserBlogTest() {
-	cookie := utils.RequireEnv("COOKIE")
-	client := client.NewClient(cookie)
-	rate := 2000 * time.Millisecond
-	client.SetRateLimit(rate)
-	weiboAgent := agent.NewService(client)
-	weiboService := services.NewWeiboService(weiboAgent)
-	blogProvider := &services.StaticBlogProvider{
-		BlogIDs: []string{"5254998191509253"},
-	}
-
-	comments, err := weiboService.GetCommentsForBlogs(blogProvider, 20)
-	if err != nil {
-		fmt.Print(err)
-	}
-	fmt.Printf("Fetched %d comments\n", len(comments))
-
-	for _, comment := range comments {
-		commentUserInfo, err := weiboService.GetUserPhoneType(comment)
-		if err != nil {
-			fmt.Print(err)
-		}
-		fmt.Printf("Fetched comment user info: %+v\n", commentUserInfo)
 	}
 }
