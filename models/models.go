@@ -78,7 +78,7 @@ type WeiboComment struct {
 	DegradeType        string         `json:"degrade_type"`
 	ReportScheme       string         `json:"report_scheme"`
 	BizMarkType        int            `json:"biz_mark_type"`
-	Comments           []WeiboComment `json:"comments"`
+	SubComments        []WeiboComment `json:"comments"`
 	HasVisible         bool           `json:"hasvisible"`
 	PreviousCursor     int            `json:"previous_cursor"`
 	NextCursor         int            `json:"next_cursor"`
@@ -118,9 +118,10 @@ type WeiboBlog struct {
 	// Additional nested objects
 }
 
-type CommentUserInfo struct {
-	Comment    WeiboComment
+type UserPhoneInfo struct {
+	User       WeiboUser
 	Blog       WeiboBlog
+	Detail     UserDetail
 	PhoneType  string
 	PhoneBrand string
 }
