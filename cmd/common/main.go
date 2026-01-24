@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"time"
 
 	"github.com/joho/godotenv"
@@ -9,6 +10,7 @@ import (
 	"github.com/x1uc/comment_user_analysis/client"
 	"github.com/x1uc/comment_user_analysis/models"
 	"github.com/x1uc/comment_user_analysis/services"
+	"github.com/x1uc/comment_user_analysis/store"
 	"github.com/x1uc/comment_user_analysis/utils"
 )
 
@@ -16,21 +18,23 @@ func main() {
 	godotenv.Load()
 	cookie := utils.RequireEnv("COOKIE")
 	client := client.NewClient(cookie)
-	rate := 3000 * time.Millisecond
+	rate := 2000 * time.Millisecond
 	client.SetRateLimit(rate)
 
-	weiboAgent := agent.NewService(client)
-	weiboService := services.NewWeiboService(weiboAgent)
-	blogProvider := &services.StaticBlogProvider{
+	store1 := store.NewStore("test.db")
+
+	weibo_agent := agent.NewService(client)
+	weibo_service := services.NewWeiboService(weibo_agent)
+	blog_provider := &services.StaticBlogProvider{
 		BlogIDs: []string{"5254998191509253"},
 	}
 
-	users, comments, err := weiboService.GetUsers(blogProvider, 20, false)
+	users, comments, err := weibo_service.GetUsers(blog_provider, 20, false)
 
 	phone_info_list := make([]models.UserPhoneInfo, 0)
 
 	for _, user := range users {
-		phone_info, err := weiboService.GetUserPhoneType(user)
+		phone_info, err := weibo_service.GetUserPhoneType(user)
 		if err != nil {
 			fmt.Printf("Error fetching phone type for user %s: %v\n", user.IDStr, err)
 			continue
@@ -39,7 +43,7 @@ func main() {
 			fmt.Printf("No phone info for user %s\n", user.IDStr)
 			continue
 		}
-		user_detail, err := weiboAgent.GetUserDetailInfo(user.IDStr)
+		user_detail, err := weibo_agent.GetUserDetailInfo(user.IDStr)
 		if err != nil {
 			fmt.Printf("Error fetching phone type for user %s: %v\n", user.IDStr, err)
 			continue
@@ -53,6 +57,9 @@ func main() {
 	fmt.Printf("Fetched %d comments\n", len(comments))
 	fmt.Printf("USER LEN %d", len(users))
 	for _, info := range phone_info_list {
-		fmt.Printf("User: %s, Phone Type: %s, Brand: %s, Blog Count: %d\n", info.User.ScreenName, info.PhoneType, info.PhoneBrand, info.Detail.IPLocation)
+		if err := store1.InsertInfo(info); err != nil {
+			log.Printf("Failed to insert info for user %s: %v", info.User.ScreenName, err)
+		}
+		fmt.Printf("User: %s, Phone Type: %s, Brand: %s, Blog Count: %s\n", info.User.ScreenName, info.PhoneType, info.PhoneBrand, info.Detail.IPLocation)
 	}
 }
