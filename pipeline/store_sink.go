@@ -8,11 +8,12 @@ import (
 )
 
 type StorePlugin struct {
-	store *store.Store
+	store   *store.Store
+	batchID string
 }
 
-func NewStorePlugin(db *store.Store) *StorePlugin {
-	return &StorePlugin{store: db}
+func NewStorePlugin(db *store.Store, batchID string) *StorePlugin {
+	return &StorePlugin{store: db, batchID: batchID}
 }
 
 func (p *StorePlugin) Name() string {
@@ -24,7 +25,7 @@ func (p *StorePlugin) Run(ctx context.Context, mem *Memory) error {
 		if err := ctx.Err(); err != nil {
 			return err
 		}
-		if err := p.store.InsertInfo(info); err != nil {
+		if err := p.store.InsertInfo(p.batchID, info); err != nil {
 			log.Printf("Failed to insert info for user %s: %v", info.User.ScreenName, err)
 		}
 	}
