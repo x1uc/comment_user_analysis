@@ -13,7 +13,7 @@ func TestClient_RateLimit(t *testing.T) {
 	}))
 	defer ts.Close()
 
-	c := NewClient("test-cookie")
+	c := NewClient("test-cookie", 0)
 	rate := 200 * time.Millisecond
 	c.SetRateLimit(rate)
 

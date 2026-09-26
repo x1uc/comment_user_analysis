@@ -2,55 +2,72 @@ package main
 
 import (
 	"fmt"
+	"log"
 
-	"strings"
-
-	"github.com/joho/godotenv"
 	"github.com/x1uc/comment_user_analysis/agent"
 	"github.com/x1uc/comment_user_analysis/client"
+	"github.com/x1uc/comment_user_analysis/config"
+	"github.com/x1uc/comment_user_analysis/models"
 	"github.com/x1uc/comment_user_analysis/services"
-	"github.com/x1uc/comment_user_analysis/utils"
+	"github.com/x1uc/comment_user_analysis/store"
 )
 
 func main() {
-	godotenv.Load()
-	//serviceGetUserTest()
-	//serviceGetBlogTest()
-	//serviceGetStaticBlogTest()
-	//serviceGetBlogTest()
-	//serviceGetStaticBlogTest()
-}
-
-func serviceGetBlogTest() {
-	cookie := utils.RequireEnv("COOKIE")
-	weiboAgent := agent.NewService(client.NewClient(cookie))
-	blogProvider := &services.AgentBlogProvider{
-		Agent:  weiboAgent,
-		UID:    "2607719317",
-		Number: 100,
-	}
-	blogs, err := blogProvider.GetBlogs()
+	cfg, err := config.Load("config.toml")
 	if err != nil {
-		fmt.Print(err)
-	}
-	fmt.Printf("Fetched %d blogs\n", len(blogs))
-	for _, blogID := range blogs {
-		fmt.Printf("Blog ID: %s\n", blogID)
+		log.Fatal(err)
 	}
 
-}
-
-func serviceGetStaticBlogTest() {
-	blogIDs := utils.RequireEnv("BLOG_IDS")
-	blogProvider := &services.StaticBlogProvider{
-		BlogIDs: strings.Split(blogIDs, ","),
-	}
-	blogs, err := blogProvider.GetBlogs()
+	rateLimit, err := cfg.RateLimitDuration()
 	if err != nil {
-		fmt.Print(err)
+		log.Fatal(err)
 	}
-	fmt.Printf("Fetched %d blogs from static provider\n", len(blogs))
-	for _, blogID := range blogs {
-		fmt.Printf("Blog ID: %s\n", blogID)
+
+	httpClient := client.NewClient(cfg.Cookie, rateLimit)
+
+	store1, err := store.NewStore(cfg.DBPath)
+	if err != nil {
+		log.Fatalf("Failed to initialize database: %v", err)
 	}
+	defer store1.Close()
+
+	weiboAgent := agent.NewService(httpClient)
+	weiboService := services.NewWeiboService(weiboAgent)
+
+	resultData := models.ResultData{
+		ResultComment:    make([]models.WeiboComment, 0),
+		ResultUsers:      make([]models.WeiboUser, 0),
+		ResultPhoneInfos: make([]models.UserPhoneInfo, 0),
+	}
+	for _, blog := range cfg.BlogsInfos {
+		curData, err := weiboService.GetUsers(blog.BlogId, blog.CommentAmount, services.CommentOrderType(blog.OrderType))
+
+		if err != nil {
+			log.Fatalf("Failed to fetch comments for blog %s: %v", blog.BlogId, err)
+		}
+		resultData.ResultComment = append(resultData.ResultComment, curData.ResultComment...)
+		resultData.ResultUsers = append(resultData.ResultUsers, curData.ResultUsers...)
+	}
+
+	phoneInfoList := make([]models.UserPhoneInfo, 0)
+
+	for _, user := range resultData.ResultUsers {
+		phoneInfo, err := weiboService.GetUserPhoneType(user)
+		if err != nil {
+			fmt.Printf("Error fetching phone type for user %s: %v\n", user.IDStr, err)
+			continue
+		}
+		if phoneInfo == nil {
+			fmt.Printf("No phone info for user %s\n", user.IDStr)
+			continue
+		}
+		userDetail, err := weiboAgent.GetUserDetailInfo(user.IDStr)
+		if err != nil {
+			fmt.Printf("Error fetching phone type for user %s: %v\n", user.IDStr, err)
+			continue
+		}
+		phoneInfo.Detail = *userDetail
+		phoneInfoList = append(phoneInfoList, *phoneInfo)
+	}
+	resultData.ResultPhoneInfos = append(resultData.ResultPhoneInfos, phoneInfoList...)
 }

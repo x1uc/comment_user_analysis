@@ -18,12 +18,13 @@ type Client struct {
 	mu          sync.Mutex
 }
 
-func NewClient(cookie string) *Client {
+func NewClient(cookie string, rateLimit time.Duration) *Client {
 	return &Client{
 		httpClient: &http.Client{
 			Timeout: 30 * time.Second,
 		},
-		cookie: cookie,
+		cookie:    cookie,
+		rateLimit: rateLimit,
 	}
 }
 

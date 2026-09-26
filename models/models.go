@@ -91,6 +91,12 @@ type WeiboComment struct {
 	User               WeiboUser      `json:"user"`
 }
 
+type ResultData struct {
+	ResultComment    []WeiboComment  `json:"comments"`
+	ResultUsers      []WeiboUser     `json:"users"`
+	ResultPhoneInfos []UserPhoneInfo `json:"phone_infos"`
+}
+
 // WeiboStatus represents the root object
 type WeiboBlog struct {
 	CreatedAt      string    `json:"created_at"`
@@ -129,13 +135,13 @@ type UserPhoneInfo struct {
 var BrandMap = map[string]string{
 	"Huawei":     "华为",
 	"HUAWEI":     "华为",
-	"华为":         "华为",
+	"华为":       "华为",
 	"nova":       "华为",
 	"HarmonyOS":  "华为",
 	"Xiaomi":     "小米",
 	"xiaomi":     "小米",
 	"MI ":        "小米",
-	"小米":         "小米",
+	"小米":       "小米",
 	"OPPO":       "OPPO",
 	"oppo":       "OPPO",
 	"Find":       "OPPO",
@@ -146,61 +152,74 @@ var BrandMap = map[string]string{
 	"iPhone":     "苹果",
 	"iPad":       "iPad",
 	"iOS":        "苹果",
-	"苹果":         "苹果",
+	"苹果":       "苹果",
 	"Samsung":    "三星",
 	"SAMSUNG":    "三星",
 	"Galaxy":     "三星",
-	"三星":         "三星",
+	"三星":       "三星",
 	"Meizu":      "魅族",
-	"魅族":         "魅族",
+	"魅族":       "魅族",
 	"realme":     "真我",
 	"Realme":     "真我",
-	"真我":         "真我",
+	"真我":       "真我",
 	"redmi":      "红米",
 	"Redmi":      "红米",
-	"红米":         "红米",
-	"一加":         "一加",
+	"红米":       "红米",
+	"一加":       "一加",
 	"OnePlus":    "一加",
-	"荣耀":         "荣耀",
+	"荣耀":       "荣耀",
 	"Honor":      "荣耀",
 	"honor":      "荣耀",
 	"ZTE":        "中兴",
-	"中兴":         "中兴",
+	"中兴":       "中兴",
 	"Axon":       "中兴",
 	"Nubia":      "努比亚",
-	"努比亚":        "努比亚",
+	"努比亚":     "努比亚",
 	"RedMagic":   "努比亚",
-	"红魔":         "努比亚",
+	"红魔":       "努比亚",
 	"IQOO":       "IQOO",
 	"iQOO":       "IQOO",
 	"Neo":        "IQOO",
 	"BlackShark": "黑鲨",
-	"黑鲨":         "黑鲨",
+	"黑鲨":       "黑鲨",
 	"ROG":        "华硕",
 	"ASUS":       "华硕",
-	"华硕":         "华硕",
+	"华硕":       "华硕",
 	"Lenovo":     "联想",
 	"Legion":     "联想",
-	"联想":         "联想",
+	"联想":       "联想",
 	"Sony":       "索尼",
 	"Xperia":     "索尼",
-	"索尼":         "索尼",
+	"索尼":       "索尼",
 	"Moto":       "摩托罗拉",
 	"Motorola":   "摩托罗拉",
-	"摩托罗拉":       "摩托罗拉",
+	"摩托罗拉":   "摩托罗拉",
 	"Google":     "谷歌",
 	"Pixel":      "谷歌",
 	"HTC":        "HTC",
 	"Nokia":      "诺基亚",
 	"LG":         "LG",
 	"Coolpad":    "酷派",
-	"酷派":         "酷派",
+	"酷派":       "酷派",
 	"Gionee":     "金立",
-	"金立":         "金立",
+	"金立":       "金立",
 	"Smartisan":  "坚果/锤子",
-	"坚果":         "坚果/锤子",
+	"坚果":       "坚果/锤子",
 	"8848":       "8848",
 	"Vertu":      "Vertu",
 	"Android":    "Android设备",
 	"android":    "Android设备",
+}
+
+type BlogsInfo struct {
+	BlogId        string `toml:"blog_id"`        // 微博文章ID
+	CommentAmount int    `toml:"comment_amount"` // 需要拉取多少条数据
+	OrderType     string `toml:"order_type"`     // 按照热度排序还是按照时间降序排序(可选值：popular、timeDesc)
+}
+type BlogCrawlInfos struct {
+	BlogsInfos       []BlogsInfo `toml:"blogs_infos"` // 需要拉取的文章信息
+	Cookie           string      `toml:"cookie"`
+	RateLimit        string      `toml:"rate_limit"`         // 拉取的限流策略
+	DefaultOrderType string      `toml:"default_order_type"` // 默认的评论排序方式，在 BlogInfo.OrderType 为空的时候使用
+	DBPath           string      `toml:"db_path"`
 }

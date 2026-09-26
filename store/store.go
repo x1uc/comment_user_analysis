@@ -1,51 +1,56 @@
 package store
 
 import (
+	"context"
 	"database/sql"
+	"embed"
+	"fmt"
+	"io/fs"
 	"log"
 
 	_ "github.com/mattn/go-sqlite3"
+	"github.com/pressly/goose/v3"
 	"github.com/x1uc/comment_user_analysis/models"
 )
+
+//go:embed migrations/*.sql
+var migrations embed.FS
 
 type Store struct {
 	ctx *sql.DB
 }
 
-func NewStore(path string) Store {
+func NewStore(path string) (*Store, error) {
 	log.Printf("Opening database at %s", path)
 	ctx, err := sql.Open("sqlite3", path)
 	if err != nil {
-		log.Fatalf("Failed to open database: %v", err)
+		return nil, fmt.Errorf("open database: %w", err)
+	}
+	if err := ctx.Ping(); err != nil {
+		ctx.Close()
+		return nil, fmt.Errorf("connect to database: %w", err)
 	}
 
-	create_table_sql := `
-	CREATE TABLE IF NOT EXISTS USER_PHONE_INFO (
-		id INTEGER PRIMARY KEY AUTOINCREMENT,
-		user_id_str TEXT,
-		screen_name TEXT,
-		blog_text_raw TEXT,
-		blog_region_name TEXT,
-		blog_source TEXT,
-		blog_created_at TEXT,
-		blog_id_str TEXT,
-		blog_mblog_id TEXT,
-		user_ip_location TEXT,
-		user_created_at TEXT,
-		gender TEXT,
-		phone_type TEXT,
-		phone_brand TEXT
-	);`
-
-	_, err = ctx.Exec(create_table_sql)
-
+	migrationFS, err := fs.Sub(migrations, "migrations")
 	if err != nil {
-		log.Fatalf("create table error: %v", err)
+		ctx.Close()
+		return nil, fmt.Errorf("load migrations: %w", err)
+	}
+	provider, err := goose.NewProvider(goose.DialectSQLite3, ctx, migrationFS)
+	if err != nil {
+		ctx.Close()
+		return nil, fmt.Errorf("initialize migrations: %w", err)
+	}
+	if _, err := provider.Up(context.Background()); err != nil {
+		ctx.Close()
+		return nil, fmt.Errorf("migrate database: %w", err)
 	}
 
-	return Store{
-		ctx: ctx,
-	}
+	return &Store{ctx: ctx}, nil
+}
+
+func (s *Store) Close() error {
+	return s.ctx.Close()
 }
 
 func (s Store) InsertInfo(user_info models.UserPhoneInfo) error {

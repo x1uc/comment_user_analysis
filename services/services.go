@@ -7,6 +7,13 @@ import (
 	"github.com/x1uc/comment_user_analysis/models"
 )
 
+type CommentOrderType string
+
+const (
+	OrderByPopular  CommentOrderType = "popular"
+	OrderByTimeDesc CommentOrderType = "timeDesc"
+)
+
 type WeiboService struct {
 	agent *agent.WeiboAgent
 }
@@ -61,50 +68,46 @@ func NewWeiboService(agent *agent.WeiboAgent) *WeiboService {
 	return &WeiboService{agent: agent}
 }
 
-// num: number of users to fetch per blog,
-// popular: whether to fetch popular comments or new comments
-func (s *WeiboService) GetUsers(blog_provider BlogProvider, num int, popular bool) ([]models.WeiboUser, []models.WeiboComment, error) {
-	blog_ids, err := blog_provider.GetBlogs()
-	if err != nil {
-		return nil, nil, err
+func (s *WeiboService) GetUsers(blogId string, commentAmount int, orderType CommentOrderType) (*models.ResultData, error) {
+	resultData := models.ResultData{
+		ResultComment: make([]models.WeiboComment, 0),
+		ResultUsers:   make([]models.WeiboUser, 0),
 	}
-	summary_users := make([]models.WeiboUser, 0)
-	summary_comments := make([]models.WeiboComment, 0)
-	for _, blog_id := range blog_ids {
 
-		var users []models.WeiboUser
-		var max_id uint64
-		var err error
+	var curComments []models.WeiboComment
+	var curSubComments []models.WeiboComment
+	curUsers := make([]models.WeiboUser, 0)
+	var maxId uint64
+	var err error
 
-		for len(users) < num {
-			var comments []models.WeiboComment
-			if popular {
-				comments, max_id, err = s.agent.GetHotComments(blog_id, "", max_id)
-			} else {
-				comments, max_id, err = s.agent.GetNewComments(blog_id, "", max_id)
-			}
+	for len(curComments) < commentAmount {
+		if orderType == OrderByPopular {
+			curComments, maxId, err = s.agent.GetHotComments(blogId, "", maxId)
+		} else {
+			curComments, maxId, err = s.agent.GetNewComments(blogId, "", maxId)
+		}
 
-			if err != nil {
-				return nil, nil, err
-			}
+		if err != nil {
+			return nil, err
+		}
 
-			for _, comment := range comments {
-				users = append(users, comment.User)
-				summary_comments = append(summary_comments, comment)
-				for _, reply_comment := range comment.SubComments {
-					users = append(users, reply_comment.User)
-					summary_comments = append(summary_comments, reply_comment)
-				}
-			}
-
-			if max_id == 0 {
-				break
+		for _, comment := range curComments {
+			curUsers = append(curUsers, comment.User)
+			curSubComments = append(curSubComments, comment.SubComments...)
+			for _, subComment := range comment.SubComments {
+				curUsers = append(curUsers, subComment.User)
 			}
 		}
-		summary_users = append(summary_users, users...)
-	}
 
-	return summary_users, summary_comments, nil
+		if maxId == 0 {
+			break
+		}
+	}
+	resultData.ResultComment = append(resultData.ResultComment, curComments...)
+	resultData.ResultComment = append(resultData.ResultComment, curSubComments...)
+	resultData.ResultUsers = append(resultData.ResultUsers, curUsers...)
+
+	return &resultData, nil
 }
 
 func (s *WeiboService) GetUserPhoneType(user models.WeiboUser) (*models.UserPhoneInfo, error) {
@@ -115,15 +118,15 @@ func (s *WeiboService) GetUserPhoneType(user models.WeiboUser) (*models.UserPhon
 	if len(blogs) == 0 {
 		return nil, nil
 	}
-	phone_type := ""
+	phoneType := ""
 	brand := ""
 	var blog models.WeiboBlog
-	for _, cur_blog := range blogs {
-		blog = cur_blog
-		phone_type = strings.TrimSpace(strings.ToLower(blog.Source))
-		for device_name, cur_brand := range models.BrandMap {
-			if strings.Contains(phone_type, strings.ToLower(device_name)) {
-				brand = cur_brand
+	for _, curBlog := range blogs {
+		blog = curBlog
+		phoneType = strings.TrimSpace(strings.ToLower(blog.Source))
+		for deviceName, curBrand := range models.BrandMap {
+			if strings.Contains(phoneType, strings.ToLower(deviceName)) {
+				brand = curBrand
 				break
 			}
 		}
@@ -131,7 +134,7 @@ func (s *WeiboService) GetUserPhoneType(user models.WeiboUser) (*models.UserPhon
 	return &models.UserPhoneInfo{
 		User:       user,
 		Blog:       blog,
-		PhoneType:  phone_type,
+		PhoneType:  phoneType,
 		PhoneBrand: brand,
 	}, nil
 }
