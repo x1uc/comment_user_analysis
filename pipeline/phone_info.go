@@ -2,7 +2,7 @@ package pipeline
 
 import (
 	"context"
-	"fmt"
+	"log/slog"
 
 	"github.com/x1uc/comment_user_analysis/agent"
 	"github.com/x1uc/comment_user_analysis/services"
@@ -18,7 +18,7 @@ func NewPhoneInfoPlugin(service *services.WeiboService, weiboAgent *agent.WeiboA
 }
 
 func (p *PhoneInfoPlugin) Name() string {
-	return "phone_info"
+	return "手机信息"
 }
 
 func (p *PhoneInfoPlugin) Run(ctx context.Context, mem *Memory) error {
@@ -28,20 +28,21 @@ func (p *PhoneInfoPlugin) Run(ctx context.Context, mem *Memory) error {
 		}
 		phoneInfo, err := p.service.GetUserPhoneType(user)
 		if err != nil {
-			fmt.Printf("Error fetching phone type for user %s: %v\n", user.IDStr, err)
+			slog.Error("获取用户手机信息失败", "user_id", user.IDStr, "error", err)
 			continue
 		}
 		if phoneInfo == nil {
-			fmt.Printf("No phone info for user %s\n", user.IDStr)
+			slog.Info("用户没有手机信息", "user_id", user.IDStr)
 			continue
 		}
 		userDetail, err := p.agent.GetUserDetailInfo(user.IDStr)
 		if err != nil {
-			fmt.Printf("Error fetching phone type for user %s: %v\n", user.IDStr, err)
+			slog.Error("获取用户详情失败", "user_id", user.IDStr, "error", err)
 			continue
 		}
 		phoneInfo.Detail = *userDetail
 		mem.PhoneInfos = append(mem.PhoneInfos, *phoneInfo)
+		slog.Info("获取用户手机信息成功", "user_id", user.IDStr, "user", user.ScreenName, "brand", phoneInfo.PhoneBrand, "phone", phoneInfo.PhoneType)
 	}
 	return nil
 }

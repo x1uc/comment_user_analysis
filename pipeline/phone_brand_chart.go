@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"html/template"
-	"log"
+	"log/slog"
 	"os"
 	"path/filepath"
 	"sort"
@@ -24,7 +24,7 @@ func NewPhoneBrandChartPlugin(path string) *PhoneBrandChartPlugin {
 }
 
 func (p *PhoneBrandChartPlugin) Name() string {
-	return "phone_brand_chart"
+	return "品牌饼图"
 }
 
 func (p *PhoneBrandChartPlugin) Run(ctx context.Context, mem *Memory) error {
@@ -35,7 +35,7 @@ func (p *PhoneBrandChartPlugin) Run(ctx context.Context, mem *Memory) error {
 	if err := writePhoneBrandChart(p.path, labels, counts, brandChartColors(labels)); err != nil {
 		return err
 	}
-	log.Printf("phone brand chart: %s", p.path)
+	slog.Info("手机品牌饼图", "path", p.path)
 	return nil
 }
 

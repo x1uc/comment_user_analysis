@@ -47,19 +47,19 @@ func (c *Client) Get(url string) ([]byte, error) {
 
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
-		return nil, fmt.Errorf("failed to create request: %w", err)
+		return nil, fmt.Errorf("创建请求失败: %w", err)
 	}
 
 	c.setHeaders(req)
 
 	resp, err := c.httpClient.Do(req)
 	if err != nil {
-		return nil, fmt.Errorf("request failed: %w", err)
+		return nil, fmt.Errorf("请求失败: %w", err)
 	}
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("HTTP status code error: %d", resp.StatusCode)
+		return nil, fmt.Errorf("HTTP 状态码错误: %d", resp.StatusCode)
 	}
 
 	// handle compressed response
@@ -67,7 +67,7 @@ func (c *Client) Get(url string) ([]byte, error) {
 
 	body, err := io.ReadAll(reader)
 	if err != nil {
-		return nil, fmt.Errorf("failed to read response: %w", err)
+		return nil, fmt.Errorf("读取响应失败: %w", err)
 	}
 
 	return body, nil

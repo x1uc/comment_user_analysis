@@ -29,7 +29,7 @@ func Run(ctx context.Context, plugins []Plugin) error {
 			return err
 		}
 		if err := plugin.Run(ctx, mem); err != nil {
-			return fmt.Errorf("%s: %w", plugin.Name(), err)
+			return fmt.Errorf("插件 %s 执行失败: %w", plugin.Name(), err)
 		}
 	}
 	return nil

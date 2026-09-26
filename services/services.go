@@ -68,7 +68,7 @@ func NewWeiboService(agent *agent.WeiboAgent) *WeiboService {
 	return &WeiboService{agent: agent}
 }
 
-func (s *WeiboService) GetUsers(blogId string, commentAmount int, orderType CommentOrderType) (*models.ResultData, error) {
+func (s *WeiboService) GetCommentData(blogId string, commentAmount int, orderType CommentOrderType) (*models.ResultData, error) {
 	resultData := models.ResultData{
 		ResultComment: make([]models.WeiboComment, 0),
 		ResultUsers:   make([]models.WeiboUser, 0),

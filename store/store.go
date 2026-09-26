@@ -6,7 +6,7 @@ import (
 	"embed"
 	"fmt"
 	"io/fs"
-	"log"
+	"log/slog"
 
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/pressly/goose/v3"
@@ -21,29 +21,29 @@ type Store struct {
 }
 
 func NewStore(path string) (*Store, error) {
-	log.Printf("Opening database at %s", path)
+	slog.Info("正在打开数据库", "path", path)
 	ctx, err := sql.Open("sqlite3", path)
 	if err != nil {
-		return nil, fmt.Errorf("open database: %w", err)
+		return nil, fmt.Errorf("打开数据库失败: %w", err)
 	}
 	if err := ctx.Ping(); err != nil {
 		ctx.Close()
-		return nil, fmt.Errorf("connect to database: %w", err)
+		return nil, fmt.Errorf("连接数据库失败: %w", err)
 	}
 
 	migrationFS, err := fs.Sub(migrations, "migrations")
 	if err != nil {
 		ctx.Close()
-		return nil, fmt.Errorf("load migrations: %w", err)
+		return nil, fmt.Errorf("加载迁移失败: %w", err)
 	}
 	provider, err := goose.NewProvider(goose.DialectSQLite3, ctx, migrationFS)
 	if err != nil {
 		ctx.Close()
-		return nil, fmt.Errorf("initialize migrations: %w", err)
+		return nil, fmt.Errorf("初始化迁移失败: %w", err)
 	}
 	if _, err := provider.Up(context.Background()); err != nil {
 		ctx.Close()
-		return nil, fmt.Errorf("migrate database: %w", err)
+		return nil, fmt.Errorf("执行迁移失败: %w", err)
 	}
 
 	return &Store{ctx: ctx}, nil
@@ -55,7 +55,7 @@ func (s *Store) Close() error {
 
 func (s Store) InsertInfo(batchID string, user_info models.UserPhoneInfo) error {
 	if batchID == "" {
-		return fmt.Errorf("batch id is required")
+		return fmt.Errorf("批次号不能为空")
 	}
 	stmt, err := s.ctx.Prepare(`INSERT INTO USER_PHONE_INFO (
 		user_id_str,
