@@ -13,7 +13,8 @@ CREATE TABLE IF NOT EXISTS USER_PHONE_INFO (
     user_created_at TEXT,
     gender TEXT,
     phone_type TEXT,
-    phone_brand TEXT
+    phone_brand TEXT,
+    batch_id TEXT
 );
 
 -- +goose Down

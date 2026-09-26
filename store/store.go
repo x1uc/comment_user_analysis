@@ -53,7 +53,10 @@ func (s *Store) Close() error {
 	return s.ctx.Close()
 }
 
-func (s Store) InsertInfo(user_info models.UserPhoneInfo) error {
+func (s Store) InsertInfo(batchID string, user_info models.UserPhoneInfo) error {
+	if batchID == "" {
+		return fmt.Errorf("batch id is required")
+	}
 	stmt, err := s.ctx.Prepare(`INSERT INTO USER_PHONE_INFO (
 		user_id_str,
 		screen_name,
@@ -67,8 +70,9 @@ func (s Store) InsertInfo(user_info models.UserPhoneInfo) error {
 		user_created_at,
 		gender,
 		phone_type,
-		phone_brand
-	) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`)
+		phone_brand,
+		batch_id
+	) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`)
 	if err != nil {
 		return err
 	}
@@ -88,6 +92,7 @@ func (s Store) InsertInfo(user_info models.UserPhoneInfo) error {
 		user_info.Detail.Gender,
 		user_info.PhoneType,
 		user_info.PhoneBrand,
+		batchID,
 	)
 	return err
 }

@@ -17,7 +17,8 @@ func TestNewStoreMigratesAndPreservesData(t *testing.T) {
 	info := models.UserPhoneInfo{}
 	info.User.IDStr = "123"
 	info.User.ScreenName = "test user"
-	if err := first.InsertInfo(info); err != nil {
+	const batchID = "batch-1"
+	if err := first.InsertInfo(batchID, info); err != nil {
 		t.Fatal(err)
 	}
 	// Simulate a database created before goose tracked migrations.
@@ -60,5 +61,12 @@ func TestNewStoreMigratesAndPreservesData(t *testing.T) {
 	}
 	if count != 1 {
 		t.Fatalf("want 1 row after repeated migration, got %d", count)
+	}
+	var storedBatch string
+	if err := third.ctx.QueryRow("SELECT batch_id FROM USER_PHONE_INFO WHERE user_id_str = ?", "123").Scan(&storedBatch); err != nil {
+		t.Fatal(err)
+	}
+	if storedBatch != batchID {
+		t.Fatalf("batch_id = %s", storedBatch)
 	}
 }

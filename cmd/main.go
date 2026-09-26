@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"github.com/google/uuid"
 	"log"
 
 	"github.com/x1uc/comment_user_analysis/agent"
@@ -25,11 +26,17 @@ func main() {
 
 	httpClient := client.NewClient(cfg.Cookie, rateLimit)
 
-	store1, err := store.NewStore(cfg.DBPath)
+	DB, err := store.NewStore(cfg.DBPath)
 	if err != nil {
 		log.Fatalf("Failed to initialize database: %v", err)
 	}
-	defer store1.Close()
+	defer DB.Close()
+
+	batchID, err := uuid.NewUUID()
+	if err != nil {
+		log.Fatal(err)
+	}
+	log.Printf("batch id: %s", batchID)
 
 	weiboAgent := agent.NewService(httpClient)
 	weiboService := services.NewWeiboService(weiboAgent)
@@ -37,7 +44,7 @@ func main() {
 	err = pipeline.Run(context.Background(), []pipeline.Plugin{
 		pipeline.NewCommentUserPlugin(cfg, weiboService),
 		pipeline.NewPhoneInfoPlugin(weiboService, weiboAgent),
-		pipeline.NewStorePlugin(store1),
+		pipeline.NewStorePlugin(DB, batchID.String()),
 	})
 	if err != nil {
 		log.Fatal(err)
