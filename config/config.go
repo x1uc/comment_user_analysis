@@ -62,7 +62,7 @@ func (c *BlogCrawlInfos) applyDefaults() {
 			c.BlogsInfos[i].CommentAmount = DefaultCommentAmount
 		}
 		if c.BlogsInfos[i].OrderType == "" {
-			c.BlogsInfos[i].OrderType = DefaultOrderType
+			c.BlogsInfos[i].OrderType = c.DefaultOrderType
 		}
 	}
 }
