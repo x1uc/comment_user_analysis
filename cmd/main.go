@@ -2,8 +2,10 @@ package main
 
 import (
 	"context"
-	"github.com/google/uuid"
 	"log"
+	"path/filepath"
+
+	"github.com/google/uuid"
 
 	"github.com/x1uc/comment_user_analysis/agent"
 	"github.com/x1uc/comment_user_analysis/client"
@@ -45,6 +47,7 @@ func main() {
 		pipeline.NewCommentUserPlugin(cfg, weiboService),
 		pipeline.NewPhoneInfoPlugin(weiboService, weiboAgent),
 		pipeline.NewStorePlugin(DB, batchID.String()),
+		pipeline.NewPhoneBrandChartPlugin(filepath.Join("output", "phone_brand_pie"+batchID.String()+".html")),
 	})
 	if err != nil {
 		log.Fatal(err)

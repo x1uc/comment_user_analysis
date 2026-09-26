@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>手机品牌</title>
+</head>
+<body>
+  <svg class="pie-chart"></svg>
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1/dist/chart.xkcd.min.js"></script>
+  <script>
+    const svg = document.querySelector('.pie-chart');
+    new chartXkcd.Pie(svg, {
+      title: '手机品牌',
+      data: {
+        labels: ["华为","小米","苹果","荣耀","IQOO","OPPO","Vivo"],
+        datasets: [{
+          data: [10,9,9,4,2,1,1],
+        }],
+      },
+      options: {
+        innerRadius: 0,
+        showLegend: true,
+        dataColors: ["#CF0A2C","#FF6900","#000000","#0092D2","#FF9E2C","#00A862","#415FFF"],
+      },
+    });
+    drawBrandCallouts(svg, ["华为","小米","苹果","荣耀","IQOO","OPPO","Vivo"], [10,9,9,4,2,1,1], ["#A9A9A9","#CF0A2C","#FF6900","#000000","#0092D2","#FF9E2C","#00A862","#415FFF"]);
+
+    function drawBrandCallouts(svg, labels, values, colors) {
+      const total = values.reduce(function(sum, value) { return sum + value; }, 0);
+      if (!total) {
+        return;
+      }
+      const width = svg.width.baseVal.value;
+      const height = svg.height.baseVal.value;
+      const pad = 150;
+      svg.setAttribute('viewBox', [-pad, -pad, width + pad * 2, height + pad * 2].join(' '));
+      const cx = width / 2;
+      const cy = height / 2;
+      const radius = Math.min(width, height) / 2 - 50;
+      const slices = labels.map(function(label, index) {
+        return {label: label, value: values[index], index: index};
+      });
+      slices.sort(function(a, b) {
+        return b.value - a.value || a.index - b.index;
+      });
+      const left = [];
+      const right = [];
+      let angle = -Math.PI / 2;
+      slices.forEach(function(slice) {
+        const sweep = slice.value / total * Math.PI * 2;
+        const mid = angle + sweep / 2;
+        angle += sweep;
+        const cos = Math.cos(mid);
+        const sin = Math.sin(mid);
+        const item = {
+          label: slice.label,
+          x1: cx + cos * radius,
+          y1: cy + sin * radius,
+          x2: cx + cos * (radius + 16),
+          y2: cy + sin * (radius + 16),
+        };
+        item.y = item.y2;
+        (cos >= 0 ? right : left).push(item);
+      });
+      const ns = 'http://www.w3.org/2000/svg';
+      const defs = document.createElementNS(ns, 'defs');
+      defs.innerHTML = '<marker id="brand-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#222"></path></marker>';
+      svg.insertBefore(defs, svg.firstChild);
+      placeCallouts(svg, ns, right, cx + radius + 28, 1, -pad + 18, height + pad - 18);
+      placeCallouts(svg, ns, left, cx - radius - 28, -1, -pad + 18, height + pad - 18);
+    }
+
+    function placeCallouts(svg, ns, items, labelX, direction, minY, maxY) {
+      items.sort(function(a, b) { return a.y - b.y; });
+      for (let i = 1; i < items.length; i++) {
+        if (items[i].y < items[i - 1].y + 22) {
+          items[i].y = items[i - 1].y + 22;
+        }
+      }
+      if (items.length && items[items.length - 1].y > maxY) {
+        const shift = items[items.length - 1].y - maxY;
+        items.forEach(function(item) { item.y -= shift; });
+      }
+      if (items.length && items[0].y < minY) {
+        const shift = minY - items[0].y;
+        items.forEach(function(item) { item.y += shift; });
+      }
+      items.forEach(function(item) {
+        const line = document.createElementNS(ns, 'polyline');
+        line.setAttribute('points', [item.x1, item.y1, item.x2, item.y2, labelX, item.y].join(' '));
+        line.setAttribute('fill', 'none');
+        line.setAttribute('stroke', '#222');
+        line.setAttribute('stroke-width', '1.5');
+        line.setAttribute('marker-end', 'url(#brand-arrow)');
+        svg.appendChild(line);
+        const text = document.createElementNS(ns, 'text');
+        text.setAttribute('x', labelX + direction * 8);
+        text.setAttribute('y', item.y);
+        text.setAttribute('dominant-baseline', 'middle');
+        text.setAttribute('text-anchor', direction > 0 ? 'start' : 'end');
+        text.setAttribute('font-size', '16');
+        text.textContent = item.label;
+        svg.appendChild(text);
+      });
+    }
+  </script>
+</body>
+</html>
