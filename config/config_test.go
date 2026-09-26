@@ -85,6 +85,53 @@ blog_id = "111"
 	}
 }
 
+func TestLoadConvertsBase62BlogID(t *testing.T) {
+	dir := t.TempDir()
+	path := filepath.Join(dir, "config.toml")
+	content := `
+cookie = "test-cookie"
+rate_limit = "1s"
+default_order_type = "timeDesc"
+db_path = "test.db"
+
+[[blogs_infos]]
+blog_base62_id = "Qn4KL6kCN"
+comment_amount = 20
+`
+	if err := os.WriteFile(path, []byte(content), 0o644); err != nil {
+		t.Fatal(err)
+	}
+
+	cfg, err := Load(path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if cfg.BlogsInfos[0].BlogId != "5254998191509253" {
+		t.Fatalf("blog_id = %s", cfg.BlogsInfos[0].BlogId)
+	}
+}
+
+func TestLoadRejectsInvalidBase62BlogID(t *testing.T) {
+	dir := t.TempDir()
+	path := filepath.Join(dir, "config.toml")
+	content := `
+cookie = "test-cookie"
+rate_limit = "1s"
+default_order_type = "timeDesc"
+db_path = "test.db"
+
+[[blogs_infos]]
+blog_base62_id = "!!!"
+comment_amount = 1
+`
+	if err := os.WriteFile(path, []byte(content), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := Load(path); err == nil {
+		t.Fatal("expected invalid blog_base62_id to fail")
+	}
+}
+
 func TestLoadRejectsInvalidOrder(t *testing.T) {
 	dir := t.TempDir()
 	path := filepath.Join(dir, "config.toml")

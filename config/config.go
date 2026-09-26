@@ -3,14 +3,17 @@ package config
 import (
 	"fmt"
 	"os"
+	"strconv"
 	"strings"
 	"time"
 
 	"github.com/pelletier/go-toml/v2"
+	"github.com/x1uc/comment_user_analysis/utils"
 )
 
 type BlogsInfo struct {
-	BlogId        string `toml:"blog_id"`        // 微博文章ID
+	BlogId        string `toml:"blog_id"`        // 微博文章Id
+	BlogBase62Id  string `toml:"blog_base62_id"` // 微博文章字符串Id
 	CommentAmount int    `toml:"comment_amount"` // 需要拉取多少条数据
 	OrderType     string `toml:"order_type"`     // 按照热度排序还是按照时间降序排序(可选值：popular、timeDesc)
 }
@@ -40,11 +43,29 @@ func Load(path string) (*BlogCrawlInfos, error) {
 	if err := toml.Unmarshal(data, &cfg); err != nil {
 		return nil, fmt.Errorf("parse config %s: %w", path, err)
 	}
+	if err := cfg.applyBlogIDs(); err != nil {
+		return nil, fmt.Errorf("invalid config %s: %w", path, err)
+	}
 	cfg.applyDefaults()
 	if err := cfg.Validate(); err != nil {
 		return nil, fmt.Errorf("invalid config %s: %w", path, err)
 	}
 	return &cfg, nil
+}
+
+func (c *BlogCrawlInfos) applyBlogIDs() error {
+	for i := range c.BlogsInfos {
+		base62ID := strings.TrimSpace(c.BlogsInfos[i].BlogBase62Id)
+		if base62ID == "" {
+			continue
+		}
+		mid, err := utils.URLToMid(base62ID)
+		if err != nil {
+			return fmt.Errorf("blogs_infos[%d].blog_base62_id: %w", i, err)
+		}
+		c.BlogsInfos[i].BlogId = strconv.FormatInt(mid, 10)
+	}
+	return nil
 }
 
 func (c *BlogCrawlInfos) applyDefaults() {
