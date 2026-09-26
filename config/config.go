@@ -1,137 +1,136 @@
 package config
 
 import (
-	"comment_phone_analyse/internal/utils"
-	"encoding/json"
 	"fmt"
 	"os"
-	"path/filepath"
+	"strconv"
+	"strings"
 	"time"
+
+	"github.com/pelletier/go-toml/v2"
+	"github.com/x1uc/comment_user_analysis/utils"
 )
 
-// Config 应用配置
-type Config struct {
-	UID         string `json:"uid"`
-	Cookie      string `json:"cookie"`
-	Limit       int    `json:"limit"`
-	OutputDir   string `json:"output_dir"`
-	Interval    int    `json:"interval"`
-	SingleLimit int    `json:"single_limit"`
+type BlogsInfo struct {
+	BlogId        string `toml:"blog_id"`        // 微博文章Id
+	BlogBase62Id  string `toml:"blog_base62_id"` // 微博文章字符串Id
+	CommentAmount int    `toml:"comment_amount"` // 需要拉取多少条数据
+	OrderType     string `toml:"order_type"`     // 按照热度排序还是按照时间降序排序(可选值：popular、timeDesc)
 }
 
-// LoadConfig 加载配置
-func LoadConfig() (*Config, error) {
-	config := &Config{
-		Limit:     100,
-		OutputDir: "./output",
-		Interval:  5,
-	}
-
-	// 1. 首先尝试从配置文件加载
-	if err := config.loadFromFile(); err != nil {
-		fmt.Printf("警告: %v\n", err)
-	}
-
-	// 验证配置
-	if err := config.validate(); err != nil {
-		return nil, err
-	}
-
-	// 创建输出目录
-	if err := os.MkdirAll(config.OutputDir, 0755); err != nil {
-		return nil, utils.NewConfigError("创建输出目录失败", err)
-	}
-
-	return config, nil
+type BlogCrawlInfos struct {
+	BlogsInfos       []BlogsInfo `toml:"blogs_infos"` // 需要拉取的文章信息
+	Cookie           string      `toml:"cookie"`
+	RateLimit        string      `toml:"rate_limit"`         // 拉取的限流策略
+	DefaultOrderType string      `toml:"default_order_type"` // 默认的评论排序方式，在 BlogInfo.OrderType 为空的时候使用
+	DBPath           string      `toml:"db_path"`
 }
 
-// loadFromFile 从配置文件加载配置
-func (c *Config) loadFromFile() error {
-	// 尝试多个配置文件位置
-	configPaths := []string{
-		"config.json",
-		"config.local.json",
-		"./config/config.json",
-		"../config.json",
-		filepath.Join(os.Getenv("HOME"), ".config", "comment_analyzer", "config.json"),
+var (
+	DefaultDBPath        = "data.db"
+	DefaultOrderType     = "popular"
+	DefaultRateLimit     = "5s"
+	DefaultCommentAmount = 20
+)
+
+func Load(path string) (*BlogCrawlInfos, error) {
+	data, err := os.ReadFile(path)
+	if err != nil {
+		return nil, fmt.Errorf("read config %s: %w", path, err)
 	}
 
-	for _, path := range configPaths {
-		if _, err := os.Stat(path); err == nil {
-			data, err := os.ReadFile(path)
-			if err != nil {
-				return utils.NewConfigError(fmt.Sprintf("读取配置文件 %s 失败", path), err)
-			}
+	var cfg BlogCrawlInfos
+	if err := toml.Unmarshal(data, &cfg); err != nil {
+		return nil, fmt.Errorf("parse config %s: %w", path, err)
+	}
+	if err := cfg.applyBlogIDs(); err != nil {
+		return nil, fmt.Errorf("invalid config %s: %w", path, err)
+	}
+	cfg.applyDefaults()
+	if err := cfg.Validate(); err != nil {
+		return nil, fmt.Errorf("invalid config %s: %w", path, err)
+	}
+	return &cfg, nil
+}
 
-			if err := json.Unmarshal(data, c); err != nil {
-				return utils.NewConfigError(fmt.Sprintf("解析配置文件 %s 失败", path), err)
-			}
-
-			fmt.Printf("从配置文件加载: %s\n", path)
-			return nil
+func (c *BlogCrawlInfos) applyBlogIDs() error {
+	for i := range c.BlogsInfos {
+		base62ID := strings.TrimSpace(c.BlogsInfos[i].BlogBase62Id)
+		if base62ID == "" {
+			continue
 		}
+		mid, err := utils.URLToMid(base62ID)
+		if err != nil {
+			return fmt.Errorf("blogs_infos[%d].blog_base62_id: %w", i, err)
+		}
+		c.BlogsInfos[i].BlogId = strconv.FormatInt(mid, 10)
 	}
-
-	return utils.NewConfigError("未找到配置文件", nil)
-}
-
-// validate 验证配置
-func (c *Config) validate() error {
-	if c.UID == "" {
-		return utils.NewConfigError("用户ID不能为空", nil)
-	}
-
-	if c.Cookie == "" {
-		return utils.NewConfigError("Cookie不能为空", nil)
-	}
-
-	if c.Limit <= 0 {
-		c.Limit = 100
-	}
-
 	return nil
 }
 
-// Save 保存配置到文件
-func (c *Config) Save(filename string) error {
-	data, err := json.MarshalIndent(c, "", "  ")
-	if err != nil {
-		return utils.NewConfigError("序列化配置失败", err)
+func (c *BlogCrawlInfos) applyDefaults() {
+	if strings.TrimSpace(c.DBPath) == "" {
+		c.DBPath = DefaultDBPath
 	}
-
-	return os.WriteFile(filename, data, 0644)
+	if strings.TrimSpace(c.RateLimit) == "" {
+		c.RateLimit = DefaultRateLimit
+	}
+	if strings.TrimSpace(c.DefaultOrderType) == "" {
+		c.DefaultOrderType = DefaultOrderType
+	}
+	for i := range c.BlogsInfos {
+		if c.BlogsInfos[i].CommentAmount == 0 {
+			c.BlogsInfos[i].CommentAmount = DefaultCommentAmount
+		}
+		if c.BlogsInfos[i].OrderType == "" {
+			c.BlogsInfos[i].OrderType = c.DefaultOrderType
+		}
+	}
 }
 
-// LoadFromFile 从文件加载配置
-func LoadFromFile(filename string) (*Config, error) {
-	data, err := os.ReadFile(filename)
-	if err != nil {
-		return nil, utils.NewConfigError("读取配置文件失败", err)
-	}
-
-	var config Config
-	if err := json.Unmarshal(data, &config); err != nil {
-		return nil, utils.NewConfigError("解析配置文件失败", err)
-	}
-
-	return &config, nil
+func (c *BlogCrawlInfos) RateLimitDuration() (time.Duration, error) {
+	return time.ParseDuration(c.RateLimit)
 }
 
-// Print 打印配置信息
-func (c *Config) Print() {
-	fmt.Printf("配置信息:\n")
-	fmt.Printf("  用户ID: %s\n", c.UID)
-
-	// 只显示Cookie的前8个字符，保护隐私
-	cookieDisplay := c.Cookie
-	if len(cookieDisplay) > 8 {
-		cookieDisplay = cookieDisplay[:8] + "..."
+func (c *BlogCrawlInfos) OrderTypeFor(info BlogsInfo) string {
+	if strings.TrimSpace(info.OrderType) != "" {
+		return info.OrderType
 	}
-	fmt.Printf("  Cookie: %s\n", cookieDisplay)
+	return c.DefaultOrderType
+}
 
-	fmt.Printf("  统计限制: %d\n", c.Limit)
-	fmt.Printf("  输出目录: %s\n", c.OutputDir)
-	fmt.Printf("  间隔时间: %d\n", c.Interval)
-	fmt.Printf("  开始时间: %s\n", time.Now().Format("2006-01-02 15:04:05"))
-	fmt.Println()
+func (c *BlogCrawlInfos) Validate() error {
+	if strings.TrimSpace(c.Cookie) == "" {
+		return fmt.Errorf("cookie is required")
+	}
+	if _, err := time.ParseDuration(c.RateLimit); err != nil {
+		return fmt.Errorf("rate_limit %q: %w", c.RateLimit, err)
+	}
+	if err := validateOrderType(c.DefaultOrderType); err != nil {
+		return fmt.Errorf("default_order_type: %w", err)
+	}
+	if len(c.BlogsInfos) == 0 {
+		return fmt.Errorf("blogs_infos is required")
+	}
+	for i, info := range c.BlogsInfos {
+		if strings.TrimSpace(info.BlogId) == "" {
+			return fmt.Errorf("blogs_infos[%d].blog_id is required", i)
+		}
+		if info.CommentAmount <= 0 {
+			return fmt.Errorf("blogs_infos[%d].comment_amount must be greater than 0", i)
+		}
+		if err := validateOrderType(c.OrderTypeFor(info)); err != nil {
+			return fmt.Errorf("blogs_infos[%d].order_type: %w", i, err)
+		}
+	}
+	return nil
+}
+
+func validateOrderType(orderType string) error {
+	switch orderType {
+	case "popular", "timeDesc":
+		return nil
+	default:
+		return fmt.Errorf("must be popular or timeDesc, got %q", orderType)
+	}
 }

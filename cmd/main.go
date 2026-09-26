@@ -1,119 +1,45 @@
 package main
 
 import (
-	"comment_phone_analyse/config"
-	"comment_phone_analyse/export"
-	"comment_phone_analyse/internal/models"
-	"comment_phone_analyse/internal/services"
-	"fmt"
+	"context"
 	"log"
-	"os"
-	"os/signal"
-	"syscall"
+
+	"github.com/x1uc/comment_user_analysis/agent"
+	"github.com/x1uc/comment_user_analysis/client"
+	"github.com/x1uc/comment_user_analysis/config"
+	"github.com/x1uc/comment_user_analysis/pipeline"
+	"github.com/x1uc/comment_user_analysis/services"
+	"github.com/x1uc/comment_user_analysis/store"
 )
 
 func main() {
-	// 初始化全局配置
-	if err := config.InitGlobalConfig(); err != nil {
-		log.Fatalf("加载配置失败: %v", err)
+	cfg, err := config.Load("config.toml")
+	if err != nil {
+		log.Fatal(err)
 	}
 
-	cfg := config.GetGlobalConfig()
-	cfg.Print()
-
-	// 创建服务
-	weiboService := services.NewWeiboService()
-	analyzerService := services.NewAnalyzerService(weiboService)
-	defer analyzerService.Close() // 确保资源释放
-
-	setupGracefulShutdown(analyzerService)
-
-	// 开始分析
-	fmt.Println("开始分析...")
-	analyzerService.AnalyzeUserPhones()
-
-	// 打印结果
-	printResults(analyzerService)
-	convertDataToChart(analyzerService)
-}
-
-func convertDataToChart(analyzerService *services.AnalyzerService) {
-	cfg := config.GetGlobalConfig()
-	// 导出图表到用户专属目录
-	userOutputDir := analyzerService.GetOutputDir()
-	chartExporter := export.NewChartExporter(cfg.UID, userOutputDir)
-	fmt.Println("\n开始导出图表...")
-	knownStats := analyzerService.GetKnownBrandStats()
-
-	// 导出饼图
-	if err := chartExporter.ExportPieChart(knownStats); err != nil {
-		log.Printf("导出饼图失败: %v", err)
-	} else {
-		fmt.Println("饼图导出完成!")
+	rateLimit, err := cfg.RateLimitDuration()
+	if err != nil {
+		log.Fatal(err)
 	}
 
-	// 导出柱状图
-	if err := chartExporter.ExportBarChart(knownStats); err != nil {
-		log.Printf("导出柱状图失败: %v", err)
-	} else {
-		fmt.Println("柱状图导出完成!")
+	httpClient := client.NewClient(cfg.Cookie, rateLimit)
+
+	store1, err := store.NewStore(cfg.DBPath)
+	if err != nil {
+		log.Fatalf("Failed to initialize database: %v", err)
 	}
+	defer store1.Close()
 
-	// 导出摘要
-	summaryExporter := export.NewChartExporter(cfg.UID, userOutputDir)
+	weiboAgent := agent.NewService(httpClient)
+	weiboService := services.NewWeiboService(weiboAgent)
 
-	// 获取所有统计数据（包括未知机型）
-	allStats := analyzerService.GetStatistics()
-	var allStatsData []models.StatisticsData
-	for phoneType, count := range allStats.BrandCounts {
-		allStatsData = append(allStatsData, models.StatisticsData{
-			PhoneType: phoneType,
-			Count:     count,
-		})
+	err = pipeline.Run(context.Background(), []pipeline.Plugin{
+		pipeline.NewCommentUserPlugin(cfg, weiboService),
+		pipeline.NewPhoneInfoPlugin(weiboService, weiboAgent),
+		pipeline.NewStorePlugin(store1),
+	})
+	if err != nil {
+		log.Fatal(err)
 	}
-
-	if err := summaryExporter.ExportSummary(allStatsData); err != nil {
-		log.Printf("导出摘要失败: %v", err)
-	} else {
-		fmt.Println("摘要导出完成!")
-	}
-
-	// 打印摘要
-	fmt.Println("\n" + analyzerService.GetSummary())
-	fmt.Printf("所有文件已保存到目录: %s\n", userOutputDir)
-}
-
-// printResults 打印分析结果
-func printResults(analyzer *services.AnalyzerService) {
-	fmt.Println("\n========================== 最终统计结果：未知机型 ============================")
-	unknownStats := analyzer.GetUnknownBrandStats()
-	for _, stat := range unknownStats {
-		fmt.Printf("PhoneType: %s, Num: %d\n", stat.PhoneType, stat.Count)
-	}
-
-	fmt.Println("\n========================== 最终统计结果：已知机型 ============================")
-	knownStats := analyzer.GetKnownBrandStats()
-	for _, stat := range knownStats {
-		fmt.Printf("PhoneType: %s, Num: %d\n", stat.PhoneType, stat.Count)
-	}
-
-	// 计算总数
-	totalKnown := 0
-	for _, stat := range knownStats {
-		totalKnown += stat.Count
-	}
-	fmt.Printf("\n已知品牌总用户数: %d\n", totalKnown)
-}
-
-// setupGracefulShutdown 设置优雅退出
-func setupGracefulShutdown(analyzerService *services.AnalyzerService) {
-	c := make(chan os.Signal, 1)
-	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
-
-	go func() {
-		<-c
-		fmt.Println("\n\n收到退出信号，正在优雅退出...")
-		convertDataToChart(analyzerService)
-		os.Exit(0)
-	}()
 }

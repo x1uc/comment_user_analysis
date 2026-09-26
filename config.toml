@@ -1,0 +1,9 @@
+cookie = ""
+rate_limit = "1s"
+default_order_type = "timeDesc" # popular 或 timeDesc；单篇文章 order_type 为空时使用
+db_path = "test.db"
+
+[[blogs_infos]]
+blog_base62_id = "Qn4KL6kCN"
+comment_amount = 20
+order_type = "" # 留空则使用 default_order_type
